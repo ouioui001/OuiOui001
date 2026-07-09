@@ -54,17 +54,17 @@ def make_logo(pfx, animate=False):
 
 
 # ---------------------------------------------------------------- shell
-def nav(active):
+def nav(active, base):
     def a(href, label, key):
         cls = "active" if active == key else ""
         return '<a href="{h}" class="{c}">{l}</a>'.format(h=href, c=cls, l=label)
     return (
         '<nav class="nav">'
-        + a("/", "catalogue", "catalogue")
+        + a(base or "./", "catalogue", "catalogue")
         + '<span class="sep">,&nbsp;</span>'
-        + a("/archive/", "archive", "archive")
+        + a(base + "archive/", "archive", "archive")
         + '<span class="sep">,&nbsp;</span>'
-        + a("/information/", "information", "information")
+        + a(base + "information/", "information", "information")
         + "</nav>"
     )
 
@@ -73,7 +73,7 @@ def intro_overlay():
     return '<div class="intro" aria-hidden="true">' + make_logo("intro", animate=True) + "</div>"
 
 
-def page(title, active, body, description="OuiOui website.", with_intro=True):
+def page(title, active, body, base="", description="OuiOui website.", with_intro=True):
     head = (
         "<!DOCTYPE html><html lang=\"en\"><head>"
         '<meta charset="utf-8">'
@@ -86,11 +86,11 @@ def page(title, active, body, description="OuiOui website.", with_intro=True):
         '<meta property="og:title" content="{title}">'
         '<meta property="og:description" content="{desc}">'
         '<meta property="og:type" content="website">'
-        '<link rel="icon" type="image/x-icon" href="/favicon.ico">'
-        '<link rel="apple-touch-icon" href="/fav-l.png">'
+        '<link rel="icon" type="image/x-icon" href="{base}favicon.ico">'
+        '<link rel="apple-touch-icon" href="{base}fav-l.png">'
         '<link rel="preconnect" href="https://cdn.sanity.io" crossorigin>'
-        '<link rel="preload" as="font" type="font/otf" href="/assets/fonts/26A1VeeloNeue.otf" crossorigin>'
-        '<link rel="stylesheet" href="/assets/style.css">'
+        '<link rel="preload" as="font" type="font/otf" href="{base}assets/fonts/26A1VeeloNeue.otf" crossorigin>'
+        '<link rel="stylesheet" href="{base}assets/style.css">'
         # --- Visitor analytics (pending account) -------------------------
         # GoatCounter is privacy-friendly and needs no cookie banner.
         # Create a free account at https://www.goatcounter.com, then replace
@@ -98,10 +98,10 @@ def page(title, active, body, description="OuiOui website.", with_intro=True):
         # <script data-goatcounter="https://YOURCODE.goatcounter.com/count"
         #         async src="//gc.zgo.at/count.js"></script>
         "</head><body>"
-    ).format(title=esc(title), desc=esc(description))
+    ).format(title=esc(title), desc=esc(description), base=base)
     intro = intro_overlay() if with_intro else ""
-    tail = '<script src="/assets/app.js" defer></script></body></html>'
-    return head + intro + nav(active) + body + tail
+    tail = '<script src="{base}assets/app.js" defer></script></body></html>'.format(base=base)
+    return head + intro + nav(active, base) + body + tail
 
 
 # ---------------------------------------------------------------- tiles
@@ -125,14 +125,15 @@ def tile(img, group, sizes):
 
 # ---------------------------------------------------------------- pages
 def build_catalogue():
+    base = ""  # repo root
     rows = []
     for p in POSTS:
         cover = p["cover"]["file"] if p.get("cover") else ""
         rows.append(
             '<li class="inv-item">'
-            '<a class="inv-link" href="/books/{slug}/" data-cover="{cover}" data-title="{t}">'
+            '<a class="inv-link" href="{base}books/{slug}/" data-cover="{cover}" data-title="{t}">'
             '<span class="inv-more">(view more)</span>{title}</a></li>'.format(
-                slug=p["slug"], cover=esc(cover), t=esc(p["title"]), title=esc(p["title"])
+                base=base, slug=p["slug"], cover=esc(cover), t=esc(p["title"]), title=esc(p["title"])
             )
         )
     body = (
@@ -140,13 +141,14 @@ def build_catalogue():
         '<main class="catalogue">'
         '<h1 class="inv-count">(inventory {n})</h1>'
         '<ul class="inv-list dimmable">{rows}</ul>'
-        '<footer class="foot"><a href="/" aria-label="OuiOui001 home">{logo}</a></footer>'
+        '<footer class="foot"><a href="{base}" aria-label="OuiOui001 home">{logo}</a></footer>'
         "</main>"
-    ).format(n=len(POSTS), rows="".join(rows), logo=make_logo("catfoot"))
-    return page("OuiOui001", "catalogue", body)
+    ).format(n=len(POSTS), rows="".join(rows), logo=make_logo("catfoot"), base=base or "./")
+    return page("OuiOui001", "catalogue", body, base=base)
 
 
 def build_archive():
+    base = "../"  # archive/index.html
     secs = []
     for p in POSTS:
         tiles = "".join(
@@ -155,12 +157,12 @@ def build_archive():
         )
         secs.append(
             '<section>'
-            '<a class="archive-sec-title" href="/books/{slug}/">{title}</a>'
+            '<a class="archive-sec-title" href="{base}books/{slug}/">{title}</a>'
             '<div class="grid archive-grid">{tiles}</div>'
-            "</section>".format(slug=p["slug"], title=esc(p["title"]), tiles=tiles)
+            "</section>".format(base=base, slug=p["slug"], title=esc(p["title"]), tiles=tiles)
         )
     body = '<main class="archive">' + "".join(secs) + "</main>"
-    return page("OuiOui001 — archive", "archive", body,
+    return page("OuiOui001 — archive", "archive", body, base=base,
                 description="OuiOui001 archive — the complete image index.")
 
 
@@ -181,7 +183,7 @@ def build_information():
         '<p class="op-wrp">' + lead + "".join(links) + "</p>"
         "</section></div></main>"
     )
-    return page("OuiOui001 — information", "information", body,
+    return page("OuiOui001 — information", "information", body, base="../",
                 description="OuiOui001 — contact & information.")
 
 
@@ -212,7 +214,7 @@ def build_book(p):
         "</div>"
         "</main>"
     ).format(title=esc(p["title"]), desc=desc_block, tiles=tiles)
-    return page(p["title"] + " — OuiOui001", "", body,
+    return page(p["title"] + " — OuiOui001", "", body, base="../../",
                 description=(desc or p["title"])[:180], with_intro=False)
 
 

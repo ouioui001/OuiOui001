@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OuiOui Prints — Fashion &amp; Art Publications</title>
+  <meta name="description" content="OuiOui Prints — independent archive of rare fashion and art books, magazines, catalogs and lookbooks. Yohji Yamamoto, Margiela, Comme des Garçons, Yoshitomo Nara and more. Sold via Depop.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2300e100'/></svg>">
+</head>
+<body>
+
+  <div id="intro" aria-hidden="true"><span>OUIOUI&nbsp;PRINTS</span></div>
+
+  <div class="edge-tabs">
+    <button id="menu-tab" class="edge-tab edge-tab--menu" aria-controls="menu-overlay" aria-expanded="false">MENU</button>
+    <button id="refine-tab" class="edge-tab edge-tab--refine" aria-controls="refine-panel" aria-expanded="false">REFINE</button>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">OuiOui Prints</a>
+    <p class="displaying">Displaying <b id="disp-filter">ALL</b> by <b>COVER</b> in <b id="disp-mode">GRID</b></p>
+    <a class="topbar-action" href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">DEPOP&nbsp;↗</a>
+  </header>
+
+  <main>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="list" class="list" hidden></div>
+    <p id="empty" class="empty" hidden>NOTHING MATCHES — CLEAR YOUR FILTERS.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 OUIOUI PRINTS</span>
+    <span>RARE FASHION &amp; ART PUBLICATIONS</span>
+    <a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">@OUIOUIPRINTS ON DEPOP ↗</a>
+  </footer>
+
+  <nav id="menu-overlay" class="menu-overlay" hidden>
+    <button class="panel-close" data-close="menu">×</button>
+    <ul class="menu-list">
+      <li><a href="index.html" data-type="">SHOP ALL <sup id="count-all"></sup></a></li>
+      <li><a href="index.html?type=Books" data-type="Books">BOOKS <sup id="count-books"></sup></a></li>
+      <li><a href="index.html?type=Magazines" data-type="Magazines">MAGAZINES <sup id="count-mags"></sup></a></li>
+      <li><a href="index.html?type=Catalogs" data-type="Catalogs">CATALOGS <sup id="count-cats"></sup></a></li>
+      <li><a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">DEPOP ↗</a></li>
+    </ul>
+    <p class="menu-about">
+      OUIOUI PRINTS IS AN INDEPENDENT ARCHIVE OF RARE FASHION AND ART
+      PUBLICATIONS — JAPANESE MAGAZINES, DESIGNER LOOKBOOKS, EXHIBITION
+      CATALOGS AND ART BOOKS. EVERY ITEM IS AUTHENTIC AND SHIPS WORLDWIDE
+      VIA OUR DEPOP SHOP.
+    </p>
+  </nav>
+
+  <aside id="refine-panel" class="refine-panel" hidden>
+    <button class="panel-close" data-close="refine">×</button>
+    <h2 class="refine-heading">REFINE</h2>
+    <p class="refine-count"><span id="refine-count-n"></span></p>
+
+    <fieldset class="refine-group">
+      <legend>DISPLAY</legend>
+      <label><input type="radio" name="mode" value="grid" checked> GRID</label>
+      <label><input type="radio" name="mode" value="list"> LIST</label>
+    </fieldset>
+
+    <fieldset class="refine-group">
+      <legend>SORT</legend>
+      <label><input type="radio" name="sort" value="new" checked> NEW TO OLD</label>
+      <label><input type="radio" name="sort" value="old"> OLD TO NEW</label>
+      <label><input type="radio" name="sort" value="price-asc"> PRICE: LOW TO HIGH</label>
+      <label><input type="radio" name="sort" value="price-desc"> PRICE: HIGH TO LOW</label>
+      <label><input type="radio" name="sort" value="az"> A TO Z</label>
+    </fieldset>
+
+    <fieldset class="refine-group" id="type-group">
+      <legend>TYPE</legend>
+    </fieldset>
+
+    <fieldset class="refine-group" id="topic-group">
+      <legend>TOPICS</legend>
+    </fieldset>
+
+    <button id="refine-clear" class="refine-clear">CLEAR ALL</button>
+  </aside>
+
+  <script src="data/books.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

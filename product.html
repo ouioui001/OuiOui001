@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OuiOui Prints</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2300e100'/></svg>">
+</head>
+<body class="product-page">
+
+  <div class="edge-tabs">
+    <button id="menu-tab" class="edge-tab edge-tab--menu" aria-controls="menu-overlay" aria-expanded="false">MENU</button>
+    <a class="edge-tab edge-tab--refine" href="index.html">BACK</a>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">OuiOui Prints</a>
+    <p class="displaying" id="product-crumb"></p>
+    <a class="topbar-action" id="topbar-buy" href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">+&nbsp;BUY&nbsp;ON&nbsp;DEPOP</a>
+  </header>
+
+  <main class="product-main">
+    <div id="gallery" class="gallery"></div>
+
+    <div class="product-info">
+      <div class="product-copy">
+        <h1 id="p-title"></h1>
+        <p id="p-price" class="p-price"></p>
+        <div id="p-desc" class="p-desc"></div>
+      </div>
+
+      <div class="product-specs">
+        <ul id="spec-list" class="spec-list"></ul>
+        <a id="buy-btn" class="buy-btn" href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">BUY ON DEPOP</a>
+      </div>
+    </div>
+
+    <nav class="product-pager">
+      <a id="prev-link" hidden>← PREV</a>
+      <a id="next-link" hidden>NEXT →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 OUIOUI PRINTS</span>
+    <span>RARE FASHION &amp; ART PUBLICATIONS</span>
+    <a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">@OUIOUIPRINTS ON DEPOP ↗</a>
+  </footer>
+
+  <nav id="menu-overlay" class="menu-overlay" hidden>
+    <button class="panel-close" data-close="menu">×</button>
+    <ul class="menu-list">
+      <li><a href="index.html">SHOP ALL <sup id="count-all"></sup></a></li>
+      <li><a href="index.html?type=Books">BOOKS <sup id="count-books"></sup></a></li>
+      <li><a href="index.html?type=Magazines">MAGAZINES <sup id="count-mags"></sup></a></li>
+      <li><a href="index.html?type=Catalogs">CATALOGS <sup id="count-cats"></sup></a></li>
+      <li><a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">DEPOP ↗</a></li>
+    </ul>
+    <p class="menu-about">
+      OUIOUI PRINTS IS AN INDEPENDENT ARCHIVE OF RARE FASHION AND ART
+      PUBLICATIONS — JAPANESE MAGAZINES, DESIGNER LOOKBOOKS, EXHIBITION
+      CATALOGS AND ART BOOKS. EVERY ITEM IS AUTHENTIC AND SHIPS WORLDWIDE
+      VIA OUR DEPOP SHOP.
+    </p>
+  </nav>
+
+  <script src="data/books.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

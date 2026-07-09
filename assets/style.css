@@ -142,6 +142,26 @@ main { width: 100%; }
 }
 
 .inv-more { display: none; }
+
+/* Mobile: roomier tap targets + a small faint (view more) tag after the
+   title. Both live inside the same link, so tapping either navigates. */
+@media (max-width: 1023px) {
+  .inv-item { margin-bottom: 0.8rem; }
+  .inv-link {
+    display: flex;
+    align-items: baseline;
+    padding: 0.15rem 0;
+  }
+  .inv-more {
+    display: inline-block;
+    order: 2;              /* render after the title text */
+    font-size: 0.7rem;
+    line-height: 1;
+    opacity: 0.45;
+    margin-left: 0.6em;
+    white-space: nowrap;
+  }
+}
 @media (min-width: 1024px) {
   .inv-more {
     display: inline-block;
@@ -403,7 +423,7 @@ main { width: 100%; }
 }
 .lb-btn:hover { opacity: 1; }
 .lb-close { top: var(--pad); right: var(--pad); z-index: 6; }
-.lb-count { top: var(--pad); left: var(--pad); opacity: 0.55; font-size: 1.125rem; pointer-events: none; z-index: 6; }
+.lb-count { position: absolute; top: var(--pad); left: var(--pad); opacity: 0.55; font-size: 1.125rem; pointer-events: none; z-index: 6; }
 /* prev/next strips are inset from top and bottom so they never sit on top
    of the close button or the hint text */
 .lb-prev { left: 0; top: 5.5rem; bottom: 5.5rem; width: 22vw; font-size: 2rem; display: flex; align-items: center; justify-content: flex-start; }
@@ -420,6 +440,22 @@ main { width: 100%; }
   opacity: 0.4;
   pointer-events: none;
 }
+/* faint one-time swipe cue on touch devices */
+.lb-swipe {
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+.lb-swipe.show { opacity: 0.45; }
 @media (max-width: 1023px) { .lb-hint { display: none; } .lb-prev, .lb-next { display: none; } }
 
 /* ---------- Image download protection ---------- */

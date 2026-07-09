@@ -128,7 +128,8 @@
       '<button class="lb-btn lb-close" aria-label="Close">(close)</button>' +
       '<button class="lb-btn lb-prev" aria-label="Previous">&#8592;</button>' +
       '<button class="lb-btn lb-next" aria-label="Next">&#8594;</button>' +
-      '<div class="lb-hint">scroll or pinch to zoom · drag to pan · &#8592; &#8594; to browse · esc to close</div>';
+      '<div class="lb-hint">scroll or pinch to zoom · drag to pan · &#8592; &#8594; to browse · esc to close</div>' +
+      '<div class="lb-swipe" aria-hidden="true">&#8592; swipe &#8594;</div>';
     document.body.appendChild(lb);
 
     var img = lb.querySelector(".lb-img");
@@ -193,16 +194,31 @@
       preload(arr, curIndex + 1);
       preload(arr, curIndex - 1);
     }
+    // faint one-time "swipe" cue for touch users, ~2s then gone
+    var swipeEl = lb.querySelector(".lb-swipe");
+    function maybeSwipeHint(count) {
+      if (count < 2) return;
+      if (!window.matchMedia("(pointer: coarse)").matches) return;
+      var seen = false;
+      try { seen = sessionStorage.getItem("ouioui_swipe") === "1"; } catch (e) {}
+      if (seen) return;
+      try { sessionStorage.setItem("ouioui_swipe", "1"); } catch (e) {}
+      swipeEl.classList.add("show");
+      window.setTimeout(function () { swipeEl.classList.remove("show"); }, 2000);
+    }
+
     function open(group, index) {
       show(group, index);
       lb.classList.add("open");
       document.documentElement.style.overflow = "hidden";
+      maybeSwipeHint(getGroup(group).length);
     }
     function close() {
       lb.classList.remove("open");
       document.documentElement.style.overflow = "";
       loadToken++; // cancel any pending full-res swap
       img.removeAttribute("src");
+      swipeEl.classList.remove("show");
     }
     function next() { show(curGroup, curIndex + 1); }
     function prev() { show(curGroup, curIndex - 1); }

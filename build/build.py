@@ -155,11 +155,21 @@ def build_archive():
             tile(g, p["slug"], "(max-width:640px) 25vw, (max-width:1024px) 12.5vw, 6.6vw")
             for g in p["gallery"]
         )
+        # Estimated rendered height per breakpoint (content-visibility hint):
+        # rows * column-width * average aspect ratio, plus room for the title.
+        n = len(p["gallery"]) or 1
+        avg = sum(g["h"] / g["w"] for g in p["gallery"]) / n if p["gallery"] else 1.0
+        def cis(cols, col_vw):
+            rows = -(-n // cols)  # ceil
+            return "calc({h}vw + 5rem)".format(h=round(rows * col_vw * avg, 1))
+        style = "--cis-m:{m};--cis-t:{t};--cis-d:{d}".format(
+            m=cis(4, 24.5), t=cis(8, 12.2), d=cis(15, 6.5)
+        )
         secs.append(
-            '<section>'
+            '<section style="{style}">'
             '<a class="archive-sec-title" href="{base}books/{slug}/">{title}</a>'
             '<div class="grid archive-grid">{tiles}</div>'
-            "</section>".format(base=base, slug=p["slug"], title=esc(p["title"]), tiles=tiles)
+            "</section>".format(style=style, base=base, slug=p["slug"], title=esc(p["title"]), tiles=tiles)
         )
     body = '<main class="archive">' + "".join(secs) + "</main>"
     return page("OuiOui001 — archive", "archive", body, base=base,

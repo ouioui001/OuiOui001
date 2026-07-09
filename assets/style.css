@@ -44,7 +44,12 @@ html, body {
 
 a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
 
-img { display: block; max-width: 100%; }
+img {
+  display: block;
+  max-width: 100%;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
 
 .font-veelo { font-family: var(--font); }
 .small-label {
@@ -244,9 +249,18 @@ main { width: 100%; }
 }
 @media (min-width: 1024px) { .archive { padding: var(--nav-h) var(--pad) 6rem; gap: 4rem; } }
 
+/* Off-screen sections are skipped entirely by the renderer; the generator
+   writes per-section height estimates (--cis-*) so the scrollbar stays
+   stable while 2,000+ images stay cheap. */
 .archive section {
   content-visibility: auto;
-  contain-intrinsic-size: auto 600px;
+  contain-intrinsic-size: auto var(--cis-m, 500px);
+}
+@media (min-width: 640px) {
+  .archive section { contain-intrinsic-size: auto var(--cis-t, 400px); }
+}
+@media (min-width: 1024px) {
+  .archive section { contain-intrinsic-size: auto var(--cis-d, 300px); }
 }
 
 .archive-sec-title {
@@ -386,10 +400,12 @@ main { width: 100%; }
   -webkit-tap-highlight-color: transparent;
 }
 .lb-btn:hover { opacity: 1; }
-.lb-close { top: var(--pad); right: var(--pad); }
-.lb-count { top: var(--pad); left: var(--pad); opacity: 0.55; font-size: 1.125rem; pointer-events: none; }
-.lb-prev { left: 0; top: 0; bottom: 0; width: 22vw; font-size: 2rem; display: flex; align-items: center; justify-content: flex-start; }
-.lb-next { right: 0; top: 0; bottom: 0; width: 22vw; font-size: 2rem; display: flex; align-items: center; justify-content: flex-end; }
+.lb-close { top: var(--pad); right: var(--pad); z-index: 6; }
+.lb-count { top: var(--pad); left: var(--pad); opacity: 0.55; font-size: 1.125rem; pointer-events: none; z-index: 6; }
+/* prev/next strips are inset from top and bottom so they never sit on top
+   of the close button or the hint text */
+.lb-prev { left: 0; top: 5.5rem; bottom: 5.5rem; width: 22vw; font-size: 2rem; display: flex; align-items: center; justify-content: flex-start; }
+.lb-next { right: 0; top: 5.5rem; bottom: 5.5rem; width: 22vw; font-size: 2rem; display: flex; align-items: center; justify-content: flex-end; }
 .lb-prev, .lb-next { opacity: 0; }
 .lightbox:hover .lb-prev, .lightbox:hover .lb-next { opacity: 0.35; }
 .lb-prev:hover, .lb-next:hover { opacity: 1 !important; }

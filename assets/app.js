@@ -68,6 +68,8 @@
 
   /* ============================================================
      2. CATALOGUE — bottom-right cover preview on hover.
+        Covers are warmed in the browser cache during idle time
+        so the preview appears instantly.
      ============================================================ */
   function catalogueHover() {
     var holder = document.querySelector(".hover-cover");
@@ -84,31 +86,44 @@
       });
       a.addEventListener("mouseleave", function () { holder.style.opacity = "0"; });
     });
+
+    // idle-time cover warm-up — desktop pointer devices only
+    if (window.matchMedia("(min-width: 1024px) and (hover: hover)").matches) {
+      var files = [];
+      items.forEach(function (a) {
+        var f = a.getAttribute("data-cover");
+        if (f) files.push(f);
+      });
+      var i = 0;
+      function warmNext(deadline) {
+        while (i < files.length && (!deadline || deadline.timeRemaining() > 4)) {
+          var im = new Image();
+          im.src = imgURL(files[i++], "w=700&auto=format&q=85");
+        }
+        if (i < files.length) idle(warmNext);
+      }
+      var idle = window.requestIdleCallback
+        ? function (fn) { window.requestIdleCallback(fn, { timeout: 3000 }); }
+        : function (fn) { window.setTimeout(fn, 400); };
+      idle(warmNext);
+    }
   }
 
   /* ============================================================
      3. LIGHTBOX — click any gallery/archive photo to zoom.
-        Full-resolution image, pan + wheel/pinch zoom, prev/next,
-        keyboard + swipe. Works for every image in every gallery.
+        A screen-sized image is shown immediately, then the native
+        full-resolution file is swapped in as soon as it's loaded.
+        Neighbours are preloaded so prev/next are instant.
+        One delegated click listener serves every tile.
      ============================================================ */
   function lightbox() {
-    var groups = {}; // groupId -> array of {file, alt}
-    var tiles = document.querySelectorAll(".tile[data-file]");
-    if (!tiles.length) return;
-
-    tiles.forEach(function (t) {
-      var g = t.getAttribute("data-group") || "default";
-      if (!groups[g]) groups[g] = [];
-      var idx = groups[g].length;
-      groups[g].push({ file: t.getAttribute("data-file"), alt: t.getAttribute("alt") || "" });
-      t.setAttribute("data-index", idx);
-    });
+    if (!document.querySelector(".tile[data-file]")) return;
 
     // build DOM
     var lb = document.createElement("div");
     lb.className = "lightbox";
     lb.innerHTML =
-      '<div class="lb-stage"><img class="lb-img" alt=""></div>' +
+      '<div class="lb-stage"><img class="lb-img" alt="" draggable="false"></div>' +
       '<span class="lb-count"></span>' +
       '<button class="lb-btn lb-close" aria-label="Close">(close)</button>' +
       '<button class="lb-btn lb-prev" aria-label="Previous">&#8592;</button>' +
@@ -122,23 +137,61 @@
     var curGroup = null, curIndex = 0;
     var scale = 1, tx = 0, ty = 0;
     var MIN = 1, MAX = 6;
+    var loadToken = 0;
+
+    // group index built lazily, one pass per group, cached
+    var groupsCache = {};
+    function getGroup(name) {
+      if (!groupsCache[name]) {
+        var arr = [];
+        document.querySelectorAll(".tile[data-file]").forEach(function (t) {
+          if ((t.getAttribute("data-group") || "default") === name) {
+            arr.push({ file: t.getAttribute("data-file"), alt: t.getAttribute("alt") || "", el: t });
+          }
+        });
+        groupsCache[name] = arr;
+      }
+      return groupsCache[name];
+    }
 
     function apply() {
       img.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")";
     }
     function resetView() { scale = 1; tx = 0; ty = 0; apply(); }
 
+    var FAST = "w=1600&auto=format&q=90";   // screen-sized, loads fast
+    var FULL = "auto=format&q=95";          // native full resolution
+
+    function preload(arr, i) {
+      var it = arr[(i + arr.length) % arr.length];
+      var im = new Image();
+      im.src = imgURL(it.file, FAST);
+    }
+
     function show(group, index) {
-      var arr = groups[group];
-      if (!arr) return;
+      var arr = getGroup(group);
+      if (!arr || !arr.length) return;
       curGroup = group;
       curIndex = (index + arr.length) % arr.length;
       var item = arr[curIndex];
       resetView();
-      // full-resolution, high quality
-      img.src = imgURL(item.file, "auto=format&q=92");
+      var token = ++loadToken;
+
+      // 1) immediate: screen-sized image
+      img.src = imgURL(item.file, FAST);
       img.alt = item.alt;
       countEl.textContent = (curIndex + 1) + " / " + arr.length;
+
+      // 2) background: swap in the native full-resolution file
+      var full = new Image();
+      full.onload = function () {
+        if (token === loadToken && lb.classList.contains("open")) img.src = full.src;
+      };
+      full.src = imgURL(item.file, FULL);
+
+      // 3) warm the neighbours for instant prev/next
+      preload(arr, curIndex + 1);
+      preload(arr, curIndex - 1);
     }
     function open(group, index) {
       show(group, index);
@@ -148,18 +201,27 @@
     function close() {
       lb.classList.remove("open");
       document.documentElement.style.overflow = "";
-      img.src = "";
+      loadToken++; // cancel any pending full-res swap
+      img.removeAttribute("src");
     }
     function next() { show(curGroup, curIndex + 1); }
     function prev() { show(curGroup, curIndex - 1); }
 
-    tiles.forEach(function (t) {
-      t.addEventListener("click", function () {
-        open(t.getAttribute("data-group") || "default", parseInt(t.getAttribute("data-index"), 10) || 0);
-      });
+    // one delegated listener for every tile on the page
+    document.addEventListener("click", function (e) {
+      var t = e.target && e.target.closest ? e.target.closest(".tile[data-file]") : null;
+      if (!t) return;
+      var g = t.getAttribute("data-group") || "default";
+      var arr = getGroup(g);
+      var idx = 0;
+      for (var i = 0; i < arr.length; i++) { if (arr[i].el === t) { idx = i; break; } }
+      open(g, idx);
     });
 
-    lb.querySelector(".lb-close").addEventListener("click", close);
+    lb.querySelector(".lb-close").addEventListener("click", function (e) {
+      e.stopPropagation();
+      close();
+    });
     lb.querySelector(".lb-next").addEventListener("click", function (e) { e.stopPropagation(); next(); });
     lb.querySelector(".lb-prev").addEventListener("click", function (e) { e.stopPropagation(); prev(); });
 
@@ -274,42 +336,22 @@
   /* ============================================================
      5. IMAGE DOWNLOAD PROTECTION
         No right-click save, no drag-out, no long-press save.
-        (Deterrent — images are still delivered by the browser,
-        but casual saving is blocked as requested.)
+        Two document-level listeners + CSS (user-drag, touch-callout)
+        cover every image, including ones added later — no per-image
+        work, no DOM scanning.
      ============================================================ */
   function protectImages() {
-    // Block context menu on images / media wrappers
     document.addEventListener("contextmenu", function (e) {
       var t = e.target;
-      if (t && (t.tagName === "IMG" || t.tagName === "SVG" || t.closest(".tile,.lightbox,.hover-cover,.wordmark"))) {
+      if (!t) return;
+      if (t.tagName === "IMG" ||
+          (t.closest && t.closest(".tile,.lightbox,.hover-cover,.wordmark,svg"))) {
         e.preventDefault();
       }
     });
-    // Block drag
     document.addEventListener("dragstart", function (e) {
       if (e.target && e.target.tagName === "IMG") e.preventDefault();
     });
-    // Mark all images undraggable
-    function markAll() {
-      document.querySelectorAll("img").forEach(function (im) {
-        im.setAttribute("draggable", "false");
-        im.oncontextmenu = function () { return false; };
-      });
-    }
-    markAll();
-    // Long-press on touch — suppress the default callout/save
-    var pressTimer = null;
-    document.addEventListener("touchstart", function (e) {
-      if (e.target && e.target.tagName === "IMG") {
-        pressTimer = window.setTimeout(function () {}, 0);
-      }
-    }, { passive: true });
-    document.addEventListener("touchend", function () {
-      if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
-    });
-    // Re-mark images added later (defensive)
-    var mo = new MutationObserver(markAll);
-    mo.observe(document.body, { childList: true, subtree: true });
   }
 
   /* ---------- boot ---------- */

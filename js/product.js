@@ -25,14 +25,15 @@
   document.getElementById("p-desc").textContent = book.details.join("\n");
 
   // ---------- gallery ----------
-  // First image is the processed cover stored in the repo; any further
-  // photos are loaded from the Depop CDN at full size.
+  // First image is the background-removed cover stored in the repo; any
+  // further photos are the original shots (loaded at full size).
   var gallery = document.getElementById("gallery");
   var sources = [book.cover].concat(book.photos.slice(1));
   sources.forEach(function (src, i) {
     var img = document.createElement("img");
     img.src = src;
     img.alt = book.title + " — photo " + (i + 1);
+    if (i === 0) img.className = "is-cover";
     if (i > 0) img.loading = "lazy";
     var n = document.createElement("span");
     n.className = "ph-num";
@@ -46,9 +47,9 @@
   var specs = [
     '<span class="dot">●</span> IN STOCK',
     "TYPE: " + book.kind.replace(/s$/, ""),
-    "SHIPPING (US): " + (book.shipping ? formatPrice(book.shipping) : "SEE DEPOP"),
+    "SHIPPING (US): " + (book.shipping ? formatPrice(book.shipping) : "CALCULATED AT CHECKOUT"),
     "SHIPS WORLDWIDE",
-    "SOLD VIA DEPOP @OUIOUIPRINTS"
+    "AUTHENTIC — ONE IN STOCK"
   ];
   var list = document.getElementById("spec-list");
   specs.forEach(function (s) {
@@ -57,8 +58,13 @@
     list.appendChild(li);
   });
 
-  document.getElementById("buy-btn").href = book.depopUrl;
-  document.getElementById("topbar-buy").href = book.depopUrl;
+  // ---------- add to cart ----------
+  var addBtn = document.getElementById("add-btn");
+  addBtn.addEventListener("click", function () {
+    Cart.add(book.id);
+    addBtn.textContent = "ADDED ✓";
+    setTimeout(function () { addBtn.textContent = "ADD TO STACK"; }, 1400);
+  });
 
   // ---------- prev / next ----------
   var prev = document.getElementById("prev-link");

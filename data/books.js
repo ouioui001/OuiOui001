@@ -1,5 +1,5 @@
-// OuiOui Prints — book catalogue generated from the live Depop shop
-// (@ouiouiprints). Regenerate with the scraper pipeline; do not edit by hand.
+// OuiOui Prints — book catalogue generated from the live Depop shop.
+// Regenerate with tools/; do not edit by hand.
 const BOOKS = [
  {
   "id": 805947906,

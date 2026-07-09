@@ -152,13 +152,15 @@
     var make = state.mode === "grid" ? cardFor : rowFor;
     items.forEach(function (b) { target.appendChild(make(b)); });
 
-    // "Displaying ALL by COVER in GRID" line
-    var filterLabel = "ALL";
-    if (state.types.length === 1) filterLabel = state.types[0].toUpperCase();
-    else if (state.types.length || state.topics.length) filterLabel = "REFINED";
+    // meta bar: count + active filter + mode
+    var filterLabel = "All";
+    if (state.types.length === 1) filterLabel = state.types[0];
+    else if (state.types.length || state.topics.length) filterLabel = "Refined";
     document.getElementById("disp-filter").textContent = filterLabel;
-    document.getElementById("disp-mode").textContent = state.mode.toUpperCase();
+    document.getElementById("disp-mode").textContent = state.mode === "grid" ? "Grid" : "List";
 
+    var cnt = document.getElementById("disp-count");
+    if (cnt) cnt.textContent = items.length + (items.length === 1 ? " title" : " titles");
     var n = document.getElementById("refine-count-n");
     if (n) n.textContent = "SHOWING " + items.length + " OF " + BOOKS.length;
   }

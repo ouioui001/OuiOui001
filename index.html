@@ -4,24 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OuiOui Prints — Fashion &amp; Art Publications</title>
-  <meta name="description" content="OuiOui Prints — independent archive of rare fashion and art books, magazines, catalogs and lookbooks. Yohji Yamamoto, Margiela, Comme des Garçons, Yoshitomo Nara and more. Sold via Depop.">
+  <meta name="description" content="OuiOui Prints — independent archive of rare fashion and art books, magazines, catalogs and lookbooks. Yohji Yamamoto, Margiela, Comme des Garçons, Yoshitomo Nara and more.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2300e100'/></svg>">
 </head>
 <body>
 
-  <div id="intro" aria-hidden="true"><span>OUIOUI&nbsp;PRINTS</span></div>
-
-  <div class="edge-tabs">
-    <button id="menu-tab" class="edge-tab edge-tab--menu" aria-controls="menu-overlay" aria-expanded="false">MENU</button>
-    <button id="refine-tab" class="edge-tab edge-tab--refine" aria-controls="refine-panel" aria-expanded="false">REFINE</button>
-  </div>
+  <div id="intro" aria-hidden="true"><span>OuiOui Prints</span></div>
 
   <header class="topbar">
+    <div class="nav-cluster">
+      <button id="menu-tab" class="navlink" aria-controls="menu-overlay" aria-expanded="false">Menu</button>
+      <button id="refine-tab" class="navlink" aria-controls="refine-panel" aria-expanded="false">Refine</button>
+    </div>
     <a class="brand" href="index.html">OuiOui Prints</a>
-    <p class="displaying">Displaying <b id="disp-filter">ALL</b> by <b>COVER</b> in <b id="disp-mode">GRID</b></p>
-    <a class="topbar-action" href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">DEPOP&nbsp;↗</a>
+    <div class="nav-cluster nav-cluster--right">
+      <button class="navlink" data-cart-tab>Stack (0)</button>
+    </div>
   </header>
+  <div class="meta">
+    <span id="disp-count">217 titles</span>
+    <span class="meta-state"><b id="disp-filter">All</b> · <b id="disp-mode">Grid</b></span>
+  </div>
 
   <main>
     <div id="grid" class="grid" aria-live="polite"></div>
@@ -32,7 +36,7 @@
   <footer class="site-footer">
     <span>© 2026 OUIOUI PRINTS</span>
     <span>RARE FASHION &amp; ART PUBLICATIONS</span>
-    <a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">@OUIOUIPRINTS ON DEPOP ↗</a>
+    <span>AUTHENTIC · SHIPS WORLDWIDE</span>
   </footer>
 
   <nav id="menu-overlay" class="menu-overlay" hidden>
@@ -42,13 +46,12 @@
       <li><a href="index.html?type=Books" data-type="Books">BOOKS <sup id="count-books"></sup></a></li>
       <li><a href="index.html?type=Magazines" data-type="Magazines">MAGAZINES <sup id="count-mags"></sup></a></li>
       <li><a href="index.html?type=Catalogs" data-type="Catalogs">CATALOGS <sup id="count-cats"></sup></a></li>
-      <li><a href="https://www.depop.com/ouiouiprints/" target="_blank" rel="noopener">DEPOP ↗</a></li>
+      <li><a href="#" data-cart-tab>STACK</a></li>
     </ul>
     <p class="menu-about">
       OUIOUI PRINTS IS AN INDEPENDENT ARCHIVE OF RARE FASHION AND ART
       PUBLICATIONS — JAPANESE MAGAZINES, DESIGNER LOOKBOOKS, EXHIBITION
-      CATALOGS AND ART BOOKS. EVERY ITEM IS AUTHENTIC AND SHIPS WORLDWIDE
-      VIA OUR DEPOP SHOP.
+      CATALOGS AND ART BOOKS. EVERY ITEM IS AUTHENTIC AND SHIPS WORLDWIDE.
     </p>
   </nav>
 
@@ -85,6 +88,7 @@
 
   <script src="data/books.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/shop.js"></script>
 </body>
 </html>

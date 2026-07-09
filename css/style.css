@@ -1,0 +1,230 @@
+/* OuiOui001 — catalogue & archive
+   Minimal white/black editorial system. Mobile-first. */
+
+:root {
+  --ink: #111111;
+  --paper: #ffffff;
+  --muted: #8a8a8a;
+  --rule: #e5e5e5;
+  --max: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+/* ---------- image protection ----------
+   Blocks drag-out and iOS long-press save sheet.
+   contextmenu / dragstart are also blocked in js/main.js. */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- intro animation ---------- */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s ease;
+}
+#intro.done { opacity: 0; pointer-events: none; }
+#intro svg { width: min(72vw, 420px); height: auto; }
+#intro .stroke {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: draw 2.2s ease forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  #intro { display: none; }
+}
+
+/* ---------- header / nav ---------- */
+header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 20px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+}
+nav { display: flex; gap: 22px; }
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+}
+nav a:hover, nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.page-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  margin: 6px 0 26px;
+  color: var(--muted);
+}
+
+/* ---------- catalogue grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+}
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 26px; }
+}
+.card { text-decoration: none; color: var(--ink); }
+.card figure { aspect-ratio: 3 / 4; overflow: hidden; background: #f4f4f4; }
+.card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.card:hover img { transform: scale(1.03); }
+.card figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.card .sub { color: var(--muted); font-size: 10px; letter-spacing: 0.12em; margin-top: 2px; }
+
+/* ---------- magazine gallery / archive ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+}
+@media (min-width: 640px) {
+  .gallery { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px; }
+}
+.gallery button {
+  border: 0;
+  padding: 0;
+  background: #f4f4f4;
+  cursor: zoom-in;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+.gallery img { width: 100%; height: 100%; object-fit: cover; }
+
+.magazine-head { margin-bottom: 26px; }
+.magazine-head h1 { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; }
+.magazine-head p { color: var(--muted); font-size: 12px; letter-spacing: 0.1em; margin-top: 4px; }
+
+/* ---------- lightbox ---------- */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.97);
+  z-index: 900;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+#lightbox.open { display: flex; }
+#lightbox .stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+#lightbox img {
+  max-width: 92vw;
+  max-height: 84vh;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+#lightbox img.zoomed { cursor: zoom-out; }
+#lightbox .lb-btn {
+  position: absolute;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 14px;
+  z-index: 2;
+}
+#lb-close { top: 10px; right: 12px; }
+#lb-prev { left: 4px; top: 50%; transform: translateY(-50%); }
+#lb-next { right: 4px; top: 50%; transform: translateY(-50%); }
+#lb-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- about / footer ---------- */
+.prose { max-width: 560px; }
+.prose p { margin-bottom: 14px; }
+
+footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: space-between;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--ink); }

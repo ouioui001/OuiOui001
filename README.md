@@ -40,13 +40,29 @@ build/
 - **Image protection** — right-click save, drag-out, and long-press save are
   blocked on all images.
 
-## Regenerating
+## Adding new scans / updating content
 
-Edit `build/content.json` (or re-export it from Sanity) and run:
+Content lives in the OuiOui001 Sanity dataset (same CMS as before). To pull the
+latest posts, galleries, and links and regenerate every page:
+
+```bash
+python3 build/sync.py     # fetch fresh content.json + rebuild the site
+```
+
+Then commit and push — GitHub Pages redeploys automatically.
+
+To rebuild without re-fetching (e.g. after editing templates or
+`build/content.json` by hand):
 
 ```bash
 python3 build/build.py
 ```
+
+## SEO
+
+The generator writes per-page canonical URLs, Open Graph / Twitter cards
+(each book page previews with its cover), schema.org JSON-LD, plus
+`sitemap.xml` and `robots.txt` for `https://www.ouioui001.com`.
 
 ## Visitor analytics
 

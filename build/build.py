@@ -87,6 +87,7 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
         '<meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
         "<title>{title}</title>"
+        '<meta name="google-site-verification" content="_3Nf6DqwwXZ7L5BF-RpeF6y-JDrfqMpQUoZ85KKGul0">'
         '<meta name="description" content="{desc}">'
         '<link rel="canonical" href="{canonical}">'
         '<meta name="apple-mobile-web-app-capable" content="yes">'

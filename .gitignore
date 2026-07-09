@@ -1,0 +1,6 @@
+# Generated preview bundle (self-contained artifact, rebuilt on demand)
+preview/
+
+# Local sync scratch
+node_modules/
+*.tmp

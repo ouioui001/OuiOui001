@@ -113,11 +113,14 @@ main { width: 100%; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .inv-item {
   line-height: 0.9;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
+  max-width: 100%;
 }
 @media (min-width: 1024px) {
   .inv-list.dimmable:hover .inv-item { opacity: 0.15; }
@@ -125,21 +128,20 @@ main { width: 100%; }
   .inv-item { transition: opacity 0.25s var(--ease-out-quart); margin-bottom: 0; }
 }
 
+/* Mobile mirrors the desktop list: one title per line, scaled to the
+   viewport so most titles fit; extra-long ones clip, as on desktop. */
 .inv-link {
   display: inline-block;
-  font-size: 2.5rem;
-  line-height: 0.85;
+  font-size: clamp(1rem, 4.5vw, 2.5rem);
+  line-height: 0.9;
+  white-space: nowrap;
   position: relative;
 }
-@media (min-width: 1024px) { .inv-link { font-size: 4vw; line-height: 0.77; } }
-
-.inv-more {
-  display: block;
-  font-size: 0.95rem;
-  line-height: 1;
-  opacity: 0.55;
-  margin-bottom: 0.15rem;
+@media (min-width: 1024px) {
+  .inv-link { font-size: 4vw; line-height: 0.77; white-space: normal; }
 }
+
+.inv-more { display: none; }
 @media (min-width: 1024px) {
   .inv-more {
     display: inline-block;
@@ -186,7 +188,7 @@ main { width: 100%; }
   }
 }
 .book-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 0.85;
   margin: 0 0 1rem 0;
   font-weight: normal;
@@ -194,8 +196,8 @@ main { width: 100%; }
 @media (min-width: 1024px) { .book-title { font-size: 4vw; margin-bottom: 0.15em; line-height: 0.8; } }
 
 .book-desc {
-  font-size: 1.875rem;
-  line-height: 0.9;
+  font-size: 1.5rem;
+  line-height: 0.95;
   margin: 0;
   max-width: 40ch;
 }

@@ -26,7 +26,7 @@
     var c = read(), t = 0;
     Object.keys(c).forEach(function (k) {
       var b = bookById(parseInt(k, 10));
-      if (b) t += parseFloat(b.price) * c[k];
+      if (b && b.price) t += parseFloat(b.price) * c[k];
     });
     return t;
   }
@@ -89,7 +89,7 @@
         '<img src="' + b.cover + '" alt="">' +
         '<div class="cart-line-main">' +
           '<span class="cart-line-t">' + b.title + '</span>' +
-          '<span class="cart-line-p">' + formatPrice(b.price) + ' USD</span>' +
+          '<span class="cart-line-p">' + priceLabel(b) + '</span>' +
         '</div>' +
         '<div class="cart-qty">' +
           '<button data-dec="' + k + '">−</button>' +

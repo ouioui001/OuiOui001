@@ -85,11 +85,12 @@
       if (state.topics.length && !b.topics.some(function (t) { return state.topics.indexOf(t) !== -1; })) return false;
       return true;
     });
+    function num(x) { return x.price ? parseFloat(x.price) : Infinity; }
     var sorters = {
       "new": function (a, b) { return b.id - a.id; },
       "old": function (a, b) { return a.id - b.id; },
-      "price-asc": function (a, b) { return parseFloat(a.price) - parseFloat(b.price); },
-      "price-desc": function (a, b) { return parseFloat(b.price) - parseFloat(a.price); },
+      "price-asc": function (a, b) { return num(a) - num(b); },
+      "price-desc": function (a, b) { return (b.price ? parseFloat(b.price) : -Infinity) - (a.price ? parseFloat(a.price) : -Infinity); },
       "az": function (a, b) { return a.title.localeCompare(b.title); }
     };
     return items.sort(sorters[state.sort]);
@@ -111,7 +112,7 @@
     t.textContent = b.title;
     var p = document.createElement("div");
     p.className = "p";
-    p.innerHTML = formatPrice(b.price) + ' <span class="cur">USD</span>';
+    p.innerHTML = priceLabel(b, true);
     a.appendChild(fig);
     a.appendChild(t);
     a.appendChild(p);
@@ -128,7 +129,7 @@
     k.className = "lk";
     k.textContent = b.kind;
     var p = document.createElement("span");
-    p.textContent = formatPrice(b.price) + " USD";
+    p.textContent = priceLabel(b);
     var s = document.createElement("span");
     s.className = "ls";
     s.textContent = "IN STOCK";

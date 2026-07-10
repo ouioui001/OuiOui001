@@ -14,7 +14,7 @@
   document.getElementById("p-title").textContent = book.title;
 
   var priceEl = document.getElementById("p-price");
-  priceEl.textContent = formatPrice(book.price) + " USD";
+  priceEl.textContent = priceLabel(book);
   if (book.reduced && book.originalPrice) {
     var was = document.createElement("span");
     was.className = "was";

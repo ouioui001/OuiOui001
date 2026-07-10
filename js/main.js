@@ -67,3 +67,9 @@ function formatPrice(amount) {
   var s = n % 1 === 0 ? String(n) : n.toFixed(2);
   return "$" + s;
 }
+
+// Price line for a book; some items are price-on-request.
+function priceLabel(book, withCur) {
+  if (!book.price) return "PRICE ON REQUEST";
+  return formatPrice(book.price) + (withCur ? ' <span class="cur">USD</span>' : " USD");
+}

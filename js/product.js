@@ -39,9 +39,20 @@
     n.className = "ph-num";
     n.textContent = i + 1;
     img.onerror = function () { img.remove(); n.remove(); };
+    // tap a photo to enlarge / zoom (fullscreen lightbox)
+    img.addEventListener("click", function () {
+      var imgs = Array.prototype.slice.call(gallery.querySelectorAll("img"));
+      Lightbox.open(imgs.map(function (m) { return m.src; }), imgs.indexOf(img));
+    });
     gallery.appendChild(img);
     gallery.appendChild(n);
   });
+  if (sources.length) {
+    var hint = document.createElement("p");
+    hint.className = "gallery-hint";
+    hint.textContent = "Tap photo to enlarge";
+    gallery.insertAdjacentElement("afterend", hint);
+  }
 
   // ---------- spec panel ----------
   var specs = [

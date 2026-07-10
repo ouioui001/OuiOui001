@@ -6,13 +6,13 @@ book/magazine/catalog listings (Depop category 27, minus posters),
 removes the photo background so each cover is just the book, prunes
 covers for delisted items, and regenerates data/books.js.
 
-Background removal is a three-stage cascade, best result wins:
+Background removal is a two-stage cascade, best result wins:
   1. ML segmentation (rembg / u2net) — handles books on any background.
   2. Border-colour key — for the common case of a light, uniform backdrop.
-  3. Keep the tidily-trimmed photo — last resort, so a cover is never
-     destroyed by an over-aggressive cutout.
-The chosen result is composited onto the site's paper colour so every
-cover sits seamlessly on the page.
+A cutout is only accepted when it is a filled, roughly book-shaped
+rectangle. Listings where neither stage produces a clean cutout are
+EXCLUDED from the catalogue — the site only shows covers that sit
+perfectly on the page. The result is composited onto the paper colour.
 
 Usage: python3 tools/build_data.py <api.json>
 Requires: pillow, numpy, scipy, rembg (optional — degrades to trim-only).
@@ -113,7 +113,7 @@ def key_cutout(im):
         arr[:, 0:6].reshape(-1, 3), arr[:, -6:].reshape(-1, 3),
     ])
     bg = np.median(border, axis=0)
-    if bg.mean() < 165 or border.std(axis=0).mean() > 34:   # only clean, light backdrops
+    if bg.mean() < 165 or border.std(axis=0).mean() > 36:   # only clean, light backdrops
         return None
     m = _clean_mask(np.abs(arr - bg).sum(axis=2) > 42)
     if m is None or not _accept(m, arr.shape[0] * arr.shape[1]):
@@ -121,29 +121,17 @@ def key_cutout(im):
     return _to_rgba(im, m)
 
 
-def trim(im):
-    """Crop to the content bounding box; no transparency (last resort)."""
-    arr = np.asarray(im.convert("RGB"), dtype=np.int16)
-    h, w, _ = arr.shape
-    border = np.concatenate([arr[0:6].reshape(-1, 3), arr[-6:].reshape(-1, 3),
-                             arr[:, 0:6].reshape(-1, 3), arr[:, -6:].reshape(-1, 3)])
-    bg = np.median(border, axis=0)
-    ys, xs = np.where(np.abs(arr - bg).sum(axis=2) > 48)
-    if len(ys) == 0:
-        return im.convert("RGBA")
-    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
-    if (y1 - y0) * (x1 - x0) < 0.20 * h * w:
-        return im.convert("RGBA")
-    p = int(max(h, w) * 0.04)
-    return im.convert("RGBA").crop((max(0, x0 - p), max(0, y0 - p), min(w, x1 + p), min(h, y1 + p)))
-
-
 def make_cover(src_path):
+    """Return the finished cover, or None when no clean cutout is possible.
+    Listings without a clean cutout are excluded from the catalogue so the
+    site only shows covers that sit perfectly on the page."""
     im = Image.open(src_path)
-    out = ml_cutout(im) or key_cutout(im) or trim(im)
+    out = ml_cutout(im) or key_cutout(im)
+    if out is None:
+        return None
     bg = Image.new("RGBA", out.size, PAPER + (255,))
     im2 = Image.alpha_composite(bg, out).convert("RGB")
-    im2.thumbnail((900, 900), Image.LANCZOS)
+    im2.thumbnail((1100, 1100), Image.LANCZOS)
     return im2
 
 # ---------- catalogue ----------
@@ -184,16 +172,33 @@ def price_of(b):
             p["original_price"]["price_breakdown"]["price"]["amount"])
 
 def process(b):
+    """Generate the cover if new. Returns True when the listing has a clean
+    cover (an existing file counts — it was accepted on a previous run)."""
     out = os.path.join(COVERS, f"{b['id']}.jpg")
-    if not os.path.exists(out):
-        src = b["preview"].get("960") or b["preview"]["640"]
-        tmp = out + ".src"
-        urllib.request.urlretrieve(src, tmp)
-        make_cover(tmp).save(out, "JPEG", quality=86, optimize=True)
-        os.remove(tmp)
+    if os.path.exists(out):
+        return True
+    src = b["preview"].get("1280") or b["preview"].get("960") or b["preview"]["640"]
+    tmp = out + ".src"
+    urllib.request.urlretrieve(src, tmp)
+    cover = make_cover(tmp)
+    os.remove(tmp)
+    if cover is None:
+        return False
+    cover.save(out, "JPEG", quality=92, optimize=True)
+    return True
+
+# ML inference isn't thread-safe across the shared session; keep cover
+# generation sequential for stability. Listings without a clean cutout
+# are skipped entirely.
+accepted = []
+for b in books:
+    if process(b):
+        accepted.append(b)
+    else:
+        print("skipped (no clean cutout):", b["description"].split("\n")[0][:60])
 
 records = []
-for b in books:
+for b in accepted:
     lines = [l.strip() for l in b["description"].split("\n")]
     title = re.sub(r"\s+", " ", lines[0]).strip().strip("-–— ")
     tags = " ".join(l for l in lines[1:] if l.startswith("#"))
@@ -210,18 +215,14 @@ for b in books:
         "details": [l for l in lines[1:] if l and not l.startswith("#")],
     })
 
-# ML inference isn't thread-safe across the shared session; download in
-# parallel is fine but keep cover generation sequential for stability.
-for b in books:
-    process(b)
-
-keep = {f"{b['id']}.jpg" for b in books}
+keep = {f"{b['id']}.jpg" for b in accepted}
 for f in os.listdir(COVERS):
     if f not in keep and (f.endswith(".jpg") or f.endswith(".png")):
         os.remove(os.path.join(COVERS, f))
         print("pruned", f)
 
 js = ("// OuiOui Prints — book catalogue generated from the live Depop shop.\n"
+      "// Only listings with a clean background-removed cover are included.\n"
       "// Regenerate with tools/; do not edit by hand.\n"
       "const BOOKS = " + json.dumps(records, ensure_ascii=False, indent=1) + ";\n")
 with open(os.path.join(REPO, "data", "books.js"), "w") as f:

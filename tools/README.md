@@ -28,12 +28,11 @@ Each cover runs through a best-result-wins cascade:
    networks).
 2. **Border-colour key** — for the common case of a light, uniform
    backdrop, removes it by colour distance from the frame edge.
-3. **Trim** — if both cutouts look unsafe (too much or too little
-   removed), the tidily-cropped photo is kept so a cover is never
-   destroyed.
 
-The chosen result is composited onto the site's paper colour (#fbfaf7)
-so every cover sits seamlessly on the page. If `rembg` isn't installed
-the build still runs, using stages 2–3 only.
+A cutout is only accepted when it forms a filled, book-shaped rectangle
+(this rejects the failure mode where segmentation lifts the person off a
+full-bleed cover). **Listings without a clean cutout are excluded from
+the catalogue** so the site stays clean and presentable. Covers are cut
+from the 1280px source and saved at quality 92.
 
 Commit and push the result if `git status` shows changes.

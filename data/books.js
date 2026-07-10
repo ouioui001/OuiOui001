@@ -1,4 +1,5 @@
 // OuiOui Prints — book catalogue generated from the live Depop shop.
+// Only listings with a clean background-removed cover are included.
 // Regenerate with tools/; do not edit by hand.
 const BOOKS = [
  {
@@ -142,76 +143,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 805596040,
-  "title": "Japanese Art Book rare Exhibition Catalog Book",
-  "kind": "Catalogs",
-  "topics": [
-   "Art"
-  ],
-  "price": "25.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipfints-japanese-art-book-rare-exhibition-fd85/",
-  "cover": "assets/covers/805596040.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4084237513_8308f293740345fd8bb1d328ffb78654/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4084234281_f57b778f1a5f4b288ae83cd5a80b7bcd/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4084233586_4e188b0c053a48a7b510966963fad1e7/P7.jpg"
-  ],
-  "details": [
-   "* art book/catalog with impressionistic cover painting of a street fountain and flowers. Features high-quality reproductions and exhibition content from the gallery.",
-   "Perfect for art collectors, painting enthusiasts, & Japanese gallery publication fans.",
-   "Excellent condition"
-  ]
- },
- {
-  "id": 805592779,
-  "title": "Rare Japanese Art Book Exhibition Catalog Book",
-  "kind": "Catalogs",
-  "topics": [
-   "Art"
-  ],
-  "price": "25.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprixts-rain-island-castle-japanese-9406/",
-  "cover": "assets/covers/805592779.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4084220748_805607cfc7104e97ac9956601d4b9542/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4084219906_00259590b60b4ae299837a48cff53ccb/P7.jpg"
-  ],
-  "details": [
-   "* art book/catalog with impressionistic cover painting of a street fountain and flowers. Features high-quality reproductions and exhibition content from the gallery.",
-   "Perfect for art collectors, painting enthusiasts, & Japanese gallery publication fans.",
-   "Excellent condition"
-  ]
- },
- {
-  "id": 803209000,
-  "title": "Rain Island & Castle Japanese Art Book Hangado Edition 151 Exhibition Catalog Book",
-  "kind": "Catalogs",
-  "topics": [
-   "Art"
-  ],
-  "price": "25.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiomiprints-rain-island-castle-japanese-f0ba/",
-  "cover": "assets/covers/803209000.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4070772370_b22b55ce01d2448e92881d076f5fb984/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4070771078_ce0946beaab14cdc9a671196b87b53d7/P7.jpg"
-  ],
-  "details": [
-   "* art book/catalog with impressionistic cover painting of a street fountain and flowers. Features high-quality reproductions and exhibition content from the gallery.",
-   "Perfect for art collectors, painting enthusiasts, & Japanese gallery publication fans.",
-   "Excellent condition"
-  ]
- },
- {
   "id": 803200920,
   "title": "Life in Art Vol.1 Art Gallery Eizendo Exhibition Catalog Book",
   "kind": "Catalogs",
@@ -233,120 +164,6 @@ const BOOKS = [
    "* art book/catalog with impressionistic cover painting of a street fountain and flowers. Features high-quality reproductions and exhibition content from the gallery.",
    "Perfect for art collectors, painting enthusiasts, & Japanese gallery publication fans.",
    "Excellent condition"
-  ]
- },
- {
-  "id": 803035134,
-  "title": "Interview Magazine Spring 2019 Issue Celine Hedi Slimane",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "31.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouimuiprints-interview-magazine-spring-2019-issue-ac2f/",
-  "cover": "assets/covers/803035134.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4069828506_12aa64461fce4df9b9d593691c19ac44/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069807353_fce81e47f1e24ef6b3ca2e41ffb78178/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069807821_6202d6f0f1b4485799b07c9c3fec77ba/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069807291_a9d547648d854daf837cf9cb3a44a23c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069806381_e929c778122140e1a06378b73a8b677d/P7.jpg"
-  ],
-  "details": [
-   "Used condition  (damaged on the back as shown in photos)"
-  ]
- },
- {
-  "id": 803023364,
-  "title": "Interview Magazine Spring 2020 Issue Selena Gomez cover",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "29.99",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou2ouiprints-interview-magazine-spring-2020-issue-db9e/",
-  "cover": "assets/covers/803023364.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4069767487_6e54573e0f52430f8b549fed4aebf3e5/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069751144_36b964c9c43d4d60bc96f0d74a292aed/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069752503_13c1d349891442438726dbe202bcd012/P7.jpg"
-  ],
-  "details": [
-   "Used condition"
-  ]
- },
- {
-  "id": 803017439,
-  "title": "YOHJI YAMAMOTO Ragne Kikas",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "42.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprwnts-yohji-yamamoto-ragne-kikas-2019-9fc7/",
-  "cover": "assets/covers/803017439.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4069721072_6b88f76312424289ac78c2f0201da4ef/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069720890_fdbf0c1cdb7f4ddabc298fd5ae52d45c/P7.jpg"
-  ],
-  "details": [
-   "2019 Spring Summer oversized catalog look Book",
-   "Mint condition"
-  ]
- },
- {
-  "id": 803010201,
-  "title": "YOHJI YAMAMOTO POUR HOMME",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "52.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouio8iprints-yohji-yamamoto-pour-homme-2026-cc22/",
-  "cover": "assets/covers/803010201.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4069693031_fd7b7746e89c4c15bac7a20b6bc544ab/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069686142_ef5d3ba044e0475495d458d7bf8f49f8/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069684895_a95b8b7b9e2b475289421b2577193052/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069686268_b3fe826b89ef42329629545ba1875b73/P7.jpg"
-  ],
-  "details": [
-   "2026 Spring Summer PHOTOGRAPHY by TAKAY STYLING by TSUYOSHI NOGUCHI (Stic-lo) oversized catalog look Book",
-   "Mint condition"
-  ]
- },
- {
-  "id": 803003395,
-  "title": "GroundY yohji yamamoto spring/Summer 2026 look book catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui9rints-groundy-yohji-yamamoto-springsummer-2026-a26b/",
-  "cover": "assets/covers/803003395.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4069655276_ce8f85eb5fe74efd872f21871228644b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069655275_7a1e1969f0bb41f0a9dc4623b0f2973b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4069654392_f714511d81e84dfaad4a15809ef76042/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
   ]
  },
  {
@@ -410,30 +227,6 @@ const BOOKS = [
   ],
   "details": [
    "- Good condition"
-  ]
- },
- {
-  "id": 801961130,
-  "title": "Martin Margiela at Kudan House 2026 Exhibition Catalog Book",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion",
-   "Art"
-  ],
-  "price": "299.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipr0nts-martin-margiela-at-kudan-house-7ed3/",
-  "cover": "assets/covers/801961130.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/4063769269_53e69dcb35d7474cbffb0b7dc2bd3677/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4063744366_2977f661066f4457a7e973dbfc3e0f32/P7.jpg"
-  ],
-  "details": [
-   "Documents the special collaboration/exhibition held at Kudan House in Tokyo (April 11 – April 29, 2026). High-quality photography and design typical of Margiela projects. 50ml edition reference.",
-   "Highly sought-after by Margiela collectors, fashion archivists, & Margiela fans",
-   "Brand new/sealed condition."
   ]
  },
  {
@@ -506,50 +299,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 800561397,
-  "title": "Chanel coco coach FALL-WINTER 2014 / 15 Lookbook catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprifts-chanel-coco-coach-fall-winter-2014-790e/",
-  "cover": "assets/covers/800561397.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4055957964_038ab0bfcbcf4679bbe1684370e9c8c2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055957965_1203b66e99014307b7c2cd8b3b4c517b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055955704_c6eedb19c83448298fadd820ce30ef0f/P7.jpg"
-  ],
-  "details": [
-   "PHOTOS BY KARL LAGERFELD",
-   "Mint condition"
-  ]
- },
- {
-  "id": 800557902,
-  "title": "Chanel mini Lookbook catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "33.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioyiprints-chanel-mini-lookbook-catalog-mint-cced/",
-  "cover": "assets/covers/800557902.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4055949802_598c7a726be142c38efafe800e498e0c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055939091_fc4411ce951a44dcb82f3b4df9d96ecf/P7.jpg"
-  ],
-  "details": [
-   "Mint condition"
-  ]
- },
- {
   "id": 800547890,
   "title": "Future Beauty: The Tradition of Innovation in Japanese Fashion Rei kawakubo comme des garçons , Yohji Yamamoto",
   "kind": "Books",
@@ -571,51 +320,6 @@ const BOOKS = [
   ],
   "details": [
    "* Decent condition"
-  ]
- },
- {
-  "id": 800539319,
-  "title": "Hermès LES HEURES HERMES collection book",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiou3prints-hermes-les-heures-hermes-collection-e861/",
-  "cover": "assets/covers/800539319.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4055845497_e87d3a04422f4fd8af3537967581c59d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055841606_528dcffaa1564b7f80900cdc8b07d84e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055841616_6d495a6ddb4e484084477061a2ff441a/P7.jpg"
-  ],
-  "details": [
-   "- Mint condition"
-  ]
- },
- {
-  "id": 800536913,
-  "title": "HUGE Magazine “Off Balanced Style” A/W fashion special Maison Mihara YASUHIRO & other",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinbs-huge-magazine-off-balanced-style-8637/",
-  "cover": "assets/covers/800536913.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4055831856_12b6ed156975465389527d08f01bc8c3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055827129_fcc95a6ad5654d9785a53cb60044cd80/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4055827132_b1d2440421fa424d87613cbe646b209d/P7.jpg"
-  ],
-  "details": [
-   "* Great 2000s Japanese magazine for rock, fashion, and art collectors.",
-   "* mint condition"
   ]
  },
  {
@@ -711,30 +415,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 799371959,
-  "title": "Yohji Yamamoto 2025 Spring/Summer oversized fashion book",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinws-yohji-yamamoto-2025-springsummer-oversized-80e2/",
-  "cover": "assets/covers/799371959.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4055735911_e9954f473fb340899eef5cf170fa7199/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4049225756_bc2bef9f60f84409bc678ec940848017/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4049225750_4171fde8d96e42a0831d478b833b9ee4/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4049225765_a86b72ed61274013bed71c8be9756ea0/P7.jpg"
-  ],
-  "details": [
-   "Good condition",
-   "PHOTOGRAPHY by TAKAY"
-  ]
- },
- {
   "id": 799014299,
   "title": "Céline blossom notebook catalog",
   "kind": "Catalogs",
@@ -754,32 +434,6 @@ const BOOKS = [
   ],
   "details": [
    "Good condition"
-  ]
- },
- {
-  "id": 798966212,
-  "title": "HUGE Magazine Hedi Slimane Dior Homme preview, Jimmy Hendrix cover, & more",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprintq-huge-magazine-hedi-slimane-dior-cb01/",
-  "cover": "assets/covers/798966212.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047309636_dc53e29da612463a97ea21735a459ae3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4047014776_76b4f2f4918c402f881b83d03c395a65/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4047014777_6b5c00ce5905404bb8b5b64a143886ef/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4047014778_3cead92761684712ad627ab6e5e7731e/P7.jpg"
-  ],
-  "details": [
-   "* No.017 August 2005 Rock & Art Special Japanese Fashion Magazine",
-   "* Great 2000s Japanese magazine for rock, fashion, and art collectors.",
-   "* Good condition"
   ]
  },
  {
@@ -806,149 +460,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 798836361,
-  "title": "Relax magazine April 2005 Hedi Slimane shoot with Peter Doherty",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "49.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou1ouiprints-relax-magazine-april-2005-hedi-50a5/",
-  "cover": "assets/covers/798836361.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047311958_b6b4cdae14974492a0bc506c4d29f0b0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4046324369_6c99156323a04cc8923a77411514178a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4046324370_534323a9de1d47c0b09207bbe89ed0c1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4046324378_9051c6710ac349b3a6b7bd916f8b2e82/P7.jpg"
-  ],
-  "details": [
-   "* Includes Beck-related content and creative music lifestyle features.",
-   "Great for music enthusiasts, & 2000s Japanese magazine fans.",
-   "* Good condition."
-  ]
- },
- {
-  "id": 798736866,
-  "title": "Popeye Magazine fashion special brands like, Prada , RAF Simon’s , & more (45+ brands)",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipribts-popeye-magazine-fashion-special-brands-eb1f/",
-  "cover": "assets/covers/798736866.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4045810776_4e75c93a4ca74b5d893fb6686d10e4bd/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045806442_acbcd04029d6427baf45518cddccfe86/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045806448_e3e2fba497034992a4c739eaaae8741b/P7.jpg"
-  ],
-  "details": [
-   "* Classic late 90s Japanese street fashion culture collectible.",
-   "* Good condition",
-   "* Vol.262 October 1997 Vanity Fair Eternal Punk, Classic 90s Japanese fashion/culture magazine",
-   "* Good condition"
-  ]
- },
- {
-  "id": 798734112,
-  "title": "Popeye Magazine fashion special brands like, Helmut Lang, Comme des Garçons, & more (45+ brands)",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oniouiprints-popeye-magazine-fashion-special-brands-7f47/",
-  "cover": "assets/covers/798734112.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4045800868_801ea7a4de564148b29bdec37c789c25/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045764310_a11da8ded51244af9921febe07fbd390/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045764324_a93d8aef5ec246d39d18013aa187ae42/P7.jpg"
-  ],
-  "details": [
-   "* Classic late 90s Japanese street fashion culture collectible.",
-   "* Good condition",
-   "* Vol.262 October 1997 Vanity Fair Eternal Punk, Classic 90s Japanese fashion/culture magazine",
-   "* Good condition"
-  ]
- },
- {
-  "id": 798711115,
-  "title": "Studio Voice magazine Maison Martin Margiela comme des garçons Alexander McQueen, & more",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "59.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouivuiprints-studio-voice-magazine-maison-martin-3674/",
-  "cover": "assets/covers/798711115.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4045664426_3447b07fa4844e0c8911cf96c782bb9a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045663156_d3b229bda8874e14b2a37bd3bc209f9e/P7.jpg"
-  ],
-  "details": [
-   "* Vol.262 October 1997 Vanity Fair Eternal Punk, Classic 90s Japanese fashion/culture magazine",
-   "* Good condition"
-  ]
- },
- {
-  "id": 798708632,
-  "title": "Studio Voice magazine Yohji Yamamoto Helmut Lang, & more",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "59.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiquiprints-studio-voice-magazine-yohji-yamamoto-f315/",
-  "cover": "assets/covers/798708632.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047314038_b46727f6317d49c2a907a6aede158c46/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045634756_cef09a474ec54eaf81f92c7d4b68fee5/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4045634753_f48aac63394e4bee9e2a7ac6f0ee8aee/P7.jpg"
-  ],
-  "details": [
-   "* Vol.262 October 1997 Vanity Fair Eternal Punk, Classic 90s Japanese fashion/culture magazine",
-   "* Good condition"
-  ]
- },
- {
-  "id": 796787534,
-  "title": "Yves Saint Laurent Beauty OFFICIAL BOOK",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouimrints-yves-saint-laurent-beauty-official-496e/",
-  "cover": "assets/covers/796787534.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4034504595_2772deec7bf2473fadcf94781e02db7b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4034503177_188d74a9054f47028a8b5ca759ed0065/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4034503186_b32fd4e0a7de41ea8103bf16f1ff214b/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 796582418,
   "title": "Nara Yoshitomo Nara + Graf foil : A to Z images & Text of the Japanese artist's work",
   "kind": "Books",
@@ -969,182 +480,6 @@ const BOOKS = [
   "details": [
    "Good condition",
    "Language: English/Japanese text"
-  ]
- },
- {
-  "id": 796573007,
-  "title": "i-D Magazine Japan October",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinfs-i-d-magazine-japan-october-condition-9e72/",
-  "cover": "assets/covers/796573007.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4033355096_20cdba58c8b84b5a8401372356568f20/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4033341391_62cb1d82e2af4af9909db2862cafdc07/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4033341407_7b7787aa67114fafa8f564c8edf6262e/P7.jpg"
-  ],
-  "details": [
-   "Condition : Good condition",
-   "Language : Japanese.",
-   "Size : 30 x 23.2 x 1.2 cm"
-  ]
- },
- {
-  "id": 796566123,
-  "title": "Neon Genesis Evangelion Rei Ayanami YOU ARE (NOT) ALONE.",
-  "kind": "Books",
-  "topics": [
-   "Fashion",
-   "Anime & Manga"
-  ],
-  "price": "50.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou1ouiprints-neon-genesis-evangelion-rei-ayanami-2cad/",
-  "cover": "assets/covers/796566123.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4033301032_7bca12fc28ab49f0975bc92f3016e20e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4033302195_c772536d820d42f0adb5c47164e9356d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4033302785_f86b4ce33892457f80c661541cbdd790/P7.jpg"
-  ],
-  "details": [
-   "* Condition: Good condition, clean pages, solid spine.",
-   "* Special feature on Evangelion with exclusive content, with  interviews"
-  ]
- },
- {
-  "id": 796481675,
-  "title": "Cut Magazine Neon Genesis Evangelion Rei Ayanami Cover",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Anime & Manga"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprznts-cut-magazine-neon-genesis-evangelion-dee4/",
-  "cover": "assets/covers/796481675.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/4032841493_e81ad01444d540d39d2896454ecc3764/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/4032841478_bfe2c6a08251473485d5ca4f3ffe5412/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/4032829751_62005b8decf74e7995f2289dd87512a7/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/4032841479_a74eb1cc1f6d4b05b7a9d19d6d8825d9/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/4032829772_b9ccd92fa471422388775e02597cbc67/P7.jpg"
-  ],
-  "details": [
-   "* August 2009 No.251",
-   "* Condition: Good condition, clean pages, solid spine.",
-   "* Special feature on Evangelion with exclusive content, with  interviews, including Perfume, Emma Watson, & more.",
-   "Highly sought-after Evangelion collectible and Japanese music/culture magazine."
-  ]
- },
- {
-  "id": 796421632,
-  "title": "High Fashion Magazine Issue 4 1998 Yohji Yamamoto Comme des Garçons Sarah Moon & others",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "72.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinus-high-fashion-magazine-issue-4-9af4/",
-  "cover": "assets/covers/796421632.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4032537195_c75e658e8c424d008418642f85d556d5/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4032513123_429b01c1149c4b4e8fbfe25aa659ab21/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4032513131_f9e93591845e4576b137505788b0cad2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4032513140_aae3b7931a9d413a9cca3ecd6a60a74b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/4032513145_22094d333a774630b77f72d2fec39345/P7.jpg"
-  ],
-  "details": [
-   "* 1998 Spring/Summer Paris Haute Couture collections report.",
-   "Classic late 90s Japanese fashion magazine — perfect for Yohji fans, CdG collectors, and High Fashion archive enthusiasts",
-   "* Good condition."
-  ]
- },
- {
-  "id": 789713935,
-  "title": "Nara Yoshitomo Nara HIROSAKI art book images and Text of the Japanese artist work",
-  "kind": "Books",
-  "topics": [
-   "Art"
-  ],
-  "price": "52.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprivts-nara-yoshitomo-nara-hirosaki-art-e56a/",
-  "cover": "assets/covers/789713935.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3995302345_7d1230f6d4ac42a49157926313b20fd2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3995302354_d26a39aec12f44f7baa993022439c86b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3995302355_039ff8bf188d4d338d60b7b3e4960463/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3995302356_4ba0639b0fc947b2bcf96aec080dd66f/P7.jpg"
-  ],
-  "details": [
-   "Good condition",
-   "Language: Japanese text"
-  ]
- },
- {
-  "id": 789467694,
-  "title": "Nara Yoshitomo Nara Little Star Newsletter images & Text of the Japanese artist's work,",
-  "kind": "Books",
-  "topics": [
-   "Art"
-  ],
-  "price": "66.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouieuiprints-nara-yoshitomo-nara-little-star-b062/",
-  "cover": "assets/covers/789467694.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3994018650_a39e5802b55d426c8d3f5816b877c975/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3994018654_4f788874517d4524b39e53770afb192a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3994018668_c74b8fe1a7d044a49d5d20185e0a38bf/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3994018659_a7a71c6afc924e3c87678ec021fa183b/P7.jpg"
-  ],
-  "details": [
-   "Good condition",
-   "Language: Japanese text"
-  ]
- },
- {
-  "id": 789302070,
-  "title": "Nara Yoshitomo Nara: no war RINKO KAWAUCHI images & Text of the Japanese artist's work",
-  "kind": "Books",
-  "topics": [
-   "Art",
-   "Photography"
-  ],
-  "price": "60.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprgnts-nara-yoshitomo-nara-no-war-de14/",
-  "cover": "assets/covers/789302070.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3993165154_ca905cfd590745d8b91e9c479cfe217a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3993172091_847f35a245ea43fa86dda93745223382/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3993172093_12591297dc6f4e919198ce8e43aff109/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3993172095_d6fbd26b3f2f462d8d13752bcb53f36d/P7.jpg"
-  ],
-  "details": [
-   "Good condition",
-   "Language: Japanese text"
   ]
  },
  {
@@ -1196,52 +531,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 788714801,
-  "title": "Vogue Japan Magazine m supermodel Kate Moss on the cover in a striking sequin dress.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipr6nts-vogue-japan-magazine-m-supermodel-6c07/",
-  "cover": "assets/covers/788714801.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3989911036_d34b040a1f3f47a99512699629a9647d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3989911062_bc830140b5114bfcbe03e6afca6ade81/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3989911063_7b58bf7a00e44cb7833bab316e1e815d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3989911093_aa383c35bab849268e342b16fcaaaa1e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3989911080_9cd603735209428db93255ca2b005f58/P7.jpg"
-  ],
-  "details": [
-   "“Fashion’s Fantasy” special issue with dreamy autumn fashion, Disney villains couture, Hermès, Rei kawakubo Comme des Garçons, Dolce & Gabbana, & more. Includes Fashion’s Night Out 2012 & beauty awards.",
-   "excellent condition."
-  ]
- },
- {
-  "id": 787643798,
-  "title": "CHANEL MAGAZINE 2025 31 RUE CAMBON COLLECTION Lookbook catalog",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "39.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouihuiprints-chanel-magazine-2025-31-rue-3a95/",
-  "cover": "assets/covers/787643798.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3983989807_eb859dd2ca974c91a28c70bcbc952e99/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3983989810_e23e06de550141329b1c201557befd2e/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 787327552,
   "title": "Chanel CRUISE 2025/26 COLLECTION Lookbook catalog",
   "kind": "Catalogs",
@@ -1287,82 +576,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 786720682,
-  "title": "High Fashion Magazine Paris Milan Mens Collections Relax comme des garçons / Ann Demeulemeester & others",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "69.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprints-high-fashion-magazine-paris-milan-c16c/",
-  "cover": "assets/covers/786720682.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3979047010_486e7ed8911d42459e803bd78465f195/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979047011_fd21903cc40945a9a3b15f946e215859/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979047015_2bd8b47a77a54bd1a06800f18b6130c6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979047017_7cc0a76d17e641bc9ac08b7bd974ae04/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979047020_b1fef657847b437094eef4754513bff6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979047031_53ef5ca025e440a8b0376a01d7533f25/P7.jpg"
-  ],
-  "details": [
-   "* Packed with designer collections, fashion stories, and 2000s style inspiration.",
-   "Great collectible for Japanese fashion magazine fans, menswear archivists, and 2000s High Fashion enthusiasts.",
-   "* Good condition."
-  ]
- },
- {
-  "id": 786719615,
-  "title": "High Fashion Magazine Paris Milan Mens Collections Relax Raf simons Redux / comme des garçons / Ann Demeulemeester & others",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "69.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprintl-high-fashion-magazine-paris-milan-bae1/",
-  "cover": "assets/covers/786719615.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3979041164_062dede838a34b5486bba567cfecfdbd/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979041168_c8ec3db8496e4d27a0ad1d0e5021b95c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3979041169_cb014c7b166d469a8952ab9052faa5b3/P7.jpg"
-  ],
-  "details": [
-   "* Packed with designer collections, fashion stories, and 2000s style inspiration.",
-   "Great collectible for Japanese fashion magazine fans, menswear archivists, and 2000s High Fashion enthusiasts.",
-   "* Good condition."
-  ]
- },
- {
-  "id": 786707746,
-  "title": "Fashion Lives Book Norma Kamali Calvin Klein Tom Ford Marc Jacobs Interviews",
-  "kind": "Books",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "48.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou3ouiprints-fashion-lives-book-norma-kamali-4054/",
-  "cover": "assets/covers/786707746.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3978971336_1b3e90d00a684b02bda06521b36afbed/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3978971358_0912209c060b44b184fe4cea7c5748d2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3978971353_947157846542442d8da9e5cb1cf0dfe2/P7.jpg"
-  ],
-  "details": [
-   "* compelling book of in-depth interviews with 19 legendary fashion icons.",
-   "Features Norma Kamali, Calvin Klein, Tommy Hilfiger, Donna Karan, Tom Ford, Michael Kors, Diane von Furstenberg, Marc Jacobs, Betsey Johnson, & more. Includes rare insights into New York Fashion Week & the business of American fashion.",
-   "Perfect for fashion history fans, designer collectors, and style archive enthusiasts. Excellent condition."
-  ]
- },
- {
   "id": 786672970,
   "title": "STUDIO VOICE Magazine Life in the Woods Japanese Design Magazine",
   "kind": "Magazines",
@@ -1387,47 +600,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 786233449,
-  "title": "YOHJI YAMAMOTO +Noir SPRING & SUMMER 2017 oversized Lookbook catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/owiouiprints-yohji-yamamoto-noir-spring-1fb5/",
-  "cover": "assets/covers/786233449.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3976230289_717eb146c65b4e4594a0af223d50cac8/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3976230279_4d2d41f17d2046be9357fa0a769f82c6/P7.jpg"
-  ],
-  "details": []
- },
- {
-  "id": 784459303,
-  "title": "SO-EN Magazine - Exciting fashion",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "42.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouigrints-so-en-magazine-exciting-fashion-be7e/",
-  "cover": "assets/covers/784459303.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3966659316_504eeb2783004b2fa672560f5365c7cd/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966659319_1f12d366c14845e8879b667977fd7e8e/P7.jpg"
-  ],
-  "details": [
-   "Designer interviews Issey miyake",
-   "* Good condition"
-  ]
- },
- {
   "id": 784454623,
   "title": "SO-EN fashion Magazine - jean paul gaultier / Martin Margiela",
   "kind": "Magazines",
@@ -1447,82 +619,6 @@ const BOOKS = [
   ],
   "details": [
    "Yasuhiro Mihara & Contemporary dance & costumes Pina Bauschx Yoji Yamamoto",
-   "* Good condition"
-  ]
- },
- {
-  "id": 784361937,
-  "title": "SO-EN Magazine - Exciting fashion designers Vivienne Westwoods",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "44.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouio7iprints-so-en-magazine-exciting-fashion-58ce/",
-  "cover": "assets/covers/784361937.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3966135114_5b0bcb902bf743f19d68fee0c825bff1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966135126_62c030a540f34dff88fa3e6a4cccf345/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966135127_744bc0bdacaf43908252c12df3f11fe4/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966135130_a07681a98c3340dc998d1c950eaa02fa/P7.jpg"
-  ],
-  "details": [
-   "Alexander McQueen / John Galliard & others Creation Paris's new idea",
-   "Designer interviews",
-   "* Good condition"
-  ]
- },
- {
-  "id": 784356485,
-  "title": "SO-EN Magazine - Exciting Japanese fashion designers Y's yohji yamamoto + Yoshiko Creation Paris's new idea",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "44.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ourouiprints-so-en-magazine-exciting-japanese-4bbd/",
-  "cover": "assets/covers/784356485.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3966103716_3febabcce4d4499a9a3615a9dc9e3963/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966103717_6ede0dc0f4154d5c9344c3470abf1a59/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966103718_b0116a4dad8f44a09225713713acb0d2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3966103723_b4ac36d625ce49d5828e28f8602cc168/P7.jpg"
-  ],
-  "details": [
-   "Designer interview & atelier interview",
-   "Spring/Summer 2007",
-   "* Good condition"
-  ]
- },
- {
-  "id": 783586241,
-  "title": "SO-EN Magazine - Exciting Japanese fashion designers interviews & topics",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "44.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprimts-so-en-magazine-exciting-japanese-1e69/",
-  "cover": "assets/covers/783586241.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3961856729_ab6f5976b2904d399ccaab570f008799/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3961856731_1e54119b0c504642a2d39e16803f9dcc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3961856738_be1f43e2ac814fdba2c25bfa095b7774/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3961856746_06c977cf7b9244349c98829fa47a6aa4/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3961856740_169d2f04494d46f6abd44afe39fbf90f/P7.jpg"
-  ],
-  "details": [
-   "Limi Feu / yohji Yamamoto / Dior & more",
-   "* for fashion magazine collectors, 2000s style archivists",
    "* Good condition"
   ]
  },
@@ -1553,31 +649,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 781707304,
-  "title": "Sotheby’s Warhol: The Artist as Icon Auction Catalogue book",
-  "kind": "Catalogs",
-  "topics": [
-   "Art"
-  ],
-  "price": "50.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinss-sothebys-warhol-the-artist-as-80e5/",
-  "cover": "assets/covers/781707304.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3951232304_9b62b1d16f164797bbb02a7e7913ab7c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3951232305_cb275c3fad474abf84b129ad0faf4c77/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3951232307_6c466de7924e4179a76e4ea3cf23ed8b/P7.jpg"
-  ],
-  "details": [
-   "* dedicated to Andy Warhol – “The Artist as Icon.”",
-   "* Features an iconic close-up black & white portrait of Warhol on the cover. High-quality auction catalog with important Warhol works from the May sales.",
-   "Perfect for Warhol fans, contemporary art collectors, auction enthusiasts, and pop art archive collectors.",
-   "* Good condition."
-  ]
- },
- {
   "id": 781702596,
   "title": "Jean-Michel Basquiat: Made in Japan Exhibition Hardcover Book",
   "kind": "Books",
@@ -1599,52 +670,6 @@ const BOOKS = [
    "* Beautifully designed book documenting Basquiat’s works shown in Japan. Clean minimalist cover with bold yellow typography.",
    "* Essential for Basquiat fans, contemporary art collectors, and Japanese exhibition archive enthusiasts",
    "* Excellent condition."
-  ]
- },
- {
-  "id": 781689321,
-  "title": "Kimono to Skirt by Mieko Suzuki - Fashion Book",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/o9iouiprints-kimono-to-skirt-by-mieko-cfb5/",
-  "cover": "assets/covers/781689321.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3951141715_fdafc85c5f104832a58effa419b7fac7/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3951141712_d4688aae063f48009f93dbeea1fd80f9/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3951141713_23af4e997b9a4488a8e4e9bcb4ca4db9/P7.jpg"
-  ],
-  "details": [
-   "photographed exploration of transforming traditional kimono into modern skirts and wearable fashion. Features a striking cover with a model in a dramatic black kimono-style skirt against a red background.",
-   "Perfect for Japanese fashion lovers, kimono fashion enthusiasts, designers, & textile art collectors",
-   "* Excellent condition"
-  ]
- },
- {
-  "id": 781482094,
-  "title": "Issey Miyake AUTUMN WINTER 2014 catalog lookbook",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprintz-issey-miyake-autumn-winter-2014-6a30/",
-  "cover": "assets/covers/781482094.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3950015214_7eb9add1578147faabac9a33ca3612f0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3950015218_6ee49a10847f4341af1dfae4c6623388/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3950015222_57d7fb7b260e45e19bb7f3ef58a5fa16/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
   ]
  },
  {
@@ -1672,29 +697,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 781469306,
-  "title": "rockin’on Magazine March 2003 - The Clash Special",
-  "kind": "Magazines",
-  "topics": [
-   "Music"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouikrints-rockinon-magazine-march-2003-5c0c/",
-  "cover": "assets/covers/781469306.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3938328812_294dc783bf1c4bfe881abc49dd3e8cb8/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3938328779_ca5e498820c64f498bb67da7b13041c1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3938328808_9032feaa51f4453fa39928f9680ce5e3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3938328773_655989225b2940b796b3b799a4693d80/P7.jpg"
-  ],
-  "details": [
-   "Perfect for punk fans, Clash collectors, and Japanese rock magazine archivists. Great condition."
-  ]
- },
- {
   "id": 779155089,
   "title": "ART SCENE From the Collection of The Museum of Modern Art, Shiga book - Rothko and Warhol to Kusama and Basquiat",
   "kind": "Books",
@@ -1714,56 +716,6 @@ const BOOKS = [
   ],
   "details": [
    "Good condition"
-  ]
- },
- {
-  "id": 778832723,
-  "title": "Dior hardcover look-book Autumn Winter 2018-2019 Collection",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouaprints-dior-hardcover-look-book-autumn-winter-eb5c/",
-  "cover": "assets/covers/778832723.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3935206137_ab8a4ed1283a4bc190b56d235af8b563/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3935206138_fd49a3bb69c84ebfb0db5790895caebe/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3935206139_33709a415c2449ed96fcc71a750f00de/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
-  "id": 775719389,
-  "title": "Them fashion Magazine love love love",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiquiprints-them-fashion-magazine-love-love-e1e6/",
-  "cover": "assets/covers/775719389.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3917945560_b0dc42f756674080baf2c95ad46fd82f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3917945571_f1695c4cd4d74ab782b3ebbff36fc000/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3917945570_b0789f8fe21c424d9caca2ae4bf3462f/P7.jpg"
-  ],
-  "details": [
-   "* Japanese fashion & culture magazine, outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-   "* Japanese/English text",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
   ]
  },
  {
@@ -1795,53 +747,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 775241406,
-  "title": "High Fashion Magazine Archives Special Maison Margiela",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "58.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprintv-high-fashion-magazine-october-2006-a399/",
-  "cover": "assets/covers/775241406.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3915126565_9bf023f4383243cc8a9a835193b8ceb6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3915126566_6f14994c961545289e8a401aa3c946ad/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3915126568_18073212c85c4bf58dcd6baff28496e9/P7.jpg"
-  ],
-  "details": [
-   "Junya Watanabe Comme des Garçons & other features",
-   "* October 2006",
-   "* Good condition"
-  ]
- },
- {
-  "id": 775233880,
-  "title": "NEIGHBORHOOD Magazine Vol.4 2007 S/S Special Edition",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "48.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinhs-neighborhood-magazine-vol4-2007-ss-596a/",
-  "cover": "assets/covers/775233880.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3915088890_5a7eb84669f04657ae100616989c3e0a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3915088889_f78edf5f9fcc40d99a48da9ff6147cbe/P7.jpg"
-  ],
-  "details": [
-   "“Ace of Spades – Drinking with Death” theme. Features the brand’s 2007 1st Collection complete catalogue & archives, plus interviews with Nobuhiko Kitamura, Tomoya Nagase, and more.",
-   "Highly sought-after by Japanese streetwear collectors, NEIGHBORHOOD fans, & #hypebeast archive heads.",
-   "* Great condition"
-  ]
- },
- {
   "id": 775136776,
   "title": "Jean-Michael Basquiat in downtown catalog",
   "kind": "Catalogs",
@@ -1862,31 +767,6 @@ const BOOKS = [
   ],
   "details": [
    "* Good condition for a used book. #artist #artworks #streetarts #jeanbasquiat #art"
-  ]
- },
- {
-  "id": 774656600,
-  "title": "Vogue Japan comme des garçons rei kawakubo “Form and Function” issue focusing on functional fashion, sustainable materials, & modern utility style.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "57.77",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/o0iouiprints-vogue-japan-comme-des-garcons-e5da/",
-  "cover": "assets/covers/774656600.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3911951647_f277de87aa414d578121cb51ed915cb9/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3911951652_0e554c3ad5c04a0792ae02fa48dc1061/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3911951656_39be992e869d45f3b42a7846d8b79620/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3911951659_5b9cba457d244cc1bdc7c7eba7e68a7c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3911951660_a84c2f0d747241c0890eb9cfb9602092/P7.jpg"
-  ],
-  "details": [
-   "* Strong 20th anniversary content & high-fashion editorials. Excellent for Vogue collectors & contemporary fashion fans.",
-   "* Great condition."
   ]
  },
  {
@@ -2008,53 +888,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 773817904,
-  "title": "MODE et MODE Vintage Magazine Paris Milano S/S COLLECTIONS",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouuouiprints-mode-et-mode-vintage-magazine-dfe4/",
-  "cover": "assets/covers/773817904.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3907100496_e3812d72d83248c69bbfe326b8f9555c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3907100498_3bf5b75fe8e64b4092f124ba9d56c8fc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3907100503_66d0b0236230473cbcb5507e8f8614a2/P7.jpg"
-  ],
-  "details": [
-   "* runway photos from JEAN PAUL GAULTIER, Thierrry Mugler, Jil Sander & more",
-   "* Good condition."
-  ]
- },
- {
-  "id": 773715724,
-  "title": "MODE et MODE Vintage Magazine PARIS",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinzs-mode-et-mode-vintage-magazine-2bc1/",
-  "cover": "assets/covers/773715724.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3906520717_e18b6c3edfc146a2a38a836041aa2e3a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3906520723_885619d87695462092a708dfafb3197f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3906520720_560bd704833f416b94f49f0f1f64ccf5/P7.jpg"
-  ],
-  "details": [
-   "Haute Couture COLLECTIONS",
-   "* runway photos for brands JEAN PAUL GAULTIER, Thierrry Mugler, GIORGIO ARMANI & more",
-   "* Good condition."
-  ]
- },
- {
   "id": 773711534,
   "title": "MODE et MODE Vintage Magazine PARIS MILANO COLLECTIONS SPECIAL",
   "kind": "Magazines",
@@ -2077,31 +910,6 @@ const BOOKS = [
   "details": [
    "S/S '90",
    "* runway photos for brands such as JEAN-PAUL GAULTIER, Thierrry Mugler, Dior & more",
-   "* Good condition."
-  ]
- },
- {
-  "id": 773706764,
-  "title": "MODE et MODE Vintage Magazine COLLECTION Italian Mode Special",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiqrints-mode-et-mode-vintage-magazine-0ab3/",
-  "cover": "assets/covers/773706764.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3906474755_1181df0a2ba3448bb02e112bf768f4c6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3906474763_724f71d0f37045ce9217d7861fde60ed/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3906474766_325a3d3cdcc94cdf8b5f190b3c063746/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3906476475_598d429b5aef4818addd66cf01727477/P7.jpg"
-  ],
-  "details": [
-   "Featuring designers such as Armani, JEAN-PAUL GAULTIER",
-   "* Rare collectible for Italian fashion fans, vintage magazine collectors, & archive lovers.",
    "* Good condition."
   ]
  },
@@ -2190,174 +998,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 771430640,
-  "title": "Them Magazine fashion journalism Japanese fashion & culture magazine, outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipriuts-them-magazine-fashion-journalism-japanese-a35e/",
-  "cover": "assets/covers/771430640.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3893291207_aa369671b6c0491d83587e4e9817197d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893291209_f383769d208e413e890c039a8306eadc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893291214_08376274abd8488ea897106f1d81542c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893291217_be39768d9b994c9cb35e3221a6f1f590/P7.jpg"
-  ],
-  "details": [
-   "* Japanese/English text",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
-  "id": 771426738,
-  "title": "Them fashion Magazine Japanese fashion & culture magazine, outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/owiouiprints-them-fashion-magazine-japanese-fashion-21fa/",
-  "cover": "assets/covers/771426738.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3893264017_3eff5e610ee14be4ad2b5c1ffb0de9ef/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893264022_83cc47e3069641508f79b1a30412c6c9/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893264037_53164c227ce84f06bbcb295dc0250c70/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3893264045_c62f0a4cae75421d9430d4a35811c6a1/P7.jpg"
-  ],
-  "details": [
-   "* Japanese/English text",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
-  "id": 771234536,
-  "title": "Yohji Yamamoto discord spring Summer 2026 catalog Collection (hardcover)",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "37.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioutprints-yohji-yamamoto-discord-spring-summer-5954/",
-  "cover": "assets/covers/771234536.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3892158296_6f4f58e6d172447c982d473ae76eac83/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892158316_375ea61b6c1745918e87c1f8d33166bd/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892158330_a75778b8565f4bc5870010da8336b789/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892158300_7abdaa8e866b485092069599317a380f/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
-  "id": 771229539,
-  "title": "Fashion Now 2 i-D selects",
-  "kind": "Books",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oriouiprints-fashion-now-2-i-d-selects-b8bb/",
-  "cover": "assets/covers/771229539.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3892115674_39440f1ee81148faad62d540f546aa4f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892115677_fb64983bf9424556a6cc97fcf4886e36/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892115683_c87009960b614d6d9a54947ed224b30c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892115691_416cf74dd5fc4c8f9a2299fd044b460d/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892115701_1bb7fd69d391480aa34581e1407211d1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3892115686_1d5b5e7426be4ed1a8698fcf25976b52/P7.jpg"
-  ],
-  "details": [
-   "160 of its tavourite fashion designers from around the world",
-   "* EDITED BY TERRY JONES & SUSIE RUSHTON",
-   "* Good condition"
-  ]
- },
- {
-  "id": 765497238,
-  "title": "Them fashion Magazine yung lean supreme",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography",
-   "Music"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinws-them-fashion-magazine-yung-lean-8c65/",
-  "cover": "assets/covers/765497238.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/3858797017_ff449919e46e49518748621fbafe2d2e/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/3858797018_646d073a6db0469683188789c28af0d3/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/3858797020_31946262fed24a8c9499fa8fb6d910fc/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/3858797021_052ca14672664738b04c1ae2ab906283/P7.jpg"
-  ],
-  "details": [
-   "* Japanese fashion and culture magazine featuring outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-   "* Japanese/English text",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
-  "id": 765220924,
-  "title": "Them fashion Magazine undercover Jun Takahashi",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprgnts-them-fashion-magazine-undercover-jun-de7d/",
-  "cover": "assets/covers/765220924.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3857165569_8801a6b62a304795894f31f344f6a177/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3857165571_c777227ec0e247679fddab8cfcecad76/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3857165576_850da3b63877469597d95e6378789e23/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3857165585_7b287b7bc32f44e1b3ab5c60086786b1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3857165611_638b07b5a5384615a6f8d1999baf6a1e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3857165672_162cca17062a4a20b2778a45514b42e4/P7.jpg"
-  ],
-  "details": [
-   "* Japanese fashion and culture magazine featuring outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-   "* Japanese/English text",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
   "id": 765211347,
   "title": "Them fashion Magazine - DAIDO MORIYAMA , NOBUYOSHI ARAKI & DAN TSUKAMOTO",
   "kind": "Magazines",
@@ -2386,59 +1026,6 @@ const BOOKS = [
    "* Minimal, high-quality visual layout",
    "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
    "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
-  "id": 765066592,
-  "title": "Them fashion Magazine Winter Fashion Issue",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oiiouiprints-them-fashion-magazine-december-bc1e/",
-  "cover": "assets/covers/765066592.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3856278863_21928909066f4710b5e73bd5e2cd1b45/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3856278840_54090a7a79d741b098884bb71c6bf396/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3856278845_8fb077b7621445148505bc16229a91d5/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3856278851_e6bd900de7cb48f1b2e2dc73ca05532c/P7.jpg"
-  ],
-  "details": [
-   "* Japanese fashion and culture magazine featuring outdoor-inspired editorial photography, contemporary styling, and modern design-focused storytelling.",
-   "* Japanese text",
-   "* Winter 2020 fashion issue",
-   "* Nature-inspired fashion editorials",
-   "* Minimal, high-quality visual layout",
-   "* Condition: Good overall condition with light wear from storage. Clean pages and solid binding.",
-   "* Perfect for fashion archive collectors, editorial photography lovers, and Japanese magazine enthusiasts. Ships carefully."
-  ]
- },
- {
-  "id": 748853030,
-  "title": "AKIRA Volume 6 Katsuhiro Otomo Kodansha Edition",
-  "kind": "Books",
-  "topics": [
-   "Anime & Manga"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipcints-akira-volume-6-katsuhiro-otomo-da29/",
-  "cover": "assets/covers/748853030.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3761395248_653666d10513460688164221b802d085/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3761395250_26e6b90eade24a648930fdbdcc8dd1ad/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3761395253_1dec675bce0042a48204a785171cb75f/P7.jpg"
-  ],
-  "details": [
-   "* Description: Classic first volume of the legendary cyberpunk masterpiece AKIRA by Katsuhiro Otomo.",
-   "Great condition"
   ]
  },
  {
@@ -2534,50 +1121,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 748092672,
-  "title": "Hermès LE MONDE Hermes Printemps-Été 2011 collection book",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "69.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouitrints-hermes-le-monde-hermes-printemps-ete-2af3/",
-  "cover": "assets/covers/748092672.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3756851501_bfeef85a026e49f3aaf62d7525b8af67/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3756851498_e918714086e04a54af8700f65d88abe4/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3756851497_6ba345fb2472450bb1c3a59fd170f3ae/P7.jpg"
-  ],
-  "details": [
-   "- Excellent condition (Please note that item are not new and may come with minor flaws as seen in photos )"
-  ]
- },
- {
-  "id": 748091438,
-  "title": "Hermès LE MONDE Hermes Automne-Hiver 2009 collection book",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "69.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oviouiprints-hermes-le-monde-hermes-automne-hiver-a8c3/",
-  "cover": "assets/covers/748091438.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3756828772_f70cad379e324d4598dbfe3b5c4c2bfb/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3756828771_fedadb38e9d343929390bb1921c91cc2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3756828774_b9baa0b96ed54288b9c86b508fa5957f/P7.jpg"
-  ],
-  "details": [
-   "- Excellent condition (Please note that item are not new and may come with minor flaws as seen in photos )"
-  ]
- },
- {
   "id": 747727351,
   "title": "Hermès LE MONDE Hermes biannual collection book",
   "kind": "Magazines",
@@ -2600,80 +1143,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 747719614,
-  "title": "DressStudy Fashion History Book (Chanel Style, New Look, Japanese Design, etc.)",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprin0s-dressstudy-fashion-history-book-chanel-2c96/",
-  "cover": "assets/covers/747719614.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3754611848_465ddfea8ffb47d58163ea397f5db3f6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3754611843_6bc5e16309fe4417ba1ec924313d8fe9/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3754611851_76666e8a03e148d1be479e226218ce2b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3754611857_2480cdbf6b484e128bae27c44bc11f63/P7.jpg"
-  ],
-  "details": [
-   "* Perfect overview of iconic silhouettes and trends.",
-   "* Good condition but it seems like a page is missing"
-  ]
- },
- {
-  "id": 747716609,
-  "title": "MiKiOSAKABE Fruits magazine Top x V idol Japanese streets photo catalog",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "59.99",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprint5-mikiosakabe-fruits-magazine-top-x-0efd/",
-  "cover": "assets/covers/747716609.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3754592986_92c0ec0026344e6284262da6f393079f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3754592985_74601a56b885480db0e33884091acc83/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3754592988_4c8a09cdf6904b02808982c430b3b961/P7.jpg"
-  ],
-  "details": [
-   "EDITOR IN CHIEF: Shoichi Aoki, Shigeo Kashiwano",
-   "Costume: MIKIOSAKABE",
-   "Styling: Mikio Sakabe",
-   "Photographer: Shoichi Aoki",
-   "Good condition"
-  ]
- },
- {
-  "id": 747355603,
-  "title": "AKIRA Volume 1 by Katsuhiro Otomo - Kodansha Edition",
-  "kind": "Books",
-  "topics": [
-   "Anime & Manga"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprintn-akira-volume-1-by-katsuhiro-2374/",
-  "cover": "assets/covers/747355603.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3752300680_fa88f8a03bfd4ab9a709173c0bf1cdc0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752300683_f73288674e76443aae5a7fd31617648b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752300686_bb6cc57447dd45d4a5d1d2a817e0c9b3/P7.jpg"
-  ],
-  "details": [
-   "* Description: Classic first volume of the legendary cyberpunk masterpiece AKIRA by Katsuhiro Otomo.",
-   "Great condition"
-  ]
- },
- {
   "id": 747342128,
   "title": "Elegant Ark Journal Volume XII.",
   "kind": "Books",
@@ -2693,59 +1162,6 @@ const BOOKS = [
    "A beautifully curated publication exploring spaces, objects, & people through the lens of high-end design.",
    "* minimalist layout and stunning photography, including the striking interior cover shot with wooden herringbone floors, sculptural furniture, and dramatic lighting.",
    "* Excellent condition."
-  ]
- },
- {
-  "id": 747335118,
-  "title": "Vogue Japan magazine Rei Kawakubo comme des garçons",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprcnts-vogue-japan-magazine-rei-kawakubo-e6a6/",
-  "cover": "assets/covers/747335118.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3752168169_6a28fd55edf44356b729376cd073b17a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752168163_3540bb584bf541b8965f13cf8c2aad01/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752168164_9a8f14406cfe47afb3a475a54b01e4d1/P7.jpg"
-  ],
-  "details": [
-   "* 2014 S/S designer interviews, & a strong “Woman’s World” theme celebrating powerful femininity.",
-   "* Classic high-fashion editorial content.",
-   "Great condition"
-  ]
- },
- {
-  "id": 747302818,
-  "title": "IZANAGI Beauty Japanese beauty and hairstyling magazine",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oniouiprints-izanagi-beauty-japanese-beauty-and-6494/",
-  "cover": "assets/covers/747302818.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3752002234_97cb829754d6482083758d985c701b71/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752002236_54a33ba54ae144728f2fd39bbdf9df46/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752002238_1dbc78d619ef41f1b7845b224bbbaead/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3752002241_f0d7d73795ae4ba3b3072326a5df2769/P7.jpg"
-  ],
-  "details": [
-   "* modern editorial hair design, makeup inspiration, and salon culture. Includes work by renowned Japanese hairstylists & creative beauty professionals.",
-   "* Japanese text",
-   "* Hair, makeup, and beauty editorials",
-   "* Contemporary Japanese salon & fashion aesthetics",
-   "* March 2026",
-   "* Great visual reference for stylists and creatives",
-   "* Condition: Good overall condition"
   ]
  },
  {
@@ -2772,75 +1188,6 @@ const BOOKS = [
    "* cover stars: tom and john ford photographed by terry richardson july 2001",
    "* i-D contributors: mark borthwick, juergen teller & others",
    "* Good condition"
-  ]
- },
- {
-  "id": 747283855,
-  "title": "Street fashion Magazine STREET FASHION in London COLLECTIONS Highly recommended to read along with the FRUiTS magazine.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "51.11",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiou1prints-street-fashion-magazine-street-fashion-2a11/",
-  "cover": "assets/covers/747283855.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3751888298_8cbef9b9488548e1b3c51bdcf48436e2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751888300_cc436a437e334c61bb5cda0fa170a4f1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751888302_3bb69dca6ff84b539c6aa389bf0338c1/P7.jpg"
-  ],
-  "details": [
-   "* This is the original magazine for street snaps.",
-   "* Good condition, Please understand that this is a used book"
-  ]
- },
- {
-  "id": 747278487,
-  "title": "Numero Tokyo Homme magazine balenciaga cover & CONVERSATION With Yuta",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouzouiprints-numero-tokyo-homme-magazine-balenciaga-40af/",
-  "cover": "assets/covers/747278487.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3751850283_7624157d57064219ad5ad28b5693afae/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751850290_e6f8cd7fcf9140229c2d2c4697d52357/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751850280_8362f1c5accd419dbcf492e7bb1d380d/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
-  "id": 747232679,
-  "title": "GroundY by Yohji Yamamoto A/W 2025/26 look book catalog collection",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "44.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipriuts-groundy-by-yohji-yamamoto-aw-5402/",
-  "cover": "assets/covers/747232679.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3751589639_0f8181bb466443c69a375fe557e94ca1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751589640_e6c04c1ce7ce4bb59db5939348252144/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751589648_3a06fee2059744abae6606f748e94e6f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3751589653_05daa2cf551e4f7f86ebd09ac72f4ede/P7.jpg"
-  ],
-  "details": [
-   "Great condition"
   ]
  },
  {
@@ -2920,29 +1267,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 746966779,
-  "title": "Chanel look book catalog",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "48.88",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou4ouiprints-chanel-look-book-catalog-fashion-3a1c/",
-  "cover": "assets/covers/746966779.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3750025783_711cc2f7a74f4f81b3f9bd2f1c848130/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3750025785_6716ce1407d1471795f70fd46d04fe5c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3750025786_4b100de0c62e4e4ba28f93d4d2d3cf17/P7.jpg"
-  ],
-  "details": [
-   "Fashion Accessories",
-   "Good condition"
-  ]
- },
- {
   "id": 746506319,
   "title": "NO WHERE Abahouse Devinette Photographed by Mote Schnabel",
   "kind": "Books",
@@ -2964,76 +1288,6 @@ const BOOKS = [
   "details": [
    "* Publisher: Kohrin-sha 1998",
    "Details\tFirst Edition, Hard cover. Japanese / English."
-  ]
- },
- {
-  "id": 746497308,
-  "title": "B Yohji Yamamoto spring/Summer 2018 oversized look book catalog collection",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "42.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiyrints-b-yohji-yamamoto-springsummer-2018-bf84/",
-  "cover": "assets/covers/746497308.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3747118027_54654a395aeb4f408c2a35b717d243bf/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747118029_8e904628e185424a8dea0a9eec44b4b9/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747118034_1d463180afd14b17bc98954ed84d046b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747118037_f2f5867e58d248a88556960874d950fe/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
-  "id": 746492758,
-  "title": "B Yohji Yamamoto Autumn / Winter 2017-18 oversized look book catalog collection",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "38.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipritts-b-yohji-yamamoto-autumn-8fa7/",
-  "cover": "assets/covers/746492758.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3747088177_4fc2be503d274b6f89f9fe70201acadc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747088181_3f5b69808c1949f592040389fdf92103/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747088183_a47f084cc3804eb0a66eb1e09a0c0540/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747088185_0ac38bb0d30d4606bbbd181c15eb6d82/P7.jpg"
-  ],
-  "details": [
-   "Decent condition (small rib at the bottom left as shown in photos)"
-  ]
- },
- {
-  "id": 746490327,
-  "title": "B Yohji Yamamoto Autumn / Winter 2020-21 oversized look book catalog collection",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "43.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouio6iprints-b-yohji-yamamoto-autumn-9d0e/",
-  "cover": "assets/covers/746490327.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3747075777_53f56268fc1a49848c67bbec7f465d8e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747075779_149b9b3a908b4da1b1f5bbfddb631721/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747075784_6d5c88b233fe4c51aeca12ac0bdf4721/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747075790_3bfe6aabf1994047acd83d484c8aa540/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3747075801_6e7ac505d19341dfbe7adc41e165b663/P7.jpg"
-  ],
-  "details": [
-   "good condition"
   ]
  },
  {
@@ -3062,30 +1316,6 @@ const BOOKS = [
   "details": [
    "Good condition",
    "music, art, and festival photos #photography #fashion #rare"
-  ]
- },
- {
-  "id": 746361294,
-  "title": "Street fashion magazine KOKON TO ZAI LONDON 10 Year Anniversary Party London/New York",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "45.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipri0ts-street-fashion-magazine-kokon-to-db7b/",
-  "cover": "assets/covers/746361294.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3746340986_a12f998495784df39306213efd2a8e82/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3746342147_8f20e6fa79da4c4ba711acbc5260321c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3746342155_3b2b8796fbde4065ab27005fdb0741eb/P7.jpg"
-  ],
-  "details": [
-   "* Highly recommended to read along with the FRUiTS magazine. This is the original magazine for street snaps.",
-   "* Good condition,"
   ]
  },
  {
@@ -3161,35 +1391,6 @@ const BOOKS = [
    "*Description:",
    "Features striking minimalist design with a translucent yellow shirt on the cover. Poetic exploration of clothing as art, words, and personal expression.",
    "A must-have for avant-garde fashion lovers, Japanese art book collectors, & conceptual design fans.",
-   "*Excellent condition."
-  ]
- },
- {
-  "id": 745916558,
-  "title": "Silver Magazine Fashion meets CAR N°22 Winter 2023-24",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "50.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouipuiprints-silver-magazine-fashion-meets-car-2688/",
-  "cover": "assets/covers/745916558.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3743618365_5c4f56eb619849789db810000267dabc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618366_1ec8d464468649569804436b3ce8f3b0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618370_4f1379a82acd4d16a2701abbf144255c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618371_7e533ec0820b4cf89cfb70c2473461e0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618367_29079a8aa1cd4f108ece8fb8dad1a46b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618369_f5c4976d116c4dd58a2c5052c25d065f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3743618372_71265a6c57ad4242b9b4dd7c5b6fcb90/P7.jpg"
-  ],
-  "details": [
-   "*Description:",
-   "Life Product Issue with a bold “Fashion meets CAR” theme.",
-   "Perfect for fashion collectors, car enthusiasts, contemporary magazine archivists, & aesthetic coffee table displays.",
    "*Excellent condition."
   ]
  },
@@ -3271,29 +1472,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 745633386,
-  "title": "GroundY yohji yamamoto spring/Summer 2026 look book catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouifuiprints-groundy-yohji-yamamoto-springsummer-2026-7819/",
-  "cover": "assets/covers/745633386.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741973022_018b4dbf79854e9fa1c4a02388241708/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741973025_7dc5478e6a46488f8bf841272dc2e6ca/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741973028_f82bf67daedf4ae7910a22bcbdba52f7/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741973030_794f3ce95d254fa2a4caa6546d5ca592/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 745629500,
   "title": "Graphic Fashion – Art Direction in Fashion Photography",
   "kind": "Books",
@@ -3324,74 +1502,6 @@ const BOOKS = [
    "* Clean, modern graphic layouts",
    "Condition: Good. Visible wear to dust jacket (creases/tape marks), interior clean and intact.",
    "Great for designers, stylists, and fashion archive collectors."
-  ]
- },
- {
-  "id": 745602833,
-  "title": "BAPE A bathing Ape 2012 summer COLLECTION URSUS BAPE UNITED ARROWS",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiourprints-bape-a-bathing-ape-2012-2b1c/",
-  "cover": "assets/covers/745602833.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741798199_1d849f26ff804da4b99d6f1b60d0c352/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741798200_a231916533a4492abf6956e719ab8af0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741798204_be07f4cf46574c6496c8434266591416/P7.jpg"
-  ],
-  "details": [
-   "- Great condition",
-   "Japanese & English"
-  ]
- },
- {
-  "id": 745598798,
-  "title": "BAPE A bathing Ape 2012 SPRING COLLECTION URSUS BAPE UNITED ARROWS",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouituiprints-bape-a-bathing-ape-2012-e2b8/",
-  "cover": "assets/covers/745598798.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741769639_8377d26e6df44af79ed3a8c3fd9c9646/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741769642_57a5e6d85daf45c0b5c71e12177db0ce/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741769643_a6a8282f079f4faead706ae49017b0f3/P7.jpg"
-  ],
-  "details": [
-   "- Great condition",
-   "Japanese & English"
-  ]
- },
- {
-  "id": 745591251,
-  "title": "BAPE A bathing Ape 2013 A / W COLLECTION BAPE × STUSSY",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiou7prints-bape-a-bathing-ape-2013-d113/",
-  "cover": "assets/covers/745591251.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741731613_20a29df612f1487183296476ac962b22/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741731626_033db3c9c2d44315b6d9c76d85975d5a/P7.jpg"
-  ],
-  "details": [
-   "-Great condition",
-   "Japanese & English"
   ]
  },
  {
@@ -3438,30 +1548,6 @@ const BOOKS = [
   ],
   "details": [
    "Good condition"
-  ]
- },
- {
-  "id": 745570371,
-  "title": "LE LABO BRAND. BALANCE. DOCUMENTARY MAGAZINE ISSUE NO.65",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprines-le-labo-brand-balance-documentary-ed4e/",
-  "cover": "assets/covers/745570371.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741604461_9b96e34c358b423a83eb2581c0221966/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741604470_6d3f13c58b4c419ea3baaa059c37e21c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741604474_6d0f48da4251431baba4c888dc564e58/P7.jpg"
-  ],
-  "details": [
-   "- APRIL 2018",
-   "- Language: Korean",
-   "- Brand Balance: brand documentary magazine"
   ]
  },
  {
@@ -3538,34 +1624,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 745501520,
-  "title": "MiKiOSAKABE Fruits magazine Top x V idol Japanese streets photo catalog",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "59.99",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprin0s-mikiosakabe-fruits-magazine-top-x-9c4b/",
-  "cover": "assets/covers/745501520.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3741215820_e353059cd2eb464c96570681ea773d24/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741215821_a761efeaea9e4e50a5c608857271ab5f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741215825_ddefeaec39ce4551861c151b47bccd32/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3741215823_22e77944b1e141bda777c63fe87bcc96/P7.jpg"
-  ],
-  "details": [
-   "EDITOR IN CHIEF: Shoichi Aoki, Shigeo Kashiwano",
-   "Costume: MIKIOSAKABE",
-   "Styling: Mikio Sakabe",
-   "Photographer: Shoichi Aoki",
-   "Good condition"
-  ]
- },
- {
   "id": 745414223,
   "title": "Fashion Cult (ファッションカルト) Japanese fashion photobook with avant-garde styling, subculture aesthetics, & editorial photography.",
   "kind": "Catalogs",
@@ -3592,31 +1650,6 @@ const BOOKS = [
    "* Focus on cult fashion & alternative style",
    "Condition: Good. Light wear, clean pages, solid binding.",
    "Perfect for collectors, stylists, and fashion archive enthusiasts. Ships carefully"
-  ]
- },
- {
-  "id": 745406246,
-  "title": "New Club Kids - London Party Fashion in the Noughties Book OGGY YORDANOV",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioxiprints-new-club-kids-london-245e/",
-  "cover": "assets/covers/745406246.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3740675700_0e84a309809447b4bb8d53ce79c09d83/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3740675710_741e702e23a1422caa06481b59f89c16/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3740675719_187955367b5d48c3a788855fe46b7d31/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3740675723_c2b8c2fbeb0f44f2a51ab7eb62e5c425/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3740675727_d6f5c404986d425b98bccf5b4787ab66/P7.jpg"
-  ],
-  "details": [
-   "Description: Bold coffee table book capturing the wild London club scene *Stunning photography showcasing outrageous outfits, club looks, and larger-than-life style from the era.",
-   "Iconic cover with the pink-haired Club Kid in full futuristic glam. Perfect for fashion lovers, Y2K fans, club culture enthusiasts, and 2000s nostalgia collectors."
   ]
  },
  {
@@ -3670,52 +1703,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 743693032,
-  "title": "BAPE A bathing Ape 2008 SUMMER Collection Smart magazine Pharrell Williams & Nigo",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "42.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprpnts-bape-a-bathing-ape-2008-4f55/",
-  "cover": "assets/covers/743693032.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3730695639_7ada8a4fe7294bc29142db670d226e15/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3730695642_b41c955974ec4c4996c99a413e9c1262/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3730695645_6857960118164324adcf5efb854cec8f/P7.jpg"
-  ],
-  "details": [
-   "-Great condition",
-   "Japanese & English #streetwear #nigo #bape #vintage #pharrell"
-  ]
- },
- {
-  "id": 743689324,
-  "title": "BAPE A bathing Ape 2007 AUTUMN/WINTER COLLECTION BAPE X6 PERSONS OF TOKYO CULTURE!",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinqs-bape-a-bathing-ape-2007-070f/",
-  "cover": "assets/covers/743689324.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3730676451_e3bbb4b38132493e98735413bda1a90e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3730670811_3e3eef1a13c34e49b0b797224adad086/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3730670815_c030639e3d1240fb97dcd492aaf5c10d/P7.jpg"
-  ],
-  "details": [
-   "-Great condition",
-   "Japanese & English"
-  ]
- },
- {
   "id": 743687390,
   "title": "BAPE A bathing Ape 2006 AUTUMN/WINTER COLLECTIOn BARE IN HÓNG KONG!",
   "kind": "Books",
@@ -3758,29 +1745,6 @@ const BOOKS = [
   ],
   "details": [
    "(2003 summer Collections)",
-   "Japanese Text",
-   "Good condition"
-  ]
- },
- {
-  "id": 731975417,
-  "title": "Hanatsubaki March Issue Fashion & Beauty catalog magazine",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/oui5uiprints-hanatsubaki-march-issue-fashion-f428/",
-  "cover": "assets/covers/731975417.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3660736273_38fdc732a54e49ab8b8ccefdee1a2aee/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3660736274_69286f801aad43379d3dd51ee01bec6c/P7.jpg"
-  ],
-  "details": [
-   "(2003 spring Collections)",
    "Japanese Text",
    "Good condition"
   ]
@@ -3979,52 +1943,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 727343034,
-  "title": "Eyescream Magazine THE TOKYO FASHION ISSUE HIROSHI FUJIWARA x NIGO",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "36.66",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ou4ouiprints-eyescream-magazine-the-tokyo-fashion-a442/",
-  "cover": "assets/covers/727343034.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3633525336_4a6c28d10c7f4fe4a61ef66d3bc7b434/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3633525335_743c455bc0eb4d34ae4341652531b18a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3633525337_7f3b02d7e39348458eccbe5557f75755/P7.jpg"
-  ],
-  "details": [
-   "PHOTOGRAPHED BY KAZUTAKA NAKAMURA",
-   "Good condition"
-  ]
- },
- {
-  "id": 727254281,
-  "title": "Eyescream Magazine Made in Tokyo Supreme x Kermit the frog Photographed by Terry Richardson",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Photography"
-  ],
-  "price": "39.99",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioudprints-eyescream-magazine-made-in-tokyo-7f03/",
-  "cover": "assets/covers/727254281.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3633031082_710d18219dea4cef929d49334f9ff2dc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3633031083_81b7d4500799409abff89864a4e26d07/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3633031085_d578273756874c5197b62ac94818087c/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 727253139,
   "title": "Eyescream Magazine Made in Tokyo Hiroshi Fujiwara FRAGMENT",
   "kind": "Magazines",
@@ -4072,76 +1990,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 727237978,
-  "title": "Hermès LE MONDE D'HERMÈS 2016 biannual collection",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "64.44",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprinth-hermes-le-monde-dhermes-2016-3995/",
-  "cover": "assets/covers/727237978.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3632935927_b3f0a38d6d81406385d283164933ec86/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3632935943_c93548689a314c08a96b12247b7757a2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3632935946_800d8b0929bd4d84b554004acb55ce9f/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3632935947_733ba581a4544b2caf4dfd332765aa0a/P7.jpg"
-  ],
-  "details": [
-   "- Good condition",
-   "hermes magazine, fashion editorial, fall winter 1996, Jean Paul Gaultier, luxury print, biannual publication, designer collection, high fashion, black and white photography, collectible magazine"
-  ]
- },
- {
-  "id": 727184235,
-  "title": "Street fashion Magazine STREET FASHION at PARIS PRET-A-PORTER COLLECTIONS Highly recommended to read along with the FRUiTS magazine. This is the original magazine for street snaps.",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "51.11",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiou8prints-street-fashion-magazine-street-fashion-b79b/",
-  "cover": "assets/covers/727184235.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3632636025_311d18c3321b463fa1062a54b8a7215e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3632636026_8765192d8a194c2a99a10c2dfdbb167a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3632636027_e3888f3c70ae4bafb258e9df41a80ce0/P7.jpg"
-  ],
-  "details": [
-   "Good condition, Please understand that this is a used book"
-  ]
- },
- {
-  "id": 726532235,
-  "title": "Chanel JOAILLERIE look book catalog",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "48.88",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouipbints-chanel-joaillerie-look-book-catalog-90cc/",
-  "cover": "assets/covers/726532235.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3628790793_77b6920d40794d0ebe25a55fb5a15dbc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3628790790_41c1510cc1c84006a1f196088ac55b79/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3628790792_241b1b9918834e0d8d0d193eacf27ee0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3628790795_55d3e26a0e5b464991c854733f01e93b/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 725027687,
   "title": "Stussy Spring Collection 2007 magazine catalog",
   "kind": "Magazines",
@@ -4161,31 +2009,6 @@ const BOOKS = [
   ],
   "details": [
    "- a stylish & rare find fashion",
-   "Good condition"
-  ]
- },
- {
-  "id": 714410169,
-  "title": "Basquiat handbook - a unique insight into the artist's life and work",
-  "kind": "Books",
-  "topics": [
-   "Fashion",
-   "Art"
-  ],
-  "price": "35.55",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ousouiprints-basquiat-handbook-a-unique-efd3/",
-  "cover": "assets/covers/714410169.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3557438036_81f16c3c9c124991a302c5186751a878/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3557438039_e13950e7dd7447639845a4dae7e935d3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3557438038_bf97570fa18e44b093aa97a1d4eb21a1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3557438037_da39da77be61454b95b4d2b8c5e5b76b/P7.jpg"
-  ],
-  "details": [
-   "Supervised by Norihisaaki Miyashita",
    "Good condition"
   ]
  },
@@ -4358,29 +2181,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 674674024,
-  "title": "YOHJI YAMAMOTO POUR HOMME oversized catalog look Book",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "49.99",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprints-yohji-yamamoto-pour-homme-oversized/",
-  "cover": "assets/covers/674674024.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3324175315_da079b50f5fb4f6a9dfcf9a18abf3e87/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3324175318_4deeddba6b4d4f8996cb4440e446b7de/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3324175319_aa266e6c57b64814a3cd0df6ae0df4be/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3324175320_e63395e80df349e1b75fc62073799617/P7.jpg"
-  ],
-  "details": [
-   "Very good condition"
-  ]
- },
- {
   "id": 671160640,
   "title": "Nara Yoshitomo Nara Slash with a knife art book - Japanese artist's works",
   "kind": "Books",
@@ -4476,30 +2276,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 666618191,
-  "title": "Kate moss mania studio voice magazine",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "35.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouiouiprints-kate-moss-mania-studio-voice/",
-  "cover": "assets/covers/666618191.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3280144414_5ff62acc5d764136ab54f847f41946ff/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3280144416_ec98ea96a46a4c70b50a57dfa2012b60/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3280144418_7b40300554174475a797972c469546c3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3280144419_d1eebcdb50434ae6b37c385745ed1e9a/P7.jpg"
-  ],
-  "details": [
-   "October 2004 FASHION, BEAUTY, LOVE, WORKS ALL ABOUT KATE MOSS",
-   "Good condition"
-  ]
- },
- {
   "id": 666011493,
   "title": "Nara Yoshitomo Nara Note book featuring images and Text of the Japanese artist's work,",
   "kind": "Books",
@@ -4520,30 +2296,6 @@ const BOOKS = [
   "details": [
    "Good condition",
    "Language: Japanese text"
-  ]
- },
- {
-  "id": 633788778,
-  "title": "Nara YOSHITOMO NARA Slash with a Knife Art Illustration Book",
-  "kind": "Books",
-  "topics": [
-   "Art",
-   "Anime & Manga"
-  ],
-  "price": "55.55",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/printsprintscurated-yoshitomo-nara-slash-with-a/",
-  "cover": "assets/covers/633788778.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3095649217_6e2773aea0594d6f8ca55ff4a45b52a2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3095649215_0602a3c92d9347dc920688b6803676d2/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/3095649222_ddbd760c621a4e72b24b1d91631372c2/P7.jpg"
-  ],
-  "details": [
-   "- A new edition of the classic book by Yoshitomo Nara first published in 1999",
-   "- Language: Japanese/English"
   ]
  },
  {
@@ -4571,53 +2323,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 580395325,
-  "title": "Rei Kawakubo masterclass Japanese magazine July 2017 magazine",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "58.88",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/printsprintscurated-rei-kawakubo-masterclass-japanese-magazine/",
-  "cover": "assets/covers/580395325.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/2808010577_a5acfffc70e443f798fccc56e4550379/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2808010578_84ff37cbd4ce4c5c9607a393729a90d0/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2808010580_4552733ce0734b8dbd9e0b901d60013a/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2808010581_8c7fbdf42e1946d3b62aa57c4d0c64f3/P7.jpg"
-  ],
-  "details": [
-   "- rare issue of (No. 215, July 2017) vogue Japan magazine",
-   "- comme des garcons cover",
-   "- good condition"
-  ]
- },
- {
-  "id": 565702320,
-  "title": "Vivienne Westwood MAN catalog lookbook",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion",
-   "Music"
-  ],
-  "price": "26.66",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/printsprintscurated-vivienne-westwood-man-catalog-lookbook-3241/",
-  "cover": "assets/covers/565702320.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/2732751522_5d3c538269b34715816c6bfd1d8a55f1/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2732751523_ae60e24082c04d938fba53e265f4e806/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 553406607,
   "title": "Yohji Yamamoto discord Autumn / Winter 2021 Collection catalog hardcover",
   "kind": "Catalogs",
@@ -4638,122 +2343,6 @@ const BOOKS = [
   ],
   "details": [
    "- The condition is beautiful overall. #Yohjiyamamoto #Yohji #Yamamoto"
-  ]
- },
- {
-  "id": 514313569,
-  "title": "THE STUDY OF COMME des GARÇONS Rei Kawakubo",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "55.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-comme-des-garcons-the-study/",
-  "cover": "assets/covers/514313569.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/2470888347_851bf28ef8234f80b09c1729b7ce9ff7/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/2470888366_9547b291136c44a7b09253868d13dd69/P7.jpg"
-  ],
-  "details": [
-   "- Author name: Eriko Minamiya",
-   "- Publisher name: Little More",
-   "- Publication date: 2009 Reprint",
-   "- Size: 122 pages 22 x 15cm",
-   "- Language: Japanese and English",
-   "- Decent condition"
-  ]
- },
- {
-  "id": 500286470,
-  "title": "Lemaire magazine B Balance issue No. 90",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "40.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-lemaire-b-balance-magazine-issue/",
-  "cover": "assets/covers/500286470.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/2397292704_3902d557a1fe4bb89ead60285cba7634/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2397292755_0490eb72e1534012a205656e46258dfa/P7.jpg"
-  ],
-  "details": [
-   "- February 2022",
-   "- Language: Korean",
-   "- Brand Balance: brand documentary magazine"
-  ]
- },
- {
-  "id": 493988143,
-  "title": "Warhol’s Jew Ten Portraits Reconsidered art book",
-  "kind": "Books",
-  "topics": [
-   "Art"
-  ],
-  "price": "35.55",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-warhols-jew-ten-portraits-reconsidered/",
-  "cover": "assets/covers/493988143.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047411519_b7fc1f53b4d249f3ab0b85f9fd1cabf4/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2365087386_58969507c96a442393f59516450bba7b/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2365087420_79fb60ef3c1e4978b99371d5cb317307/P7.jpg"
-  ],
-  "details": [
-   "- Hardcover",
-   "- #andywarhol",
-   "Good condition"
-  ]
- },
- {
-  "id": 493027054,
-  "title": "KAPITAL 2013 Indigenous catalog book",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "61.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-kapital-2013-indigenous-catalog-book/",
-  "cover": "assets/covers/493027054.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/2359960676_8ef2b87fa81248c7a034e0616c57aa6b/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/2359960701_9f98cc96189741baa94c5caf01e31503/P7.jpg"
-  ],
-  "details": [
-   "Although it is an old item, it has been stored in a cardboard box, so it is in good condition",
-   "This is a catalog that is no longer sold in stores"
-  ]
- },
- {
-  "id": 493025395,
-  "title": "KAPITAL Fukking Kountry catalog",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "59.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-kapital-fukking-kountry-catalog-this/",
-  "cover": "assets/covers/493025395.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/2359952903_ef9bc73b467b42b6acff3f1cdbeec4a1/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/2359952929_1d778d1e67154f0e9f1d16a7219b0ec4/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
   ]
  },
  {
@@ -4802,30 +2391,6 @@ const BOOKS = [
   ],
   "details": [
    "Good condition"
-  ]
- },
- {
-  "id": 481463368,
-  "title": "BAPE A bathing Ape 2006 SPRING/SUMMER Collection Smart magazine baby Milo",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "42.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-bape-a-bathing-ape-2006/",
-  "cover": "assets/covers/481463368.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/2298119097_4f8003449df043ab8be293b891f496ca/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2298119145_4dc86b848f8d4e47809c68d7024b3b4c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2298119180_9fcb0c7ce62f4c74b3ae94d9dda45b68/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2298119211_79999f3223614777bcd266c738b6a5a0/P7.jpg"
-  ],
-  "details": [
-   "-Great condition",
-   "Japanese & English #streetwear #nigo #bape #vintage"
   ]
  },
  {
@@ -4954,58 +2519,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 458482812,
-  "title": "A Magazine Curated by Jun Takahashi Undercover",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "145.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-a-magazine-curated-by-jun-0915/",
-  "cover": "assets/covers/458482812.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047407896_ff6a55c8d36b4369bf803fe3ee51c0bc/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2006275023_ede96cf812f0410489e44cbe9d68af2e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2006275090_d9524882172c4dae800b9788ff474239/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2006275105_17d056228b2943f28c82562435f20542/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2006275123_bf3f348fed50404eb746e0609bbcc928/P7.jpg"
-  ],
-  "details": [
-   "Publisher: Modenatie, Antwerp",
-   "Publication Date: 2006",
-   "Softcover book",
-   "Condition: Good",
-   "Edition: First Edition."
-  ]
- },
- {
-  "id": 458166222,
-  "title": "UNDERCOVER Jun Takahashi Relax Magazine Dec 2002 special issue",
-  "kind": "Magazines",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "48.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-relax-70-december-2002-issue/",
-  "cover": "assets/covers/458166222.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/3751933443_3b408e16160f41ed94f324245a41851c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2004662173_16e73883948b4d75b852f0fad0403baf/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2004662189_5362883d1053485b9bd8eacb5e06973c/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/2004662210_a0574ad5fa374d918a02a97bde94c822/P7.jpg"
-  ],
-  "details": [
-   "* relax UNDERCOVER's first Parcole close-up interview.",
-   "* Good condition"
-  ]
- },
- {
   "id": 449128658,
   "title": "Y’s by Yohji Yamamoto 2024 spring/summer Item Book catalog",
   "kind": "Catalogs",
@@ -5026,30 +2539,6 @@ const BOOKS = [
   ],
   "details": [
    "New condition"
-  ]
- },
- {
-  "id": 447685885,
-  "title": "Issey Miyake PLEATS PLEASE Catalog 2024 Spring/Summer Latest Edition",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "25.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-issey-miyake-pleats-please-catalog/",
-  "cover": "assets/covers/447685885.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/1953318871_765f9350e9ec46088c855d5d0be142b3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1953318938_342a24d26d4d42c2b84c4e5c62820650/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1953319008_628524333ceb46cd86caf3994cf33b3e/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1953319108_63c22e00d687471f8966b5e1f1c04f1d/P7.jpg"
-  ],
-  "details": [
-   "Discover the latest edition of the Issey Miyake PLEATS PLEASE Catalog 2024, perfect for exploring the brand's latest collections. This catalog is a must-have for fashion enthusiasts and lovers of Issey Miyake's unique aesthetic. Featuring the latest trends and styles, this catalog is a great way to stay up-to-date with the fashion world.",
-   "With a focus on the spring and summer seasons, this catalog is perfect for those looking to stay in style during the warm months. The catalog includes a variety of fashion categories, including books and magazines, and is published in 2024. Don't miss out on this opportunity to explore the latest Issey Miyake collections and stay in style this summer."
   ]
  },
  {
@@ -5096,30 +2585,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 405469485,
-  "title": "Yohji Yamamoto 2022-2023 A/W FEMME look Book catalog Softcover",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "36.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/ouioui001-yohji-yamamoto-2022-2023-a-femme/",
-  "cover": "assets/covers/405469485.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047356249_f51dc3a99f35414282ab3792681c2cb3/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1747805995_85a891f3143543fcbb151428a3f4cc65/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1747806026_1dab6f6b25744c019ffed7a7777ce6cb/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1747806064_142f0468c3f74fe29b2c8fff64caa4f6/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1747806099_2a02132df457401782b2e6c7242d492e/P7.jpg"
-  ],
-  "details": [
-   "Good condition"
-  ]
- },
- {
   "id": 391447176,
   "title": "Comme des Garçons blue cover photo Book collection",
   "kind": "Books",
@@ -5144,30 +2609,6 @@ const BOOKS = [
   ]
  },
  {
-  "id": 391434580,
-  "title": "Yohji Yamamoto discord Autumn/winter 2018 lookbook catalog hardcover",
-  "kind": "Catalogs",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "34.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/mushmush-yohji-yamamoto-discord-autumnwinter-2018/",
-  "cover": "assets/covers/391434580.jpg",
-  "photos": [
-   "https://media-photos.depop.com/b1/2851838/4047341725_35067223cff34230bc5a7133635f3e97/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1679312873_095069c6215e4e7a832502245eef1805/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1679312898_abfcec5f5ad549afa814f15cd777ed07/P7.jpg",
-   "https://media-photos.depop.com/b1/2851838/1679312944_efdcd7485f9f45c1830b92a718ebfce4/P7.jpg"
-  ],
-  "details": [
-   "LOOK BOOK photographed by Mika Ninagawa.",
-   "Good condition"
-  ]
- },
- {
   "id": 391433820,
   "title": "Yohji Yamamoto discord A/w 2019 Collection catalog hardcover Book",
   "kind": "Catalogs",
@@ -5188,31 +2629,6 @@ const BOOKS = [
   ],
   "details": [
    "Good condition"
-  ]
- },
- {
-  "id": 387382866,
-  "title": "Comme des Garçons: THE STUDY OF COMME des GARCONS Rei kawakubo book",
-  "kind": "Books",
-  "topics": [
-   "Fashion"
-  ],
-  "price": "48.00",
-  "reduced": false,
-  "originalPrice": null,
-  "shipping": "5.00",
-  "depopUrl": "https://www.depop.com/products/mushmush-the-study-of-comme-des/",
-  "cover": "assets/covers/387382866.jpg",
-  "photos": [
-   "https://media-photos.depop.com/r1/2851838/4047324018_870b590f143240a79675d2fd1b9a84ac/P7.jpg",
-   "https://media-photos.depop.com/r1/2851838/4047326387_551afcf449e34bf58df03a27a3fef918/P7.jpg"
-  ],
-  "details": [
-   "Author name: Eriko Minamiya",
-   "Publisher name: Little More",
-   "Publication date: 2009 Reprint",
-   "Size: 122 pages 22 x 15cm",
-   "Language: #Japanese and English"
   ]
  },
  {

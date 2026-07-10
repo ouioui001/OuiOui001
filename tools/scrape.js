@@ -19,7 +19,10 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
     headless: true,
     // --ssl-version-max=tls1.2 is required when running behind the
     // TLS-terminating egress proxy, which resets Chromium's TLS 1.3 hello.
-    args: ['--no-sandbox', '--ssl-version-max=tls1.2', '--disable-background-networking', '--no-first-run'],
+    // --disable-blink-features=AutomationControlled is required to pass
+    // Depop's Cloudflare JS challenge, which otherwise 403s the shop page.
+    args: ['--no-sandbox', '--ssl-version-max=tls1.2', '--disable-background-networking', '--no-first-run',
+           '--disable-blink-features=AutomationControlled'],
     proxy: process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined,
   });
   const ctx = await browser.newContext({
@@ -39,10 +42,23 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
     }
   });
 
-  await page.goto(SHOP_URL, { waitUntil: 'networkidle', timeout: 60000 });
-  for (let i = 0; i < 20; i++) {
-    await page.mouse.wheel(0, 2000);
+  // domcontentloaded + fixed wait rather than networkidle: analytics keep
+  // the network busy indefinitely. Retry navigation if the Cloudflare
+  // challenge blocks the first attempt.
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    await page.goto(SHOP_URL, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(() => {});
+    await page.waitForTimeout(6000); // let any JS challenge resolve
+    if (apiPayloads.length > 0) break;
+    console.log(`attempt ${attempt}: no product API responses yet, retrying`);
+  }
+  // Scroll until the product API stops paginating (no new payloads for
+  // several rounds), so the whole catalogue is captured.
+  let stable = 0, last = apiPayloads.length;
+  for (let i = 0; i < 80 && stable < 8; i++) {
+    await page.mouse.wheel(0, 2200);
     await page.waitForTimeout(700);
+    if (apiPayloads.length === last) stable++;
+    else { stable = 0; last = apiPayloads.length; }
   }
   await page.waitForTimeout(2000);
 

@@ -1,0 +1,19 @@
+{
+ "comment": "Listings permanently excluded from the catalogue: their photos cannot be cleanly background-removed (book bleeds off the photo edge / busy backdrop) and the ML gate wrongly passes a damaged cutout. Curated by hand \u2014 the sync must never re-add these.",
+ "ids": [
+  800539319,
+  458166222,
+  800561397,
+  745570371,
+  666601047,
+  718388101,
+  394038806,
+  697857722,
+  697857711,
+  679707700,
+  514085716,
+  487247357,
+  469594513,
+  400143826
+ ]
+}

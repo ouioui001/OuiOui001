@@ -144,12 +144,25 @@ for p in payloads:
     for prod in p["json"]["products"]:
         seen[prod["id"]] = prod
 
+EXCLUDED = set(json.load(open(os.path.join(REPO, "tools", "excluded.json")))["ids"])
+
 books = [p for p in seen.values()
          if p["category_id"] == 27
+         and p["id"] not in EXCLUDED
          and "poster" not in p["description"].split("\n")[0].lower()]
 books.sort(key=lambda b: -b["id"])
-if len(books) < 50:
-    sys.exit(f"only {len(books)} books captured — scrape looks incomplete, aborting")
+
+# Guard against an incomplete scrape wiping the catalogue: compare with
+# the existing catalogue size — the shop can't legitimately lose 20% of
+# its listings between two syncs.
+existing = 0
+data_path = os.path.join(REPO, "data", "books.js")
+if os.path.exists(data_path):
+    _raw = open(data_path).read()
+    existing = len(json.loads(_raw[_raw.index("["):_raw.rindex("]") + 1]))
+if len(books) < 50 or (existing and len(books) < 0.8 * existing):
+    sys.exit(f"only {len(books)} listings captured (catalogue has {existing}) — "
+             "scrape looks incomplete, aborting without changes")
 
 MAG_RE = re.compile(r"magazine|magazin|vogue japan|i-d magazine", re.I)
 CAT_RE = re.compile(r"catalog|catalogue|look ?book|lookbook|pamphlet", re.I)

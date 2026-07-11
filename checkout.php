@@ -21,15 +21,23 @@ $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 if ($method === 'OPTIONS') { http_response_code(204); exit; }
 if ($method !== 'POST') { http_response_code(405); echo json_encode(['error' => 'Method not allowed']); exit; }
 
-// --- secret key ---
-$secret = getenv('STRIPE_SECRET_KEY');
-if (!$secret && is_file(__DIR__ . '/stripe-secret.php')) {
-    $secret = require __DIR__ . '/stripe-secret.php';
+// --- secret key + optional storefront URL ---
+// stripe-secret.php may `return` either the key string, or an array:
+//   ['secret' => 'sk_...', 'site_url' => 'https://your-store.com']
+$conf = is_file(__DIR__ . '/stripe-secret.php') ? require __DIR__ . '/stripe-secret.php' : null;
+$secret = getenv('STRIPE_SECRET_KEY') ?: '';
+$siteOverride = getenv('SITE_URL') ?: '';
+if (is_array($conf)) {
+    $secret = $secret ?: ($conf['secret'] ?? '');
+    $siteOverride = $siteOverride ?: ($conf['site_url'] ?? '');
+} elseif (is_string($conf)) {
+    $secret = $secret ?: $conf;
 }
 if (!$secret) { http_response_code(500); echo json_encode(['error' => 'Server not configured (missing Stripe key)']); exit; }
 
-// --- authoritative price catalogue (cents) ---
-$catalogue = json_decode(@file_get_contents(__DIR__ . '/server/catalogue.json'), true);
+// --- authoritative price catalogue (cents): next to this file, or server/ ---
+$catFile = is_file(__DIR__ . '/catalogue.json') ? __DIR__ . '/catalogue.json' : __DIR__ . '/server/catalogue.json';
+$catalogue = json_decode(@file_get_contents($catFile), true);
 if (!is_array($catalogue)) { http_response_code(500); echo json_encode(['error' => 'Catalogue unavailable']); exit; }
 
 // --- cart from request ---

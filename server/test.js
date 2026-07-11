@@ -29,7 +29,7 @@ assert.strictEqual(buildLineItems({ [anyId]: 999 }, catalogue)[0].quantity, MAX_
 
 // session params enable the emailed invoice and collect email + shipping
 const p = sessionParams(buildLineItems({ [anyId]: 1 }, catalogue), {
-  siteUrl: "https://shop.example.com/", shopName: "OuiOui Prints",
+  siteUrl: "https://shop.example.com/", shopName: "HARDCPY",
 });
 assert.strictEqual(p.mode, "payment");
 assert.strictEqual(p.invoice_creation.enabled, true);

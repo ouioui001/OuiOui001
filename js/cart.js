@@ -3,7 +3,7 @@
 // an independent storefront with no payment backend yet.
 
 (function () {
-  var KEY = "ouiouiprints-cart";
+  var KEY = "hardcpy-cart";
 
   function read() {
     try { return JSON.parse(localStorage.getItem(KEY)) || {}; }

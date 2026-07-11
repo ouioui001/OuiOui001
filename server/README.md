@@ -1,4 +1,4 @@
-# OuiOui Prints — checkout backend (Stripe)
+# HARDCPY — checkout backend (Stripe)
 
 The Stack checks out through **Stripe Checkout**, and Stripe **emails the
 buyer an invoice (PDF) + receipt** automatically after payment. A static
@@ -36,7 +36,7 @@ Stripe **emails the invoice + receipt** and returns them to `/success.html`
 4. **Add the secret** in Vercel → Project → Settings → Environment
    Variables (see `.env.example`):
    - `STRIPE_SECRET_KEY` = your `sk_live_…` (or `sk_test_…` to test first)
-   - `SHOP_NAME` = `OuiOui Prints` (optional)
+   - `SHOP_NAME` = `HARDCPY` (optional)
    Then **Redeploy**.
 5. Your site is live at `https://<project>.vercel.app`, and checkout works
    at `/api/checkout` on that same domain — `js/config.js` already points

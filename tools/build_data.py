@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inventory build for the OuiOui Prints book shop.
+"""Inventory build for the HARDCPY book shop.
 
 Reads the API payloads captured by tools/scrape.js, keeps only the
 book/magazine/catalog listings (Depop category 27, minus posters),
@@ -234,7 +234,7 @@ for f in os.listdir(COVERS):
         os.remove(os.path.join(COVERS, f))
         print("pruned", f)
 
-js = ("// OuiOui Prints — book catalogue generated from the live Depop shop.\n"
+js = ("// HARDCPY — book catalogue generated from the live Depop shop.\n"
       "// Only listings with a clean background-removed cover are included.\n"
       "// Regenerate with tools/; do not edit by hand.\n"
       "const BOOKS = " + json.dumps(records, ensure_ascii=False, indent=1) + ";\n")

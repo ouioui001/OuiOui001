@@ -1,4 +1,4 @@
-// OuiOui Prints — catalogue built from the owner's cover scans
+// HARDCPY — catalogue built from the owner's cover scans
 // (Google Drive batch 1). Prices cross-referenced from the Depop shop.
 const BOOKS = [
  {

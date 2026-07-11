@@ -9,7 +9,7 @@
   }
   var book = BOOKS[index];
 
-  document.title = book.title + " — OuiOui Prints";
+  document.title = book.title + " — HARDCPY";
   document.getElementById("product-crumb").textContent = book.title.toUpperCase();
   document.getElementById("p-title").textContent = book.title;
 

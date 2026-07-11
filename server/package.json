@@ -1,8 +1,8 @@
 {
-  "name": "ouioui-prints-checkout",
+  "name": "hardcpy-checkout",
   "version": "1.0.0",
   "private": true,
-  "description": "Stripe Checkout backend for the OuiOui Prints storefront",
+  "description": "Stripe Checkout backend for the HARDCPY storefront",
   "scripts": {
     "test": "node test.js"
   },

@@ -15,7 +15,7 @@ document.addEventListener("dragstart", function (e) {
 (function () {
   var intro = document.getElementById("intro");
   if (!intro) return;
-  var KEY = "ouiouiprints-intro-seen";
+  var KEY = "hardcpy-intro-seen";
   var seen = false;
   try { seen = sessionStorage.getItem(KEY) === "1"; } catch (e) {}
   if (seen) {

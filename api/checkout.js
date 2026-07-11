@@ -39,7 +39,7 @@ module.exports = async function handler(req, res) {
     const stripe = Stripe(key);
     const session = await stripe.checkout.sessions.create(sessionParams(lineItems, {
       siteUrl: originOf(req),
-      shopName: process.env.SHOP_NAME || "OuiOui Prints",
+      shopName: process.env.SHOP_NAME || "HARDCPY",
       allowedCountries: (process.env.SHIP_COUNTRIES || "")
         .split(",").map((s) => s.trim().toUpperCase()).filter(Boolean),
     }));

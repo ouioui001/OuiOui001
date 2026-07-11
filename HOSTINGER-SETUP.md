@@ -38,7 +38,7 @@ Tip: zip the project, upload the zip, and use "Extract" in File Manager.
 `STRIPE_SECRET_KEY` in hPanel. Optional: `SHOP_NAME`, `SHIP_COUNTRIES`.
 
 ## 5. Point your domain & test
-- Connect your domain in hPanel (or use the free temporary domain).
+- Connect **hardcpy.shop** in hPanel → Domains (or use the free temporary domain to test first).
 - Visit the site, add an item, click **Checkout**.
 - Pay with test card **4242 4242 4242 4242**, any future date / any CVC.
 - You should land on the "order confirmed" page and receive the receipt +

@@ -75,7 +75,7 @@ foreach (array_values($countries) as $k => $c) {
     $params["shipping_address_collection[allowed_countries][$k]"] = $c;
 }
 
-$shop = getenv('SHOP_NAME') ?: 'OuiOui Prints';
+$shop = getenv('SHOP_NAME') ?: 'HARDCPY';
 $params['invoice_creation[enabled]'] = 'true';
 $params['invoice_creation[invoice_data][description]'] = $shop . ' — order';
 $params['invoice_creation[invoice_data][footer]'] = 'Thank you for supporting an independent archive. All items are authentic and one-of-one.';

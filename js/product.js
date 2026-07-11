@@ -25,10 +25,11 @@
   document.getElementById("p-desc").textContent = book.details.join("\n");
 
   // ---------- gallery ----------
-  // First image is the background-removed cover stored in the repo; any
-  // further photos are the original shots (loaded at full size).
+  // book.photos holds the high-resolution images (full-size cover first,
+  // then any extra shots) — used for the product hero and zoom lightbox.
+  // The small book.cover thumbnail is only used in the grid/cart.
   var gallery = document.getElementById("gallery");
-  var sources = [book.cover].concat(book.photos.slice(1));
+  var sources = (book.photos && book.photos.length) ? book.photos.slice() : [book.cover];
   sources.forEach(function (src, i) {
     var img = document.createElement("img");
     img.src = src;

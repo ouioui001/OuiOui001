@@ -14,7 +14,7 @@ const BOOKS = [
   "shipping": "0.00",
   "cover": "assets/covers/1001.jpg",
   "photos": [
-   "assets/covers/1001.jpg",
+   "assets/full/1001.jpg",
    "assets/photos/1001-1.jpg",
    "assets/photos/1001-2.jpg"
   ],
@@ -40,7 +40,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1002.jpg",
   "photos": [
-   "assets/covers/1002.jpg",
+   "assets/full/1002.jpg",
    "assets/photos/1002-1.jpg"
   ],
   "details": [
@@ -62,7 +62,7 @@ const BOOKS = [
   "shipping": null,
   "cover": "assets/covers/1003.jpg",
   "photos": [
-   "assets/covers/1003.jpg",
+   "assets/full/1003.jpg",
    "assets/photos/1003-1.jpg"
   ],
   "details": [
@@ -84,7 +84,7 @@ const BOOKS = [
   "shipping": null,
   "cover": "assets/covers/1004.jpg",
   "photos": [
-   "assets/covers/1004.jpg",
+   "assets/full/1004.jpg",
    "assets/photos/1004-1.jpg"
   ],
   "details": [
@@ -106,7 +106,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1005.jpg",
   "photos": [
-   "assets/covers/1005.jpg",
+   "assets/full/1005.jpg",
    "assets/photos/1005-1.jpg",
    "assets/photos/1005-2.jpg",
    "assets/photos/1005-3.jpg",
@@ -131,7 +131,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1006.jpg",
   "photos": [
-   "assets/covers/1006.jpg",
+   "assets/full/1006.jpg",
    "assets/photos/1006-1.jpg"
   ],
   "details": [
@@ -155,7 +155,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1007.jpg",
   "photos": [
-   "assets/covers/1007.jpg",
+   "assets/full/1007.jpg",
    "assets/photos/1007-1.jpg"
   ],
   "details": [
@@ -176,7 +176,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1008.jpg",
   "photos": [
-   "assets/covers/1008.jpg",
+   "assets/full/1008.jpg",
    "assets/photos/1008-1.jpg"
   ],
   "details": [
@@ -197,7 +197,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1009.jpg",
   "photos": [
-   "assets/covers/1009.jpg",
+   "assets/full/1009.jpg",
    "assets/photos/1009-1.jpg"
   ],
   "details": [
@@ -220,7 +220,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1010.jpg",
   "photos": [
-   "assets/covers/1010.jpg"
+   "assets/full/1010.jpg"
   ],
   "details": [
    "Japanese Text",
@@ -240,7 +240,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1011.jpg",
   "photos": [
-   "assets/covers/1011.jpg"
+   "assets/full/1011.jpg"
   ],
   "details": [
    "Authentic.",
@@ -261,7 +261,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1012.jpg",
   "photos": [
-   "assets/covers/1012.jpg",
+   "assets/full/1012.jpg",
    "assets/photos/1012-1.jpg"
   ],
   "details": [
@@ -285,7 +285,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1013.jpg",
   "photos": [
-   "assets/covers/1013.jpg",
+   "assets/full/1013.jpg",
    "assets/photos/1013-1.jpg"
   ],
   "details": [
@@ -307,7 +307,7 @@ const BOOKS = [
   "shipping": null,
   "cover": "assets/covers/1014.jpg",
   "photos": [
-   "assets/covers/1014.jpg",
+   "assets/full/1014.jpg",
    "assets/photos/1014-1.jpg"
   ],
   "details": [
@@ -329,7 +329,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1015.jpg",
   "photos": [
-   "assets/covers/1015.jpg",
+   "assets/full/1015.jpg",
    "assets/photos/1015-1.jpg"
   ],
   "details": [
@@ -351,7 +351,7 @@ const BOOKS = [
   "shipping": "0.00",
   "cover": "assets/covers/1016.jpg",
   "photos": [
-   "assets/covers/1016.jpg",
+   "assets/full/1016.jpg",
    "assets/photos/1016-1.jpg"
   ],
   "details": [
@@ -373,7 +373,7 @@ const BOOKS = [
   "shipping": "0.00",
   "cover": "assets/covers/1017.jpg",
   "photos": [
-   "assets/covers/1017.jpg",
+   "assets/full/1017.jpg",
    "assets/photos/1017-1.jpg"
   ],
   "details": [
@@ -395,7 +395,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1018.jpg",
   "photos": [
-   "assets/covers/1018.jpg"
+   "assets/full/1018.jpg"
   ],
   "details": [
    "* Vol.262 October 1997 Vanity Fair Eternal Punk, Classic 90s Japanese fashion/culture magazine",
@@ -416,7 +416,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1019.jpg",
   "photos": [
-   "assets/covers/1019.jpg"
+   "assets/full/1019.jpg"
   ],
   "details": [
    "A5/Full color/32 pages",
@@ -439,7 +439,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1020.jpg",
   "photos": [
-   "assets/covers/1020.jpg",
+   "assets/full/1020.jpg",
    "assets/photos/1020-1.jpg",
    "assets/photos/1020-2.jpg",
    "assets/photos/1020-3.jpg"
@@ -464,7 +464,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1021.jpg",
   "photos": [
-   "assets/covers/1021.jpg",
+   "assets/full/1021.jpg",
    "assets/photos/1021-1.jpg"
   ],
   "details": [
@@ -486,7 +486,7 @@ const BOOKS = [
   "shipping": "0.00",
   "cover": "assets/covers/1022.jpg",
   "photos": [
-   "assets/covers/1022.jpg",
+   "assets/full/1022.jpg",
    "assets/photos/1022-1.jpg"
   ],
   "details": [
@@ -508,7 +508,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1023.jpg",
   "photos": [
-   "assets/covers/1023.jpg",
+   "assets/full/1023.jpg",
    "assets/photos/1023-1.jpg"
   ],
   "details": [
@@ -530,7 +530,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1024.jpg",
   "photos": [
-   "assets/covers/1024.jpg",
+   "assets/full/1024.jpg",
    "assets/photos/1024-1.jpg"
   ],
   "details": [
@@ -552,7 +552,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1025.jpg",
   "photos": [
-   "assets/covers/1025.jpg"
+   "assets/full/1025.jpg"
   ],
   "details": [
    "Authentic.",
@@ -573,7 +573,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1026.jpg",
   "photos": [
-   "assets/covers/1026.jpg"
+   "assets/full/1026.jpg"
   ],
   "details": [
    "Good condition"
@@ -592,7 +592,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1027.jpg",
   "photos": [
-   "assets/covers/1027.jpg"
+   "assets/full/1027.jpg"
   ],
   "details": [
    "Authentic.",
@@ -613,7 +613,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1028.jpg",
   "photos": [
-   "assets/covers/1028.jpg"
+   "assets/full/1028.jpg"
   ],
   "details": [
    "First printed in 2004, the issue returns in 2021 as a subversive statement of creativity for a new decade.",
@@ -636,7 +636,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1029.jpg",
   "photos": [
-   "assets/covers/1029.jpg",
+   "assets/full/1029.jpg",
    "assets/photos/1029-1.jpg"
   ],
   "details": [
@@ -661,7 +661,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1030.jpg",
   "photos": [
-   "assets/covers/1030.jpg",
+   "assets/full/1030.jpg",
    "assets/photos/1030-1.jpg"
   ],
   "details": [
@@ -683,7 +683,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1031.jpg",
   "photos": [
-   "assets/covers/1031.jpg",
+   "assets/full/1031.jpg",
    "assets/photos/1031-1.jpg"
   ],
   "details": [
@@ -708,7 +708,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1032.jpg",
   "photos": [
-   "assets/covers/1032.jpg"
+   "assets/full/1032.jpg"
   ],
   "details": [
    "Authentic.",
@@ -729,7 +729,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1033.jpg",
   "photos": [
-   "assets/covers/1033.jpg"
+   "assets/full/1033.jpg"
   ],
   "details": [
    "Authentic.",
@@ -750,7 +750,7 @@ const BOOKS = [
   "shipping": "0.00",
   "cover": "assets/covers/1034.jpg",
   "photos": [
-   "assets/covers/1034.jpg",
+   "assets/full/1034.jpg",
    "assets/photos/1034-1.jpg"
   ],
   "details": [
@@ -771,7 +771,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1035.jpg",
   "photos": [
-   "assets/covers/1035.jpg",
+   "assets/full/1035.jpg",
    "assets/photos/1035-1.jpg"
   ],
   "details": [
@@ -794,7 +794,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1036.jpg",
   "photos": [
-   "assets/covers/1036.jpg"
+   "assets/full/1036.jpg"
   ],
   "details": [
    "Rare Japanese fashion magazine featuring Rei Ayanami (Evangelion) cover and Stüssy collab content.",
@@ -815,7 +815,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1037.jpg",
   "photos": [
-   "assets/covers/1037.jpg",
+   "assets/full/1037.jpg",
    "assets/photos/1037-1.jpg"
   ],
   "details": [
@@ -837,7 +837,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1038.jpg",
   "photos": [
-   "assets/covers/1038.jpg"
+   "assets/full/1038.jpg"
   ],
   "details": [
    "Good condition"
@@ -856,7 +856,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1039.jpg",
   "photos": [
-   "assets/covers/1039.jpg",
+   "assets/full/1039.jpg",
    "assets/photos/1039-1.jpg"
   ],
   "details": [
@@ -878,7 +878,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1040.jpg",
   "photos": [
-   "assets/covers/1040.jpg"
+   "assets/full/1040.jpg"
   ],
   "details": [
    "Authentic.",
@@ -899,7 +899,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1041.jpg",
   "photos": [
-   "assets/covers/1041.jpg"
+   "assets/full/1041.jpg"
   ],
   "details": [
    "Authentic.",
@@ -920,7 +920,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1042.jpg",
   "photos": [
-   "assets/covers/1042.jpg"
+   "assets/full/1042.jpg"
   ],
   "details": [
    "Authentic.",
@@ -941,7 +941,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1043.jpg",
   "photos": [
-   "assets/covers/1043.jpg"
+   "assets/full/1043.jpg"
   ],
   "details": [
    "Authentic.",
@@ -962,7 +962,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1044.jpg",
   "photos": [
-   "assets/covers/1044.jpg"
+   "assets/full/1044.jpg"
   ],
   "details": [
    "Authentic.",
@@ -983,7 +983,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1045.jpg",
   "photos": [
-   "assets/covers/1045.jpg"
+   "assets/full/1045.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1004,7 +1004,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1046.jpg",
   "photos": [
-   "assets/covers/1046.jpg"
+   "assets/full/1046.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1025,7 +1025,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1047.jpg",
   "photos": [
-   "assets/covers/1047.jpg"
+   "assets/full/1047.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1046,7 +1046,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1048.jpg",
   "photos": [
-   "assets/covers/1048.jpg"
+   "assets/full/1048.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1067,7 +1067,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1049.jpg",
   "photos": [
-   "assets/covers/1049.jpg"
+   "assets/full/1049.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1088,7 +1088,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1050.jpg",
   "photos": [
-   "assets/covers/1050.jpg"
+   "assets/full/1050.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1109,7 +1109,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1051.jpg",
   "photos": [
-   "assets/covers/1051.jpg"
+   "assets/full/1051.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1130,7 +1130,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1052.jpg",
   "photos": [
-   "assets/covers/1052.jpg"
+   "assets/full/1052.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1151,7 +1151,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1053.jpg",
   "photos": [
-   "assets/covers/1053.jpg"
+   "assets/full/1053.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1172,7 +1172,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1054.jpg",
   "photos": [
-   "assets/covers/1054.jpg"
+   "assets/full/1054.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1193,7 +1193,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1055.jpg",
   "photos": [
-   "assets/covers/1055.jpg"
+   "assets/full/1055.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1214,7 +1214,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1056.jpg",
   "photos": [
-   "assets/covers/1056.jpg"
+   "assets/full/1056.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1235,7 +1235,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1057.jpg",
   "photos": [
-   "assets/covers/1057.jpg"
+   "assets/full/1057.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1256,7 +1256,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1058.jpg",
   "photos": [
-   "assets/covers/1058.jpg"
+   "assets/full/1058.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1277,7 +1277,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1059.jpg",
   "photos": [
-   "assets/covers/1059.jpg"
+   "assets/full/1059.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1298,7 +1298,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1060.jpg",
   "photos": [
-   "assets/covers/1060.jpg"
+   "assets/full/1060.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1319,7 +1319,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1061.jpg",
   "photos": [
-   "assets/covers/1061.jpg"
+   "assets/full/1061.jpg"
   ],
   "details": [
    "Authentic.",
@@ -1340,7 +1340,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1062.jpg",
   "photos": [
-   "assets/covers/1062.jpg"
+   "assets/full/1062.jpg"
   ],
   "details": [
    "Authentic.",

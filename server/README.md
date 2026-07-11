@@ -1,71 +1,58 @@
-# OuiOui Prints — Stripe checkout backend
+# OuiOui Prints — checkout backend (Stripe)
 
-A tiny serverless backend that turns the storefront's Stack into a real
-Stripe Checkout, and has Stripe **email the buyer an invoice (PDF) and a
-receipt** automatically after payment.
+The Stack checks out through **Stripe Checkout**, and Stripe **emails the
+buyer an invoice (PDF) + receipt** automatically after payment. A static
+site can't hold a secret key or charge cards, so a tiny serverless
+function does it — and it deploys **together with the site** as one Vercel
+project (functions live in `/api`).
 
-The static site (GitHub Pages) can't hold secret keys or charge cards, so
-this small function does it. You deploy it once to your own Stripe + host.
+## Files
+- `/api/checkout.js` — builds a Stripe Checkout Session from the cart.
+- `/api/webhook.js` — optional: your own sale notification / mark-as-sold.
+- `server/lib/checkout.js` — pure, unit-tested line-item + session builder.
+- `server/catalogue.json` — id → title → amount (cents). Prices come only
+  from here; the client can't set prices. Regenerated from `data/books.js`.
+- `server/test.js` — offline tests (`node server/test.js`).
 
-## How it works
+## Flow
+Buyer clicks **Checkout** → site POSTs the cart to `/api/checkout` →
+function validates prices and creates a Checkout Session with
+`invoice_creation` on → buyer pays on Stripe (enters email + shipping) →
+Stripe **emails the invoice + receipt** and returns them to `/success.html`
+→ you see the order in Stripe and add tracking when you ship.
 
-1. Buyer clicks **Checkout** → the site POSTs the cart to `/api/checkout`.
-2. The function looks up each item's price in `catalogue.json` (the client
-   never sets prices) and creates a Stripe Checkout Session with
-   `invoice_creation` enabled.
-3. Buyer is redirected to Stripe's hosted page, enters **email + shipping
-   address**, and pays.
-4. Stripe charges the card, then **emails the buyer a receipt and a
-   finalized invoice PDF**, and returns them to `/success.html`.
-5. You get the order in your Stripe Dashboard (and via `/api/webhook` if
-   you set it up). Add the tracking number in Stripe when you ship.
+## Setup (one Vercel deploy)
 
-## Setup (Vercel — ~10 minutes)
+1. **Roll your Stripe key** if it was ever exposed:
+   https://dashboard.stripe.com/apikeys → Secret key → **Roll** → Immediately.
+   Keep the new key private.
+2. **Turn on Stripe customer emails** so the invoice/receipt actually send:
+   Dashboard → Settings → *Customer emails* → enable **Successful payments**
+   and **Send finalized invoices**. Set your business name/logo under
+   Settings → *Business*.
+3. **Deploy to Vercel:** create an account at vercel.com, **Add New →
+   Project → Import** this GitHub repo. Framework preset: **Other**. Deploy.
+   (Set the Production Branch to your working branch, or merge to `main`.)
+4. **Add the secret** in Vercel → Project → Settings → Environment
+   Variables (see `.env.example`):
+   - `STRIPE_SECRET_KEY` = your `sk_live_…` (or `sk_test_…` to test first)
+   - `SHOP_NAME` = `OuiOui Prints` (optional)
+   Then **Redeploy**.
+5. Your site is live at `https://<project>.vercel.app`, and checkout works
+   at `/api/checkout` on that same domain — `js/config.js` already points
+   there, so there's nothing else to wire.
 
-1. **Create a Stripe account** and grab your secret key from
-   <https://dashboard.stripe.com/apikeys> (use a **test** key first).
-2. In the Stripe Dashboard → Settings → *Customer emails*, turn on
-   **"Successful payments"** and **"Send finalized invoices to customers"**
-   so receipts and invoices actually send. Set your business name/logo
-   under Settings → *Business*.
-3. Deploy this `server/` folder to Vercel:
-   - `npm i -g vercel` then, inside `server/`, run `vercel` (or import the
-     repo at vercel.com and set the **Root Directory** to `server`).
-4. Add environment variables in Vercel (Project → Settings → Environment
-   Variables) — see `.env.example`:
-   - `STRIPE_SECRET_KEY` = your `sk_test_…` (then `sk_live_…` when ready)
-   - `SITE_URL` = your storefront URL (e.g. `https://ouiouiprints.com`)
-   - `ALLOWED_ORIGIN` = same as `SITE_URL`
-   - `SHOP_NAME` = `OuiOui Prints` (or your final name)
-5. Redeploy. Your endpoint is `https://<project>.vercel.app/api/checkout`.
-6. Put that URL in **`js/config.js`** at the site root:
-   ```js
-   window.STOREFRONT = { checkoutEndpoint: "https://<project>.vercel.app/api/checkout" };
-   ```
-   Commit & push. Checkout is now live.
+### Test before going live
+Use a `sk_test_…` key and card `4242 4242 4242 4242` (any future expiry /
+CVC). You should reach `/success.html` and get the receipt + invoice email.
+Swap in the `sk_live_…` key when ready.
 
-### Test it
-Use Stripe test card `4242 4242 4242 4242`, any future expiry, any CVC.
-You should land on `/success.html` and receive the receipt + invoice email.
-Flip `STRIPE_SECRET_KEY` to your live key when you're ready for real sales.
+## Optional: get notified of sales (webhook)
+Dashboard → Developers → Webhooks → add `https://<project>.vercel.app/api/webhook`,
+event `checkout.session.completed`. Put its signing secret in
+`STRIPE_WEBHOOK_SECRET`, redeploy, and extend the marked section of
+`api/webhook.js` to email/Slack yourself. (Stripe already emails the buyer.)
 
-## Optional: sale notifications / mark-as-sold (webhook)
-
-1. Stripe Dashboard → Developers → Webhooks → add endpoint
-   `https://<project>.vercel.app/api/webhook`, event
-   `checkout.session.completed`.
-2. Copy its signing secret into `STRIPE_WEBHOOK_SECRET` and redeploy.
-3. Edit the marked section in `api/webhook.js` to email/Slack yourself or
-   flag the item sold. (Stripe already emails the *buyer*; this is for you.)
-
-## Keeping prices in sync
-`catalogue.json` is regenerated from `data/books.js` by the catalogue
-build, so it always matches the site. Redeploy the function after prices
-change. It contains only id → title → amount (cents); no secrets.
-
-## Other hosts
-- **Netlify**: move handlers to `netlify/functions/checkout.js` exporting
-  `exports.handler = async (event) => …` (parse `event.body`, return
-  `{ statusCode, body }`). Same env vars.
-- **Cloudflare Workers**: use the Stripe REST API via `fetch` with the same
-  session params from `lib/checkout.js`.
+## Custom domain
+Add your domain in Vercel → Settings → Domains. Everything keeps working
+because the API is same-origin.

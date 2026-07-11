@@ -1,30 +1,30 @@
 // POST /api/checkout — create a Stripe Checkout Session from a cart.
-// Deploy target: Vercel (Node serverless). Netlify/Cloudflare notes in README.
+// Deployed with the site as one Vercel project, so this lives at
+// https://<your-site>/api/checkout and needs no CORS or SITE_URL config.
 //
 // Request body:  { "cart": { "<id>": <qty>, ... } }
 // Response:      { "url": "https://checkout.stripe.com/..." }
 //
-// Env vars required:
-//   STRIPE_SECRET_KEY   your Stripe secret key (sk_live_… / sk_test_…)
-//   SITE_URL            public URL of the storefront (for success/cancel)
-// Optional:
-//   SHOP_NAME           shown on the invoice (default "OuiOui Prints")
-//   ALLOWED_ORIGIN      CORS origin allowed to call this (default SITE_URL)
-//   SHIP_COUNTRIES      comma-separated ISO country codes to allow
+// Required env var:  STRIPE_SECRET_KEY  (sk_live_… or sk_test_…)
+// Optional:          SHOP_NAME (invoice label), SITE_URL (override origin),
+//                    ALLOWED_ORIGIN (CORS if the site is hosted elsewhere),
+//                    SHIP_COUNTRIES (comma-separated ISO codes)
 
 const Stripe = require("stripe");
-const catalogue = require("../catalogue.json");
-const { buildLineItems, sessionParams } = require("../lib/checkout");
+const catalogue = require("../server/catalogue.json");
+const { buildLineItems, sessionParams } = require("../server/lib/checkout");
 
-function setCors(res, origin) {
-  res.setHeader("Access-Control-Allow-Origin", origin || "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+function originOf(req) {
+  if (process.env.SITE_URL) return process.env.SITE_URL;
+  const proto = (req.headers["x-forwarded-proto"] || "https").split(",")[0];
+  const host = req.headers["x-forwarded-host"] || req.headers.host;
+  return proto + "://" + host;
 }
 
 module.exports = async function handler(req, res) {
-  const allowOrigin = process.env.ALLOWED_ORIGIN || process.env.SITE_URL || "*";
-  setCors(res, allowOrigin);
+  res.setHeader("Access-Control-Allow-Origin", process.env.ALLOWED_ORIGIN || "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -38,7 +38,7 @@ module.exports = async function handler(req, res) {
 
     const stripe = Stripe(key);
     const session = await stripe.checkout.sessions.create(sessionParams(lineItems, {
-      siteUrl: process.env.SITE_URL || "",
+      siteUrl: originOf(req),
       shopName: process.env.SHOP_NAME || "OuiOui Prints",
       allowedCountries: (process.env.SHIP_COUNTRIES || "")
         .split(",").map((s) => s.trim().toUpperCase()).filter(Boolean),

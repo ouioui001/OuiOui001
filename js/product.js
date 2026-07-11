@@ -59,9 +59,7 @@
   var specs = [
     '<span class="dot">●</span> IN STOCK',
     "TYPE: " + book.kind.replace(/s$/, ""),
-    "SHIPPING (US): " + (book.shipping ? formatPrice(book.shipping) : "CALCULATED AT CHECKOUT"),
-    "SHIPS WORLDWIDE",
-    "AUTHENTIC — ONE IN STOCK"
+    "SHIPS WORLDWIDE"
   ];
   var list = document.getElementById("spec-list");
   specs.forEach(function (s) {

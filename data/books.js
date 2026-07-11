@@ -56,10 +56,10 @@ const BOOKS = [
   "topics": [
    "Fashion"
   ],
-  "price": null,
+  "price": "165.00",
   "reduced": false,
   "originalPrice": null,
-  "shipping": null,
+  "shipping": "5.00",
   "cover": "assets/covers/1003.jpg",
   "photos": [
    "assets/full/1003.jpg",
@@ -78,10 +78,10 @@ const BOOKS = [
   "topics": [
    "Fashion"
   ],
-  "price": null,
+  "price": "155.00",
   "reduced": false,
   "originalPrice": null,
-  "shipping": null,
+  "shipping": "5.00",
   "cover": "assets/covers/1004.jpg",
   "photos": [
    "assets/full/1004.jpg",
@@ -301,10 +301,10 @@ const BOOKS = [
   "topics": [
    "Fashion"
   ],
-  "price": null,
+  "price": "38.00",
   "reduced": false,
   "originalPrice": null,
-  "shipping": null,
+  "shipping": "5.00",
   "cover": "assets/covers/1014.jpg",
   "photos": [
    "assets/full/1014.jpg",

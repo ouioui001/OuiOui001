@@ -1,8 +1,9 @@
 // Storefront configuration.
-// The checkout function ships in /api and deploys with the site (Vercel),
-// so this same-domain path works once deployed — no key goes here, ever.
-// On a host without the function, the Checkout button will report an error
-// instead of charging; that's expected until you deploy.
+// checkoutEndpoint is a same-domain path — no key ever goes here.
+//   Hostinger (PHP hosting):  "/checkout.php"   ← current
+//   Vercel (Node functions):  "/api/checkout"
+// Until the backend is set up with your Stripe key, the Checkout button
+// reports an error rather than charging — that's expected.
 window.STOREFRONT = {
-  checkoutEndpoint: "/api/checkout"
+  checkoutEndpoint: "/checkout.php"
 };

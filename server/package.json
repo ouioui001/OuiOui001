@@ -1,0 +1,12 @@
+{
+  "name": "ouioui-prints-checkout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stripe Checkout backend for the OuiOui Prints storefront",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "stripe": "^17.5.0"
+  }
+}

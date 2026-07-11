@@ -466,6 +466,24 @@ main {
   color: var(--muted);
 }
 
+/* ---------- order notice pages ---------- */
+.notice {
+  max-width: 520px;
+  margin: 8vh auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.notice-dot { color: var(--accent); font-size: 13px; margin-bottom: 14px; }
+.notice h1 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.25; text-wrap: balance; }
+.notice-body {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.9;
+  color: #4a473f;
+  margin-top: 16px;
+}
+.notice-btn { display: inline-block; width: auto; padding: 12px 26px; margin-top: 28px; }
+
 /* ---------- cart ---------- */
 .cart-scrim[hidden], .cart-drawer[hidden] { display: none !important; }
 .cart-scrim { position: fixed; inset: 0; background: rgba(26, 26, 23, 0.16); z-index: 850; }

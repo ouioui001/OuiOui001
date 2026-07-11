@@ -59,9 +59,37 @@
   drawer.querySelector("[data-cart-close]").addEventListener("click", close);
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 
-  drawer.querySelector("#cart-checkout").addEventListener("click", function () {
+  var checkoutBtn = drawer.querySelector("#cart-checkout");
+  checkoutBtn.addEventListener("click", function () {
     if (count() === 0) return;
-    document.getElementById("cart-msg").hidden = false;
+    var endpoint = (window.STOREFRONT && window.STOREFRONT.checkoutEndpoint) || "";
+    var msg = document.getElementById("cart-msg");
+    if (!endpoint) {                       // not wired up yet — show the note
+      msg.hidden = false;
+      return;
+    }
+    // Hand the cart to the backend, which builds a Stripe Checkout Session
+    // (prices validated server-side) and returns its hosted URL.
+    checkoutBtn.disabled = true;
+    checkoutBtn.textContent = "REDIRECTING…";
+    msg.hidden = true;
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cart: read() }),
+    })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok && res.d && res.d.url) { window.location.href = res.d.url; return; }
+        throw new Error((res.d && res.d.error) || "Checkout failed");
+      })
+      .catch(function (err) {
+        checkoutBtn.disabled = false;
+        checkoutBtn.textContent = "CHECKOUT";
+        msg.textContent = "Sorry — checkout could not start. " + (err.message || "") +
+          " Please try again, or email us to complete your order.";
+        msg.hidden = false;
+      });
   });
 
   function renderLines() {

@@ -4,3 +4,9 @@ preview/
 # Local sync scratch
 node_modules/
 *.tmp
+
+# Secrets — never commit real keys
+.env
+.env.local
+server/.env
+.vercel/

@@ -1,6 +1,7 @@
-// Client-side cart. Persists to localStorage and resolves line items from
-// the global BOOKS catalogue. Checkout is a placeholder for now — this is
-// an independent storefront with no payment backend yet.
+// Client-side cart ("Stack"). Persists to localStorage and resolves line
+// items from the global BOOKS catalogue. Checkout goes through per-listing
+// Stripe payment pages (data/paylinks.js) — every piece is one-of-one, so
+// each page allows a single completed purchase and then marks itself sold.
 
 (function () {
   var KEY = "hardcpy-cart";
@@ -59,37 +60,26 @@
   drawer.querySelector("[data-cart-close]").addEventListener("click", close);
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 
+  function linkFor(id) {
+    return (typeof PAYLINKS !== "undefined" && PAYLINKS[String(id)]) || "";
+  }
+
   var checkoutBtn = drawer.querySelector("#cart-checkout");
   checkoutBtn.addEventListener("click", function () {
-    if (count() === 0) return;
-    var endpoint = (window.STOREFRONT && window.STOREFRONT.checkoutEndpoint) || "";
+    var ids = Object.keys(read());
+    if (!ids.length) return;
     var msg = document.getElementById("cart-msg");
-    if (!endpoint) {                       // not wired up yet — show the note
-      msg.hidden = false;
+    if (ids.length === 1 && linkFor(ids[0])) {
+      // one piece — straight to its secure Stripe payment page
+      checkoutBtn.disabled = true;
+      checkoutBtn.textContent = "REDIRECTING…";
+      window.location.href = linkFor(ids[0]);
       return;
     }
-    // Hand the cart to the backend, which builds a Stripe Checkout Session
-    // (prices validated server-side) and returns its hosted URL.
-    checkoutBtn.disabled = true;
-    checkoutBtn.textContent = "REDIRECTING…";
-    msg.hidden = true;
-    fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ cart: read() }),
-    })
-      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
-      .then(function (res) {
-        if (res.ok && res.d && res.d.url) { window.location.href = res.d.url; return; }
-        throw new Error((res.d && res.d.error) || "Checkout failed");
-      })
-      .catch(function (err) {
-        checkoutBtn.disabled = false;
-        checkoutBtn.textContent = "CHECKOUT";
-        msg.textContent = "Sorry — checkout could not start. " + (err.message || "") +
-          " Please try again, or email us to complete your order.";
-        msg.hidden = false;
-      });
+    // several pieces — each one-of-one item checks out on its own page
+    msg.textContent = "Each piece is one-of-one and checks out individually — " +
+      "tap BUY next to an item to purchase it, then come back for the rest.";
+    msg.hidden = false;
   });
 
   function renderLines() {
@@ -124,6 +114,7 @@
           '<span>' + qty + '</span>' +
           '<button data-inc="' + k + '">+</button>' +
         '</div>' +
+        (linkFor(k) ? '<a class="cart-buy" href="' + linkFor(k) + '">BUY</a>' : '') +
         '<button class="cart-remove" data-rm="' + k + '">REMOVE</button>';
       wrap.appendChild(row);
     });

@@ -104,6 +104,14 @@
     list.appendChild(li);
   });
 
+  // ---------- buy now (per-listing Stripe payment page) ----------
+  var buyBtn = document.getElementById("buy-btn");
+  var payUrl = (typeof PAYLINKS !== "undefined") && PAYLINKS[String(book.id)];
+  if (buyBtn && payUrl) {
+    buyBtn.href = payUrl;
+    buyBtn.hidden = false;
+  }
+
   // ---------- add to cart ----------
   var addBtn = document.getElementById("add-btn");
   addBtn.addEventListener("click", function () {

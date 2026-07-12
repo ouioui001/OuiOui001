@@ -587,6 +587,13 @@ main {
 }
 .buy-btn:hover { background: var(--accent); border-color: var(--accent); }
 .buy-btn:disabled { background: var(--panel); border-color: var(--rule); color: var(--faint); cursor: default; }
+a.buy-btn { text-decoration: none; }
+.buy-btn--outline {
+  background: none;
+  color: var(--ink);
+  margin-top: 10px;
+}
+.buy-btn--outline:hover { background: var(--panel); color: var(--ink); border-color: var(--ink); }
 
 .product-pager {
   display: flex;
@@ -660,12 +667,24 @@ main {
 .cart-line {
   display: grid;
   grid-template-columns: 46px 1fr auto;
-  grid-template-areas: "img main qty" "img rm rm";
+  grid-template-areas: "img main qty" "img rm buy";
   gap: 4px 14px;
   align-items: start;
   padding: 16px 0;
   border-bottom: 1px solid var(--rule);
 }
+.cart-buy {
+  grid-area: buy;
+  justify-self: end;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 4px 12px;
+}
+.cart-buy:hover { background: var(--accent); }
 .cart-line img { grid-area: img; width: 46px; height: 58px; object-fit: contain; }
 .cart-line-main { grid-area: main; display: flex; flex-direction: column; gap: 4px; }
 .cart-line-t { font-family: var(--sans); font-size: 12px; line-height: 1.35; }

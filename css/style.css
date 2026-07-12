@@ -25,6 +25,7 @@ body {
   color: var(--ink);
   font-size: 12px;
   line-height: 1.55;
+  padding-top: 56px;   /* clears the fixed header */
 }
 a { color: var(--ink); }
 [hidden] { display: none !important; }
@@ -53,40 +54,40 @@ img {
 }
 #intro.done { opacity: 0; pointer-events: none; }
 #intro span {
-  font-family: var(--serif);
-  font-size: clamp(20px, 5vw, 34px);
-  font-style: italic;
-  letter-spacing: 0.16em;
+  font-family: var(--sans);
+  font-size: clamp(22px, 5vw, 36px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
   animation: intro-in 1.3s ease;
 }
-@keyframes intro-in { from { opacity: 0; letter-spacing: 0.34em; } to { opacity: 1; letter-spacing: 0.16em; } }
+@keyframes intro-in { from { opacity: 0; letter-spacing: 0.18em; } to { opacity: 1; letter-spacing: 0.02em; } }
 @media (prefers-reduced-motion: reduce) { #intro { display: none; } }
 
-/* ---------- top bar ---------- */
-.topbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+/* ---------- fixed header ---------- */
+.site-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 64px 14px 24px;
+  background: var(--paper);
+  z-index: 790;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding: 20px 24px 16px;
-  max-width: var(--max);
-  margin: 0 auto;
 }
-.brand {
-  font-family: var(--serif);
-  font-size: 20px;
-  letter-spacing: 0.06em;
+.logo {
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  text-align: center;
   white-space: nowrap;
 }
-.nav-cluster { display: flex; gap: 20px; align-items: center; }
-.nav-cluster--right { justify-content: flex-end; }
 .navlink {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
   background: none;
   border: 0;
   cursor: pointer;
@@ -96,22 +97,65 @@ img {
   border-bottom: 1px solid transparent;
 }
 .navlink:hover { border-bottom-color: var(--ink); }
-.navlink[aria-current="page"] { border-bottom-color: var(--accent); }
+
+/* two-line menu button — rotates and inverts while the menu is open */
+.burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  z-index: 810;
+  transition: transform 0.26s ease-out;
+}
+.burger .line {
+  position: absolute;
+  right: 20px;
+  width: 18px;
+  height: 3px;
+  background: var(--ink);
+  transition: background 0.26s ease-out;
+}
+.burger .line:first-child { top: 24px; }
+.burger .line:last-child { top: 30px; }
+.burger.open { transform: rotate(90deg); }
+.burger.open .line { background: #fff; }
+
+/* ---------- hero ---------- */
+.hero {
+  height: calc(100svh - 56px);
+  padding: 26px 20px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.hero img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+body.no-scroll { overflow: hidden; }
 
 .meta {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 24px 18px;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: var(--muted);
   border-bottom: 1px solid var(--rule);
 }
-.meta b { color: var(--ink); font-weight: 400; }
+.meta b { color: var(--ink); font-weight: 500; }
 .meta-state { color: var(--faint); }
 
 main {
@@ -232,38 +276,73 @@ main {
   padding: 8px;
 }
 
+/* full-screen menu that drops down from the top */
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: var(--paper);
+  background: #0d0d0c;
+  color: #fff;
   z-index: 800;
-  padding: 70px 40px 40px;
+  padding: 96px 28px 44px 32px;
   overflow-y: auto;
+  transform: scaleY(0);
+  transform-origin: top center;
+  visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1),
+              visibility 0s linear 0.6s;
 }
-.menu-list { list-style: none; max-width: var(--max); margin: 0 auto; }
+.menu-overlay.show {
+  transform: scaleY(1);
+  visibility: visible;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.menu-inner {
+  opacity: 0;
+  transform: translateY(-26px);
+  transition: opacity 0.26s ease-out, transform 0.26s ease-out;
+}
+.menu-overlay.show .menu-inner {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.34s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-overlay, .menu-overlay.show, .menu-inner, .menu-overlay.show .menu-inner {
+    transition: none;
+  }
+}
+.menu-brand {
+  font-family: var(--sans);
+  font-size: clamp(44px, 9vw, 88px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+}
+.menu-brand a { color: #fff; text-decoration: none; }
+.menu-list { list-style: none; margin-top: 36px; }
+.menu-list li { margin-top: 12px; }
 .menu-list a {
-  font-family: var(--serif);
-  font-size: clamp(28px, 6vw, 54px);
+  font-family: var(--sans);
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 500;
+  color: #fff;
   text-decoration: none;
-  line-height: 1.5;
   display: inline-block;
+  border-bottom: 1px solid transparent;
 }
-.menu-list a:hover { font-style: italic; color: var(--accent); }
-.menu-list sup {
-  font-family: var(--mono);
-  font-size: 0.28em;
-  color: var(--muted);
-  letter-spacing: 0;
-  vertical-align: super;
+.menu-list a:hover { border-bottom-color: #fff; }
+@media (min-width: 1024px) {
+  .menu-overlay { padding: 128px 32px 32px 128px; }
 }
 .menu-about {
-  max-width: 540px;
-  margin: 44px auto 0;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: #6a665e;
-  line-height: 1.85;
-  letter-spacing: 0.02em;
+  max-width: 460px;
+  margin: 56px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: #cfcbc2;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 .refine-panel {
@@ -459,10 +538,10 @@ main {
   flex-wrap: wrap;
   gap: 6px 30px;
   justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: var(--muted);
 }
 

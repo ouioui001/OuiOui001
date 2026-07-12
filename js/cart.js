@@ -145,7 +145,7 @@
   function refresh() {
     var n = count();
     document.querySelectorAll("[data-cart-tab]").forEach(function (el) {
-      el.textContent = "STACK (" + n + ")";
+      el.textContent = "Stack (" + n + ")";
     });
   }
 

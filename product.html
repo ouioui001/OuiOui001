@@ -9,17 +9,19 @@
 </head>
 <body class="product-page">
 
-  <header class="topbar">
-    <div class="nav-cluster">
-      <button id="menu-tab" class="navlink" aria-controls="menu-overlay" aria-expanded="false">Menu</button>
-      <a class="navlink" href="index.html">← Shop</a>
-    </div>
-    <a class="brand" href="index.html">HARDCPY</a>
-    <div class="nav-cluster nav-cluster--right">
-      <button class="navlink" data-cart-tab>Stack (0)</button>
-    </div>
+  <header class="site-head">
+    <a class="logo" href="index.html">HARDcpy</a>
+    <button class="navlink stack-tab" data-cart-tab>Stack (0)</button>
   </header>
-  <div class="meta"><span id="product-crumb"></span></div>
+  <button id="menu-tab" class="burger" aria-controls="menu-overlay" aria-expanded="false" aria-label="Menu">
+    <span class="line"></span>
+    <span class="line"></span>
+  </button>
+
+  <div class="meta">
+    <a class="navlink" href="index.html">← Shop</a>
+    <span id="product-crumb"></span>
+  </div>
 
   <main class="product-main">
     <div id="gallery" class="gallery"></div>
@@ -47,18 +49,20 @@
     <span>© 2026 HARDCPY</span>
   </footer>
 
-  <nav id="menu-overlay" class="menu-overlay" hidden>
-    <button class="panel-close" data-close="menu">×</button>
-    <ul class="menu-list">
-      <li><a href="index.html">SHOP ALL</a></li>
-      <li><a href="index.html?type=Books">BOOKS</a></li>
-      <li><a href="index.html?type=Magazines">MAGAZINES</a></li>
-      <li><a href="index.html?type=Catalogs">CATALOGS</a></li>
-      <li><a href="#" data-cart-tab>STACK</a></li>
-    </ul>
-    <p class="menu-about">
-      HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc.
-    </p>
+  <nav id="menu-overlay" class="menu-overlay">
+    <div class="menu-inner">
+      <h2 class="menu-brand"><a href="index.html">HARD<br>cpy</a></h2>
+      <ul class="menu-list">
+        <li><a href="index.html">Shop All</a></li>
+        <li><a href="index.html?type=Books">Books</a></li>
+        <li><a href="index.html?type=Magazines">Magazines</a></li>
+        <li><a href="index.html?type=Catalogs">Catalogs</a></li>
+        <li><a href="#" data-cart-tab>Stack</a></li>
+      </ul>
+      <p class="menu-about">
+        HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc.
+      </p>
+    </div>
   </nav>
 
   <script src="data/books.js"></script>

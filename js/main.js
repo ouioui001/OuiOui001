@@ -30,35 +30,29 @@ document.addEventListener("dragstart", function (e) {
 })();
 
 // ---------- menu overlay ----------
+// Full-screen menu drops down from the top; the two-line button toggles it
+// (rotating and inverting while open). Tapping the hero also opens it.
 (function () {
   var tab = document.getElementById("menu-tab");
   var overlay = document.getElementById("menu-overlay");
   if (!tab || !overlay) return;
+  var isOpen = false;
   function toggle(open) {
-    overlay.hidden = !open;
+    isOpen = open;
+    overlay.classList.toggle("show", open);
+    tab.classList.toggle("open", open);
     tab.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("no-scroll", open);
   }
-  tab.addEventListener("click", function () { toggle(overlay.hidden); });
-  overlay.querySelector("[data-close]").addEventListener("click", function () { toggle(false); });
+  tab.addEventListener("click", function () { toggle(!isOpen); });
+  overlay.addEventListener("click", function (e) {
+    if (e.target.closest("a")) toggle(false);   // navigating closes the menu
+  });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") toggle(false);
   });
-
-  // item counts next to the menu entries
-  if (typeof BOOKS !== "undefined") {
-    var counts = { all: BOOKS.length, Books: 0, Magazines: 0, Catalogs: 0 };
-    BOOKS.forEach(function (b) { counts[b.kind] = (counts[b.kind] || 0) + 1; });
-    var map = {
-      "count-all": counts.all,
-      "count-books": counts.Books,
-      "count-mags": counts.Magazines,
-      "count-cats": counts.Catalogs
-    };
-    Object.keys(map).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.textContent = map[id];
-    });
-  }
+  var hero = document.getElementById("hero");
+  if (hero) hero.addEventListener("click", function () { toggle(true); });
 })();
 
 // ---------- shared helpers ----------

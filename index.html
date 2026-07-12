@@ -17,20 +17,24 @@
 </head>
 <body>
 
-  <div id="intro" aria-hidden="true"><span>HARDCPY</span></div>
+  <div id="intro" aria-hidden="true"><span>HARDcpy</span></div>
 
-  <header class="topbar">
-    <div class="nav-cluster">
-      <button id="menu-tab" class="navlink" aria-controls="menu-overlay" aria-expanded="false">Menu</button>
-      <button id="refine-tab" class="navlink" aria-controls="refine-panel" aria-expanded="false">Refine</button>
-    </div>
-    <a class="brand" href="index.html">HARDCPY</a>
-    <div class="nav-cluster nav-cluster--right">
-      <button class="navlink" data-cart-tab>Stack (0)</button>
-    </div>
+  <header class="site-head">
+    <a class="logo" href="index.html">HARDcpy</a>
+    <button class="navlink stack-tab" data-cart-tab>Stack (0)</button>
   </header>
+  <button id="menu-tab" class="burger" aria-controls="menu-overlay" aria-expanded="false" aria-label="Menu">
+    <span class="line"></span>
+    <span class="line"></span>
+  </button>
+
+  <section class="hero" id="hero" title="Menu">
+    <img src="assets/full/1001.jpg" alt="HARDcpy — featured publication">
+  </section>
+
   <div class="meta">
     <span class="meta-state"><b id="disp-filter">All</b> · <b id="disp-mode">Grid</b></span>
+    <button id="refine-tab" class="navlink" aria-controls="refine-panel" aria-expanded="false">Refine</button>
   </div>
 
   <main>
@@ -43,18 +47,20 @@
     <span>© 2026 HARDCPY</span>
   </footer>
 
-  <nav id="menu-overlay" class="menu-overlay" hidden>
-    <button class="panel-close" data-close="menu">×</button>
-    <ul class="menu-list">
-      <li><a href="index.html" data-type="">SHOP ALL</a></li>
-      <li><a href="index.html?type=Books" data-type="Books">BOOKS</a></li>
-      <li><a href="index.html?type=Magazines" data-type="Magazines">MAGAZINES</a></li>
-      <li><a href="index.html?type=Catalogs" data-type="Catalogs">CATALOGS</a></li>
-      <li><a href="#" data-cart-tab>STACK</a></li>
-    </ul>
-    <p class="menu-about">
-      HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc.
-    </p>
+  <nav id="menu-overlay" class="menu-overlay">
+    <div class="menu-inner">
+      <h2 class="menu-brand"><a href="index.html">HARD<br>cpy</a></h2>
+      <ul class="menu-list">
+        <li><a href="index.html">Shop All</a></li>
+        <li><a href="index.html?type=Books">Books</a></li>
+        <li><a href="index.html?type=Magazines">Magazines</a></li>
+        <li><a href="index.html?type=Catalogs">Catalogs</a></li>
+        <li><a href="#" data-cart-tab>Stack</a></li>
+      </ul>
+      <p class="menu-about">
+        HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc.
+      </p>
+    </div>
   </nav>
 
   <aside id="refine-panel" class="refine-panel" hidden>

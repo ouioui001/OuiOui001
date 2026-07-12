@@ -44,7 +44,9 @@
     '<div class="cart-foot">' +
       '<p class="cart-subtotal"><span>SUBTOTAL</span><span id="cart-subtotal-v"></span></p>' +
       '<button id="cart-checkout" class="buy-btn">CHECKOUT</button>' +
-      '<p id="cart-msg" class="cart-msg" hidden>Checkout is coming soon — the shop is being set up. Nothing has been charged.</p>' +
+      '<p class="cart-note">Every piece is one-of-one, so each item checks out on its own ' +
+        'secure payment page — opened in a new tab. Complete each purchase separately.</p>' +
+      '<p id="cart-msg" class="cart-msg" hidden></p>' +
     '</div>';
   document.body.appendChild(drawer);
 
@@ -63,22 +65,32 @@
   function linkFor(id) {
     return (typeof PAYLINKS !== "undefined" && PAYLINKS[String(id)]) || "";
   }
+  function isSold(id) {
+    return (typeof SOLD !== "undefined") && SOLD.indexOf(parseInt(id, 10)) !== -1;
+  }
 
   var checkoutBtn = drawer.querySelector("#cart-checkout");
   checkoutBtn.addEventListener("click", function () {
     var ids = Object.keys(read());
-    if (!ids.length) return;
     var msg = document.getElementById("cart-msg");
-    if (ids.length === 1 && linkFor(ids[0])) {
-      // one piece — straight to its secure Stripe payment page
-      checkoutBtn.disabled = true;
-      checkoutBtn.textContent = "REDIRECTING…";
-      window.location.href = linkFor(ids[0]);
+    var avail = ids.filter(function (k) { return linkFor(k) && !isSold(k); });
+    if (!avail.length) {
+      if (ids.length) {
+        msg.textContent = "The pieces in your stack have sold. Remove them to keep browsing.";
+        msg.hidden = false;
+      }
       return;
     }
-    // several pieces — each one-of-one item checks out on its own page
-    msg.textContent = "Each piece is one-of-one and checks out individually — " +
-      "tap BUY next to an item to purchase it, then come back for the rest.";
+    // one payment page per piece, each in its own tab
+    var blocked = false;
+    avail.forEach(function (k) {
+      var w = window.open(linkFor(k), "_blank", "noopener");
+      if (!w) blocked = true;
+    });
+    msg.textContent = blocked
+      ? "Your browser blocked some tabs — tap BUY next to each item to open its payment page."
+      : "Payment page" + (avail.length > 1 ? "s" : "") + " opened in " +
+        (avail.length > 1 ? "new tabs — complete each purchase separately." : "a new tab.");
     msg.hidden = false;
   });
 
@@ -101,8 +113,9 @@
       var b = bookById(parseInt(k, 10));
       if (!b) return;
       var qty = c[k];
+      var sold = isSold(k);
       var row = document.createElement("div");
-      row.className = "cart-line";
+      row.className = "cart-line" + (sold ? " cart-line--sold" : "");
       row.innerHTML =
         '<img src="' + b.cover + '" alt="">' +
         '<div class="cart-line-main">' +
@@ -114,7 +127,9 @@
           '<span>' + qty + '</span>' +
           '<button data-inc="' + k + '">+</button>' +
         '</div>' +
-        (linkFor(k) ? '<a class="cart-buy" href="' + linkFor(k) + '">BUY</a>' : '') +
+        (sold
+          ? '<span class="cart-sold-tag">SOLD OUT</span>'
+          : (linkFor(k) ? '<a class="cart-buy" href="' + linkFor(k) + '" target="_blank" rel="noopener">BUY</a>' : '')) +
         '<button class="cart-remove" data-rm="' + k + '">REMOVE</button>';
       wrap.appendChild(row);
     });

@@ -200,12 +200,30 @@ main {
 .card:hover::before, .card:focus-visible::before { opacity: 1; }
 .card > * { position: relative; z-index: 1; }
 .card figure {
+  position: relative;
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
 }
+.sold-badge {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.card.is-sold img { opacity: 0.4; filter: grayscale(1); }
+.card.is-sold:hover img { transform: none; }
+.ls--sold { color: var(--muted) !important; }
+.dot--sold { color: var(--muted) !important; }
 @media (max-width: 620px) { .card figure { height: 190px; } }
 .card img {
   max-height: 100%;
@@ -685,6 +703,16 @@ a.buy-btn { text-decoration: none; }
   padding: 4px 12px;
 }
 .cart-buy:hover { background: var(--accent); }
+.cart-line--sold img, .cart-line--sold .cart-line-main, .cart-line--sold .cart-qty { opacity: 0.45; }
+.cart-sold-tag {
+  grid-area: buy;
+  justify-self: end;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.cart-note { font-size: 10px; color: #6a665e; line-height: 1.7; margin-top: 12px; }
 .cart-line img { grid-area: img; width: 46px; height: 58px; object-fit: contain; }
 .cart-line-main { grid-area: main; display: flex; flex-direction: column; gap: 4px; }
 .cart-line-t { font-family: var(--sans); font-size: 12px; line-height: 1.35; }

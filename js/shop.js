@@ -109,10 +109,14 @@
     return items.sort(sorters[state.sort]);
   }
 
+  function isSold(id) {
+    return (typeof SOLD !== "undefined") && SOLD.indexOf(id) !== -1;
+  }
+
   // ---------- rendering ----------
   function cardFor(b) {
     var a = document.createElement("a");
-    a.className = "card";
+    a.className = "card" + (isSold(b.id) ? " is-sold" : "");
     a.href = "product.html?id=" + b.id;
     var fig = document.createElement("figure");
     var img = document.createElement("img");
@@ -121,6 +125,12 @@
     img.loading = "lazy";
     img.decoding = "async";
     fig.appendChild(img);
+    if (isSold(b.id)) {
+      var badge = document.createElement("span");
+      badge.className = "sold-badge";
+      badge.textContent = "SOLD OUT";
+      fig.appendChild(badge);
+    }
     var t = document.createElement("div");
     t.className = "t";
     t.textContent = b.title;
@@ -145,8 +155,8 @@
     var p = document.createElement("span");
     p.textContent = priceLabel(b);
     var s = document.createElement("span");
-    s.className = "ls";
-    s.textContent = "IN STOCK";
+    s.className = "ls" + (isSold(b.id) ? " ls--sold" : "");
+    s.textContent = isSold(b.id) ? "SOLD OUT" : "IN STOCK";
     a.appendChild(t);
     a.appendChild(k);
     a.appendChild(p);

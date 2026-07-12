@@ -92,8 +92,10 @@
   }
 
   // ---------- spec panel ----------
+  var sold = (typeof SOLD !== "undefined") && SOLD.indexOf(book.id) !== -1;
   var specs = [
-    '<span class="dot">●</span> IN STOCK',
+    sold ? '<span class="dot dot--sold">●</span> SOLD OUT'
+         : '<span class="dot">●</span> IN STOCK',
     "TYPE: " + book.kind.split("/").map(function (w) { return w.replace(/s$/, ""); }).join("/"),
     "SHIPS WORLDWIDE"
   ];
@@ -107,18 +109,25 @@
   // ---------- buy now (per-listing Stripe payment page) ----------
   var buyBtn = document.getElementById("buy-btn");
   var payUrl = (typeof PAYLINKS !== "undefined") && PAYLINKS[String(book.id)];
-  if (buyBtn && payUrl) {
+  if (buyBtn && payUrl && !sold) {
     buyBtn.href = payUrl;
+    buyBtn.target = "_blank";
+    buyBtn.rel = "noopener";
     buyBtn.hidden = false;
   }
 
   // ---------- add to cart ----------
   var addBtn = document.getElementById("add-btn");
-  addBtn.addEventListener("click", function () {
-    Cart.add(book.id);
-    addBtn.textContent = "ADDED ✓";
-    setTimeout(function () { addBtn.textContent = "ADD TO STACK"; }, 1400);
-  });
+  if (sold) {
+    addBtn.disabled = true;
+    addBtn.textContent = "SOLD OUT";
+  } else {
+    addBtn.addEventListener("click", function () {
+      Cart.add(book.id);
+      addBtn.textContent = "ADDED ✓";
+      setTimeout(function () { addBtn.textContent = "ADD TO STACK"; }, 1400);
+    });
+  }
 
   // ---------- prev / next ----------
   var prev = document.getElementById("prev-link");

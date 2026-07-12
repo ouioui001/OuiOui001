@@ -55,6 +55,38 @@ document.addEventListener("dragstart", function (e) {
   if (hero) hero.addEventListener("click", function () { toggle(true); });
 })();
 
+// ---------- hero rotation ----------
+// The homepage hero starts on a random listing and slowly crossfades
+// through others. Skips auto-cycling for reduced-motion visitors.
+(function () {
+  var img = document.querySelector("#hero img");
+  if (!img || typeof BOOKS === "undefined" || !BOOKS.length) return;
+
+  function srcOf(b) { return (b.photos && b.photos[0]) || b.cover; }
+  var current = Math.floor(Math.random() * BOOKS.length);
+  function show(i) {
+    img.src = srcOf(BOOKS[i]);
+    img.alt = BOOKS[i].title + " — HARDcpy";
+  }
+  show(current);
+
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  window.setInterval(function () {
+    var next = Math.floor(Math.random() * BOOKS.length);
+    if (BOOKS.length > 1 && next === current) next = (next + 1) % BOOKS.length;
+    var pre = new Image();
+    pre.onload = function () {
+      img.style.opacity = "0";
+      window.setTimeout(function () {
+        current = next;
+        show(next);
+        img.style.opacity = "1";
+      }, 450);
+    };
+    pre.src = srcOf(BOOKS[next]);
+  }, 7000);
+})();
+
 // ---------- shared helpers ----------
 function formatPrice(amount) {
   var n = parseFloat(amount);

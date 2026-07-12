@@ -138,6 +138,7 @@ img {
   max-width: 100%;
   width: auto;
   object-fit: contain;
+  transition: opacity 0.45s ease;
 }
 body.no-scroll { overflow: hidden; }
 

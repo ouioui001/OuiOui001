@@ -53,6 +53,30 @@ document.addEventListener("dragstart", function (e) {
   });
   var hero = document.getElementById("hero");
   if (hero) hero.addEventListener("click", function () { toggle(true); });
+
+  // contact section inside the menu
+  var ct = document.getElementById("contact-toggle");
+  var cf = document.getElementById("contact-form");
+  if (ct && cf) {
+    ct.addEventListener("click", function () {
+      cf.hidden = !cf.hidden;
+      ct.setAttribute("aria-expanded", String(!cf.hidden));
+      if (!cf.hidden) cf.querySelector("input[name=name]").focus();
+    });
+  }
+})();
+
+// ---------- "message sent" confirmation ----------
+// The contact form redirects back with ?sent=1 after a successful send.
+(function () {
+  if (new URLSearchParams(location.search).get("sent") !== "1") return;
+  var t = document.createElement("div");
+  t.className = "toast";
+  t.textContent = "Message sent — we'll get back to you soon.";
+  document.body.appendChild(t);
+  history.replaceState(null, "", location.pathname);
+  window.setTimeout(function () { t.classList.add("fade"); }, 4200);
+  window.setTimeout(function () { t.remove(); }, 5000);
 })();
 
 // ---------- hero rotation ----------

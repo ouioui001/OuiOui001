@@ -57,7 +57,25 @@
         <li><a href="index.html?type=Books/Catalogs">Books/Catalogs</a></li>
         <li><a href="index.html?type=Magazines">Magazines</a></li>
         <li><a href="#" data-cart-tab>Stack</a></li>
+        <li><button id="contact-toggle" class="menu-link-btn" aria-expanded="false">Contact</button></li>
       </ul>
+      <form id="contact-form" class="menu-contact" method="POST"
+            action="https://formsubmit.co/officialouioui@gmail.com" hidden>
+        <input type="hidden" name="_subject" value="HARDcpy — new message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://hardcpy.shop/?sent=1">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="contact-send">Send</button>
+      </form>
       <p class="menu-about">
         HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc.
       </p>

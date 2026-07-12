@@ -56,7 +56,7 @@
   panel.addEventListener("change", function (e) {
     var t = e.target;
     if (t.name === "mode") state.mode = t.value;
-    else if (t.name === "sort") state.sort = t.value;
+    else if (t.name === "sort") { state.sort = t.value; userSorted = true; }
     else if (t.type === "checkbox") {
       var pool = t.closest("#type-group") ? state.types : state.topics;
       var i = pool.indexOf(t.value);
@@ -71,6 +71,7 @@
     state.topics = [];
     state.sort = "new";
     state.mode = "grid";
+    userSorted = false;
     panel.querySelectorAll("input[type=checkbox]").forEach(function (c) { c.checked = false; });
     panel.querySelector("input[name=sort][value=new]").checked = true;
     panel.querySelector("input[name=mode][value=grid]").checked = true;
@@ -79,12 +80,24 @@
   });
 
   // ---------- filtering / sorting ----------
+  // Default view is a random order, reshuffled once per visit. As soon as
+  // the visitor filters or picks a sort, the explicit ordering takes over.
+  var SHUFFLED = BOOKS.slice();
+  for (var si = SHUFFLED.length - 1; si > 0; si--) {
+    var sj = Math.floor(Math.random() * (si + 1));
+    var tmp = SHUFFLED[si]; SHUFFLED[si] = SHUFFLED[sj]; SHUFFLED[sj] = tmp;
+  }
+  var userSorted = false;
+
   function current() {
-    var items = BOOKS.filter(function (b) {
+    var pristine = !userSorted && !state.types.length && !state.topics.length;
+    var pool = pristine ? SHUFFLED : BOOKS;
+    var items = pool.filter(function (b) {
       if (state.types.length && state.types.indexOf(b.kind) === -1) return false;
       if (state.topics.length && !b.topics.some(function (t) { return state.topics.indexOf(t) !== -1; })) return false;
       return true;
     });
+    if (pristine) return items;
     function num(x) { return x.price ? parseFloat(x.price) : Infinity; }
     var sorters = {
       "new": function (a, b) { return b.id - a.id; },

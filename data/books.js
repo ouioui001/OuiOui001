@@ -498,8 +498,7 @@ const BOOKS = [
   "shipping": "5.00",
   "cover": "assets/covers/1023.jpg",
   "photos": [
-   "assets/full/1023.jpg",
-   "assets/photos/1023-1.jpg"
+   "assets/full/1023.jpg"
   ],
   "details": [
    "Ships worldwide from our archive.",

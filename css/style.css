@@ -332,6 +332,78 @@ main {
   border-bottom: 1px solid transparent;
 }
 .menu-list a:hover { border-bottom-color: #fff; }
+.menu-link-btn {
+  font-family: var(--sans);
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 500;
+  color: #fff;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+.menu-link-btn:hover, .menu-link-btn[aria-expanded="true"] { border-bottom-color: #fff; }
+
+/* contact form inside the menu */
+.menu-contact { max-width: 400px; margin-top: 26px; }
+.menu-contact label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: #8f8b83;
+  margin-top: 16px;
+}
+.menu-contact input,
+.menu-contact textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 7px 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: #fff;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #4a4a46;
+  border-radius: 0;
+  outline: none;
+  resize: vertical;
+}
+.menu-contact input:focus,
+.menu-contact textarea:focus { border-bottom-color: #fff; }
+.contact-send {
+  margin-top: 20px;
+  padding: 9px 26px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d0d0c;
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.contact-send:hover { background: #d9d5cc; }
+
+/* small confirmation toast (shown after ?sent=1 redirect) */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 11px 20px;
+  z-index: 950;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.toast.fade { opacity: 0; }
 @media (min-width: 1024px) {
   .menu-overlay { padding: 128px 32px 32px 128px; }
 }

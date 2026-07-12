@@ -96,6 +96,7 @@ document.addEventListener("dragstart", function (e) {
 
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   window.setInterval(function () {
+    if (document.hidden) return;   // don't burn bandwidth in background tabs
     var next = Math.floor(Math.random() * BOOKS.length);
     if (BOOKS.length > 1 && next === current) next = (next + 1) % BOOKS.length;
     var pre = new Image();

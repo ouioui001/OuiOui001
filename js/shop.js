@@ -119,6 +119,7 @@
     img.src = b.cover;
     img.alt = b.title;
     img.loading = "lazy";
+    img.decoding = "async";
     fig.appendChild(img);
     var t = document.createElement("div");
     t.className = "t";

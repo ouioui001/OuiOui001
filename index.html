@@ -11,7 +11,18 @@
   <meta property="og:title" content="HARDCPY">
   <meta property="og:description" content="An independent archive of rare fashion and art books, magazines, catalogs and lookbooks.">
   <meta property="og:url" content="https://hardcpy.shop/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://hardcpy.shop/assets/full/1001.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HARDCPY",
+    "alternateName": "HARDcpy",
+    "url": "https://hardcpy.shop/",
+    "description": "HARDcpy is a curated library of fashion, art books, magazines, DVDs, catalogs, etc."
+  }
+  </script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%236e2b2b'/></svg>">
 </head>
@@ -29,7 +40,9 @@
   </button>
 
   <section class="hero" id="hero" title="Menu">
-    <img src="assets/full/1001.jpg" alt="HARDcpy — featured publication">
+    <!-- src is set by js/main.js: a random listing per visit (avoids a
+         double download of a hardcoded cover) -->
+    <img alt="HARDcpy — featured publication" fetchpriority="high" decoding="async">
   </section>
 
   <div class="meta">
@@ -116,5 +129,6 @@
   <script src="js/main.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/shop.js"></script>
+  <script src="js/analytics.js"></script>
 </body>
 </html>

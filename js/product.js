@@ -58,7 +58,7 @@
   // ---------- spec panel ----------
   var specs = [
     '<span class="dot">●</span> IN STOCK',
-    "TYPE: " + book.kind.replace(/s$/, ""),
+    "TYPE: " + book.kind.split("/").map(function (w) { return w.replace(/s$/, ""); }).join("/"),
     "SHIPS WORLDWIDE"
   ];
   var list = document.getElementById("spec-list");

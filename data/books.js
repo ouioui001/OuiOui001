@@ -4,7 +4,7 @@ const BOOKS = [
  {
   "id": 1001,
   "title": "Vivienne Westwood",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -30,7 +30,7 @@ const BOOKS = [
  {
   "id": 1002,
   "title": "KAPITAL Blue Bear 2 — Alaska: Totem Life, Winter 2008 Catalog",
-  "kind": "Catalogs",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -142,7 +142,7 @@ const BOOKS = [
  {
   "id": 1007,
   "title": "Yohji Yamamoto: My Dear Bomb",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -184,7 +184,7 @@ const BOOKS = [
  {
   "id": 1009,
   "title": "Silver Accessory Bible — Chrome Hearts (GET ON! Gakken Mook)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -246,7 +246,7 @@ const BOOKS = [
  {
   "id": 1012,
   "title": "The Study of Comme des Garçons — Eriko Minamitani",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -270,7 +270,7 @@ const BOOKS = [
  {
   "id": 1013,
   "title": "KAPITAL — Índigo Índio, 2012 Summer Catalog",
-  "kind": "Catalogs",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -291,7 +291,7 @@ const BOOKS = [
  {
   "id": 1014,
   "title": "The Relativity of Comme des Garçons (相対性コムデギャルソン論)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -312,7 +312,7 @@ const BOOKS = [
  {
   "id": 1015,
   "title": "GroundY by Yohji Yamamoto — Autumn/Winter 2020–21 Catalog",
-  "kind": "Catalogs",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -355,7 +355,7 @@ const BOOKS = [
  {
   "id": 1017,
   "title": "Modern Menswear — Hywel Davies (Japanese Edition)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -397,7 +397,7 @@ const BOOKS = [
  {
   "id": 1019,
   "title": "We Margiela — Mint Film Office (Book)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion",
    "Film"
@@ -420,7 +420,7 @@ const BOOKS = [
  {
   "id": 1020,
   "title": "We Margiela — Japanese Film Flyer Set (2019)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion",
    "Film"
@@ -444,7 +444,7 @@ const BOOKS = [
  {
   "id": 1021,
   "title": "Martin Margiela: In His Own Words — Japanese Film Flyer (2021)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion",
    "Film"
@@ -466,7 +466,7 @@ const BOOKS = [
  {
   "id": 1022,
   "title": "Balenciaga — Mémoire de la Mode, Marie-Andrée Jouve (Korinsha Press)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -488,7 +488,7 @@ const BOOKS = [
  {
   "id": 1023,
   "title": "Issey Miyake — Mémoire de la Mode, Laurence Bénaïm (Korinsha Press)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -509,7 +509,7 @@ const BOOKS = [
  {
   "id": 1024,
   "title": "Yohji Yamamoto — Fashion Memoir, François Baudot (Assouline)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -550,7 +550,7 @@ const BOOKS = [
  {
   "id": 1026,
   "title": "Jean Paul Gaultier: Fashion Freak Show — Souvenir Programme",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -658,7 +658,7 @@ const BOOKS = [
  {
   "id": 1031,
   "title": "Aya Takano — Hot Banana Fudge (Kaikai Kiki)",
-  "kind": "Books",
+  "kind": "Books/Catalogs",
   "topics": [
    "Art"
   ],
@@ -703,7 +703,7 @@ const BOOKS = [
  {
   "id": 1033,
   "title": "Saint Laurent Look Book — 2014–15 A/W",
-  "kind": "Catalogs",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],
@@ -850,7 +850,7 @@ const BOOKS = [
  {
   "id": 1040,
   "title": "Ann Demeulemeester (Men) — Été/Summer 2013 Lookbook",
-  "kind": "Catalogs",
+  "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
   ],

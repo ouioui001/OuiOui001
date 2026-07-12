@@ -18,7 +18,7 @@
   var emptyEl = document.getElementById("empty");
 
   // ---------- refine panel construction ----------
-  var KINDS = ["Books", "Magazines", "Catalogs"];
+  var KINDS = ["Books/Catalogs", "Magazines"];
   var TOPICS = [];
   BOOKS.forEach(function (b) {
     b.topics.forEach(function (t) {

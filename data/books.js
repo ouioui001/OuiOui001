@@ -44,7 +44,6 @@ const BOOKS = [
    "assets/photos/1002-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -66,7 +65,6 @@ const BOOKS = [
    "assets/photos/1003-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -88,7 +86,6 @@ const BOOKS = [
    "assets/photos/1004-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -201,7 +198,6 @@ const BOOKS = [
    "assets/photos/1009-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -243,7 +239,6 @@ const BOOKS = [
    "assets/full/1011.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -289,7 +284,6 @@ const BOOKS = [
    "assets/photos/1013-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -311,7 +305,6 @@ const BOOKS = [
    "assets/photos/1014-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -333,7 +326,6 @@ const BOOKS = [
    "assets/photos/1015-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -445,7 +437,6 @@ const BOOKS = [
    "assets/photos/1020-3.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -468,7 +459,6 @@ const BOOKS = [
    "assets/photos/1021-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -512,7 +502,6 @@ const BOOKS = [
    "assets/photos/1023-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -534,7 +523,6 @@ const BOOKS = [
    "assets/photos/1024-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -555,7 +543,6 @@ const BOOKS = [
    "assets/full/1025.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -595,7 +582,6 @@ const BOOKS = [
    "assets/full/1027.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -665,7 +651,6 @@ const BOOKS = [
    "assets/photos/1030-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -711,7 +696,6 @@ const BOOKS = [
    "assets/full/1032.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -732,7 +716,6 @@ const BOOKS = [
    "assets/full/1033.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -860,7 +843,6 @@ const BOOKS = [
    "assets/photos/1039-1.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -881,7 +863,6 @@ const BOOKS = [
    "assets/full/1040.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -902,7 +883,6 @@ const BOOKS = [
    "assets/full/1041.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -923,7 +903,6 @@ const BOOKS = [
    "assets/full/1042.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -944,7 +923,6 @@ const BOOKS = [
    "assets/full/1043.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -965,7 +943,6 @@ const BOOKS = [
    "assets/full/1044.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -986,7 +963,6 @@ const BOOKS = [
    "assets/full/1045.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1007,7 +983,6 @@ const BOOKS = [
    "assets/full/1046.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1028,7 +1003,6 @@ const BOOKS = [
    "assets/full/1047.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1049,7 +1023,6 @@ const BOOKS = [
    "assets/full/1048.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1070,7 +1043,6 @@ const BOOKS = [
    "assets/full/1049.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1091,7 +1063,6 @@ const BOOKS = [
    "assets/full/1050.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1112,7 +1083,6 @@ const BOOKS = [
    "assets/full/1051.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1133,7 +1103,6 @@ const BOOKS = [
    "assets/full/1052.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1154,7 +1123,6 @@ const BOOKS = [
    "assets/full/1053.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1175,7 +1143,6 @@ const BOOKS = [
    "assets/full/1054.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1196,7 +1163,6 @@ const BOOKS = [
    "assets/full/1055.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1217,7 +1183,6 @@ const BOOKS = [
    "assets/full/1056.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1238,7 +1203,6 @@ const BOOKS = [
    "assets/full/1057.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1259,7 +1223,6 @@ const BOOKS = [
    "assets/full/1058.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1280,7 +1243,6 @@ const BOOKS = [
    "assets/full/1059.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1301,7 +1263,6 @@ const BOOKS = [
    "assets/full/1060.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1322,7 +1283,6 @@ const BOOKS = [
    "assets/full/1061.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]
@@ -1343,7 +1303,6 @@ const BOOKS = [
    "assets/full/1062.jpg"
   ],
   "details": [
-   "Authentic.",
    "Ships worldwide from our archive.",
    "Message us for more photos or condition details."
   ]

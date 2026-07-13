@@ -86,7 +86,10 @@ document.addEventListener("dragstart", function (e) {
   var img = document.querySelector("#hero img");
   if (!img || typeof BOOKS === "undefined" || !BOOKS.length) return;
 
-  function srcOf(b) { return (b.photos && b.photos[0]) || b.cover; }
+  // Use the small cover thumbnail (~37KB), not the 2400px product image:
+  // the hero is a decorative rotating showcase, and this keeps the page
+  // from re-downloading ~1MB every rotation. Full-res stays on product pages.
+  function srcOf(b) { return b.cover || (b.photos && b.photos[0]); }
   var current = Math.floor(Math.random() * BOOKS.length);
   function show(i) {
     img.src = srcOf(BOOKS[i]);

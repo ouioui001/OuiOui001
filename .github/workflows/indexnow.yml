@@ -1,0 +1,43 @@
+# Ping IndexNow (Bing, Yandex, and partners) whenever the catalogue or
+# pages change, so new/updated listings get crawled quickly. No secrets
+# needed — IndexNow verifies ownership via the key file at the site root.
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main, claude/depop-ebook-shop-design-brfm33]
+    paths:
+      - "data/books.js"
+      - "sitemap.xml"
+      - "**/*.html"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit URLs to IndexNow
+        run: |
+          KEY=9c20cb3da60cd111fe3729fe87d5d21e
+          HOST=hardcpy.shop
+          # Build the URL list from the sitemap.
+          URLS=$(grep -oE 'https://hardcpy\.shop[^<]*' sitemap.xml | sort -u)
+          python3 - "$KEY" "$HOST" <<PY
+          import json, sys, urllib.request
+          key, host = sys.argv[1], sys.argv[2]
+          urls = """$URLS""".split()
+          body = json.dumps({
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json"})
+          try:
+              r = urllib.request.urlopen(req, timeout=30)
+              print("IndexNow:", r.status, "submitted", len(urls), "URLs")
+          except Exception as e:
+              print("IndexNow ping failed (non-fatal):", e)
+          PY

@@ -108,12 +108,10 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
         '<link rel="preconnect" href="https://cdn.sanity.io" crossorigin>'
         '<link rel="preload" as="font" type="font/otf" href="{base}assets/fonts/26A1VeeloNeue.otf" crossorigin>'
         '<link rel="stylesheet" href="{base}assets/style.css">'
-        # --- Visitor analytics (pending account) -------------------------
-        # GoatCounter is privacy-friendly and needs no cookie banner.
-        # Create a free account at https://www.goatcounter.com, then replace
-        # YOURCODE below and remove the surrounding comment markers to enable:
-        # <script data-goatcounter="https://YOURCODE.goatcounter.com/count"
-        #         async src="//gc.zgo.at/count.js"></script>
+        # Visitor analytics — GoatCounter (privacy-friendly, no cookies).
+        # Dashboard: https://ouioui001.goatcounter.com
+        '<script data-goatcounter="https://ouioui001.goatcounter.com/count" '
+        'async src="https://gc.zgo.at/count.js"></script>'
         "{jsonld}"
         "</head><body>"
     ).format(title=esc(title), desc=esc(description), base=base,

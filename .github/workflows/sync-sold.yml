@@ -1,0 +1,36 @@
+# Auto-mark sold listings: polls Stripe every 10 minutes and updates
+# data/sold.js when a payment link has completed its single allowed sale.
+# Needs one repo secret: STRIPE_RESTRICTED_KEY — a restricted Stripe key
+# with only "Payment Links: Read" (dashboard.stripe.com/apikeys).
+name: Sync sold listings from Stripe
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update data/sold.js from Stripe
+        env:
+          STRIPE_KEY: ${{ secrets.STRIPE_RESTRICTED_KEY }}
+        run: python3 tools/sync_sold.py
+
+      - name: Commit and push if changed
+        run: |
+          if ! git diff --quiet data/sold.js; then
+            git config user.name "hardcpy-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/sold.js
+            git commit -m "Mark sold listings (auto-sync from Stripe)"
+            git push
+          else
+            echo "No sold-status changes."
+          fi

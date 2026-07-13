@@ -1,0 +1,16 @@
+{
+  "name": "OuiOui001",
+  "short_name": "OuiOui001",
+  "description": "A catalogue and archive of rare fashion books, magazines and printed matter.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/fav-l.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

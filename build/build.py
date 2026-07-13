@@ -77,7 +77,7 @@ def intro_overlay():
 def page(title, active, body, base="", description="OuiOui website.", with_intro=True,
          url="/", og_image=None, jsonld=None):
     canonical = SITE + url
-    og_img = og_image or (SITE + "/fav-l.png")
+    og_img = og_image or (SITE + "/assets/og.png")
     jsonld_tag = (
         '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>"
         if jsonld else ""
@@ -93,6 +93,8 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
         '<meta name="apple-mobile-web-app-capable" content="yes">'
         '<meta name="mobile-web-app-capable" content="yes">'
         '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+        '<meta name="theme-color" content="#ffffff">'
+        '<link rel="manifest" href="{base}manifest.webmanifest">'
         '<meta property="og:site_name" content="OuiOui001">'
         '<meta property="og:title" content="{title}">'
         '<meta property="og:description" content="{desc}">'
@@ -122,22 +124,30 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
 
 
 # ---------------------------------------------------------------- tiles
-def tile(img, group, sizes):
+def tile(img, group, sizes, alt=None, idx=None, eager=False):
     f = img["file"]
     w, h = img["w"], img["h"]
-    src = cdn(f, "w=400&auto=format&q=80")
+    # crisp thumbnails: modern format (webp/avif) + retina-ready widths
+    src = cdn(f, "w=400&auto=format&q=82")
     srcset = ", ".join([
-        cdn(f, "w=200&auto=format&q=80") + " 200w",
-        cdn(f, "w=400&auto=format&q=80") + " 400w",
-        cdn(f, "w=800&auto=format&q=82") + " 800w",
+        cdn(f, "w=200&auto=format&q=82") + " 200w",
+        cdn(f, "w=400&auto=format&q=82") + " 400w",
+        cdn(f, "w=800&auto=format&q=84") + " 800w",
+        cdn(f, "w=1200&auto=format&q=84") + " 1200w",
     ])
+    label = alt if alt else group
+    if idx is not None:
+        label = "{} — {}".format(label, idx)
+    # First images load eagerly with high priority (better LCP); rest are lazy.
+    load = ('loading="eager" fetchpriority="high"' if eager
+            else 'loading="lazy" fetchpriority="low"')
     return (
         '<img class="tile" data-file="{f}" data-group="{g}" '
         'src="{src}" srcset="{ss}" sizes="{sizes}" '
         'width="{w}" height="{h}" style="aspect-ratio:{w}/{h};" '
-        'loading="lazy" decoding="async" draggable="false" alt="{alt}">'
+        '{load} decoding="async" draggable="false" alt="{alt}">'
     ).format(f=f, g=esc(group), src=src, ss=srcset, sizes=sizes, w=w, h=h,
-             alt=esc(group))
+             load=load, alt=esc(label))
 
 
 # ---------------------------------------------------------------- pages
@@ -173,17 +183,19 @@ def build_catalogue():
     return page("OuiOui001", "catalogue", body, base=base, url="/",
                 description="OuiOui001 — a catalogue and archive of rare fashion books, "
                             "magazines and printed matter. Inventory of %d items." % len(POSTS),
-                og_image=cdn(cover0, "w=1200&auto=format") if cover0 else None,
+                og_image=None,  # branded share card (assets/og.png)
                 jsonld=jsonld)
 
 
 def build_archive():
     base = "../"  # archive/index.html
     secs = []
-    for p in POSTS:
+    for si, p in enumerate(POSTS):
         tiles = "".join(
-            tile(g, p["slug"], "(max-width:640px) 25vw, (max-width:1024px) 12.5vw, 6.6vw")
-            for g in p["gallery"]
+            tile(g, p["slug"], "(max-width:640px) 25vw, (max-width:1024px) 12.5vw, 6.6vw",
+                 alt=p["title"], idx=gi + 1,
+                 eager=(si == 0 and gi < 8))  # prioritise first row of first section
+            for gi, g in enumerate(p["gallery"])
         )
         # Estimated rendered height per breakpoint (content-visibility hint):
         # rows * column-width * average aspect ratio, plus room for the title.
@@ -240,7 +252,10 @@ def build_information():
 def build_book(p):
     slug = p["slug"]
     sizes = "(max-width:640px) 50vw, (max-width:1024px) 25vw, 6.6vw"
-    tiles = "".join(tile(g, slug, sizes) for g in p["gallery"])
+    tiles = "".join(
+        tile(g, slug, sizes, alt=p["title"], idx=gi + 1, eager=(gi < 4))
+        for gi, g in enumerate(p["gallery"])
+    )
     desc = p.get("description") or ""
     desc_block = ""
     if desc:
@@ -295,22 +310,58 @@ def write(path, content):
 def build_sitemap():
     import datetime
     today = datetime.date.today().isoformat()
-    entries = [("/", today), ("/archive/", today), ("/information/", today)]
-    for p in POSTS:
-        entries.append(("/books/{}/".format(p["slug"]), p.get("date") or today))
-    urls = "".join(
-        "<url><loc>{loc}</loc><lastmod>{mod}</lastmod></url>".format(
-            loc=esc(SITE + path), mod=esc(mod)
+    parts = []
+
+    def url_entry(path, mod, images=None):
+        img_xml = ""
+        if images:
+            img_xml = "".join(
+                "<image:image><image:loc>{loc}</image:loc>"
+                "<image:title>{t}</image:title></image:image>".format(
+                    loc=esc(cdn(im["file"], "w=1600&auto=format")), t=esc(title)
+                )
+                for im, title in images
+            )
+        return "<url><loc>{loc}</loc><lastmod>{mod}</lastmod>{imgs}</url>".format(
+            loc=esc(SITE + path), mod=esc(mod), imgs=img_xml
         )
-        for path, mod in entries
-    )
+
+    parts.append(url_entry("/", today))
+    # archive page carries every image (helps Google Images discover them)
+    archive_imgs = [(im, p["title"]) for p in POSTS for im in p["gallery"]]
+    parts.append(url_entry("/archive/", today, images=archive_imgs))
+    parts.append(url_entry("/information/", today))
+    for p in POSTS:
+        imgs = [(im, p["title"]) for im in p["gallery"]]
+        parts.append(url_entry("/books/{}/".format(p["slug"]), p.get("date") or today, images=imgs))
+
     return ('<?xml version="1.0" encoding="UTF-8"?>'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-            + urls + "</urlset>")
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
+            + "".join(parts) + "</urlset>")
 
 
 def build_robots():
     return "User-agent: *\nAllow: /\n\nSitemap: {}/sitemap.xml\n".format(SITE)
+
+
+def build_manifest():
+    return json.dumps({
+        "name": "OuiOui001",
+        "short_name": "OuiOui001",
+        "description": "A catalogue and archive of rare fashion books, magazines and printed matter.",
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#ffffff",
+        "theme_color": "#ffffff",
+        "icons": [
+            {"src": "/fav-l.png", "sizes": "256x256", "type": "image/png"}
+        ],
+    }, indent=2)
+
+
+# IndexNow key — lets Bing/Yandex re-crawl instantly when content changes.
+INDEXNOW_KEY = "a1b2c3d4e5f647589a0b1c2d3e4f5061"
 
 
 def main():
@@ -321,6 +372,8 @@ def main():
         write("books/{}/index.html".format(p["slug"]), build_book(p))
     write("sitemap.xml", build_sitemap())
     write("robots.txt", build_robots())
+    write("manifest.webmanifest", build_manifest())
+    write("{}.txt".format(INDEXNOW_KEY), INDEXNOW_KEY)
     print("Generated:")
     print("  index.html (catalogue,", len(POSTS), "items)")
     print("  archive/index.html (", sum(len(p["gallery"]) for p in POSTS), "images )")

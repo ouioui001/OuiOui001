@@ -143,24 +143,19 @@ main { width: 100%; }
 
 .inv-more { display: none; }
 
-/* Mobile: roomier tap targets + a small faint (view more) tag after the
-   title. Both live inside the same link, so tapping either navigates. */
+/* Mobile: no "(view more)" tag (it clipped on narrow screens). Titles read
+   as a clean single-line list, with generous spacing + padding so each row
+   is an easy, comfortable tap target. */
 @media (max-width: 1023px) {
-  .inv-item { margin-bottom: 0.8rem; }
+  .inv-item { margin-bottom: 0.65rem; }
   .inv-link {
-    display: flex;
-    align-items: baseline;
-    padding: 0.15rem 0;
-  }
-  .inv-more {
     display: inline-block;
-    order: 2;              /* render after the title text */
-    font-size: 0.7rem;
-    line-height: 1;
-    opacity: 0.45;
-    margin-left: 0.6em;
-    white-space: nowrap;
+    padding: 0.25rem 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: clip;
   }
+  .inv-more { display: none; }
 }
 @media (min-width: 1024px) {
   .inv-more {

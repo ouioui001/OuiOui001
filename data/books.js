@@ -1346,5 +1346,254 @@ const BOOKS = [
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
   ]
+ },
+ {
+  "id": 1063,
+  "title": "Yohji Yamamoto +Noir — Catalog / Lookbook",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "48.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1063.jpg",
+  "photos": [
+   "assets/full/1063.jpg",
+   "assets/photos/1063-1.jpg"
+  ],
+  "details": [
+   "Yohji Yamamoto +Noir line catalog.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1064,
+  "title": "STUDIO VOICE Vol.346, October 2004 — Kate Moss Mania",
+  "kind": "Magazines",
+  "topics": [
+   "Fashion",
+   "Photography"
+  ],
+  "price": "55.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1064.jpg",
+  "photos": [
+   "assets/full/1064.jpg",
+   "assets/photos/1064-1.jpg",
+   "assets/photos/1064-2.jpg"
+  ],
+  "details": [
+   "Special feature: Kate Moss Mania — who is Kate Moss?",
+   "Japanese text.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1065,
+  "title": "Fashion Lives — Fashion Icon Interviews (Japanese Edition)",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "42.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1065.jpg",
+  "photos": [
+   "assets/full/1065.jpg",
+   "assets/photos/1065-1.jpg"
+  ],
+  "details": [
+   "Interviews with New York fashion icons — Norma Kamali, Calvin Klein, Tommy Hilfiger, Donna Karan, Tom Ford, Michael Kors, Marc Jacobs, Ralph Lauren and more.",
+   "Japanese text.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1066,
+  "title": "high fashion December 2005 — Paris & Milan S/S 2006 Men's Collections",
+  "kind": "Magazines",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "52.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1066.jpg",
+  "photos": [
+   "assets/full/1066.jpg",
+   "assets/photos/1066-1.jpg",
+   "assets/photos/1066-2.jpg"
+  ],
+  "details": [
+   "Spring/Summer 2006 men's collections from Paris and Milan.",
+   "Features Yohji Yamamoto — Form of Black — and Raf Simons' 10th-anniversary show at the Boboli Gardens.",
+   "Japanese text (Bunka Publishing).",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1067,
+  "title": "Basquiat Handbook (Japanese Edition)",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Art"
+  ],
+  "price": "45.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1067.jpg",
+  "photos": [
+   "assets/full/1067.jpg",
+   "assets/photos/1067-1.jpg",
+   "assets/photos/1067-2.jpg"
+  ],
+  "details": [
+   "Compact Japanese guide to Jean-Michel Basquiat — Why Basquiat Now?",
+   "Japanese text.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1068,
+  "title": "Maison Margiela — Cinema Inferno, Show Programme (John Galliano)",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "58.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1068.jpg",
+  "photos": [
+   "assets/full/1068.jpg",
+   "assets/photos/1068-1.jpg"
+  ],
+  "details": [
+   "Programme for Cinema Inferno — an original concept by John Galliano for Maison Margiela.",
+   "Stapled white booklet.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1069,
+  "title": "BRUTUS — Maison Martin Margiela: The Little White Book",
+  "kind": "Magazines",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "48.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1069.jpg",
+  "photos": [
+   "assets/full/1069.jpg",
+   "assets/photos/1069-1.jpg",
+   "assets/photos/1069-2.jpg",
+   "assets/photos/1069-3.jpg"
+  ],
+  "details": [
+   "The 'little white book' produced by Maison Martin Margiela for BRUTUS readers.",
+   "Cover reproduces the maison's line flyer; includes the letter from the editors and the house portraying itself through its Autumn/Winter collection.",
+   "Japanese and English text.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1070,
+  "title": "Martin Margiela at Kudan House 2026 — Exhibition Catalog",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Fashion",
+   "Art"
+  ],
+  "price": "299.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1070.jpg",
+  "photos": [
+   "assets/full/1070.jpg",
+   "assets/photos/1070-1.jpg",
+   "assets/photos/1070-2.jpg"
+  ],
+  "details": [
+   "Documents the exhibition held at Kudan House, Tokyo — April 11–29, 2026.",
+   "High-quality photography and design typical of Margiela projects; 50ml edition reference.",
+   "Brand new, sealed.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1071,
+  "title": "Supreme — Spring/Summer 2026 Lookbook + Poster",
+  "kind": "Books/Catalogs",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "35.55",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1071.jpg",
+  "photos": [
+   "assets/full/1071.jpg",
+   "assets/photos/1071-1.jpg",
+   "assets/photos/1071-2.jpg"
+  ],
+  "details": [
+   "Season lookbook with fold-out poster.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
+ },
+ {
+  "id": 1072,
+  "title": "HUgE — September 2006 (Kodansha)",
+  "kind": "Magazines",
+  "topics": [
+   "Fashion"
+  ],
+  "price": "40.00",
+  "reduced": false,
+  "originalPrice": null,
+  "shipping": "5.00",
+  "cover": "assets/covers/1072.jpg",
+  "photos": [
+   "assets/full/1072.jpg"
+  ],
+  "details": [
+   "Japanese hi-end style magazine, September 2006 issue.",
+   "Japanese text.",
+   "Ships from New York City.",
+   "Unless otherwise noted, all items are in good condition or better.",
+   "Questions? Reach us anytime through the Contact form in the menu."
+  ]
  }
 ];

@@ -1364,7 +1364,8 @@ const BOOKS = [
    "assets/photos/1063-1.jpg"
   ],
   "details": [
-   "Yohji Yamamoto +Noir line catalog.",
+   "Yohji Yamamoto +Noir line catalog / lookbook.",
+   "Japanese text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
@@ -1389,8 +1390,9 @@ const BOOKS = [
    "assets/photos/1064-2.jpg"
   ],
   "details": [
-   "Special feature: Kate Moss Mania — who is Kate Moss?",
-   "Japanese text.",
+   "Japanese multimedia culture magazine, Vol.346, October 2004.",
+   "Cover feature: Kate Moss Mania — 'Who is Kate Moss?'",
+   "Japanese text (INFAS Publications).",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
@@ -1398,7 +1400,7 @@ const BOOKS = [
  },
  {
   "id": 1065,
-  "title": "Fashion Lives — Fashion Icon Interviews (Japanese Edition)",
+  "title": "Fashion Lives — Fashion Icons with Fern Mallis (Japanese Edition)",
   "kind": "Books/Catalogs",
   "topics": [
    "Fashion"
@@ -1413,7 +1415,8 @@ const BOOKS = [
    "assets/photos/1065-1.jpg"
   ],
   "details": [
-   "Interviews with New York fashion icons — Norma Kamali, Calvin Klein, Tommy Hilfiger, Donna Karan, Tom Ford, Michael Kors, Marc Jacobs, Ralph Lauren and more.",
+   "Japanese edition of Fern Mallis's 'Fashion Lives: Fashion Icons with Fern Mallis' (Rizzoli, 2015).",
+   "Nineteen candid interviews with American fashion icons — Calvin Klein, Tom Ford, Marc Jacobs, Donna Karan, Michael Kors, Tommy Hilfiger, Norma Kamali, Diane von Furstenberg, Betsey Johnson, Polly Mellen and more; foreword by Ralph Lauren.",
    "Japanese text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
@@ -1438,9 +1441,10 @@ const BOOKS = [
    "assets/photos/1066-2.jpg"
   ],
   "details": [
-   "Spring/Summer 2006 men's collections from Paris and Milan.",
-   "Features Yohji Yamamoto — Form of Black — and Raf Simons' 10th-anniversary show at the Boboli Gardens.",
-   "Japanese text (Bunka Publishing).",
+   "Japanese fashion magazine, December 2005 issue (Bunka Publishing).",
+   "Paris & Milan Spring/Summer 2006 men's collections — 'Code: RELAX'.",
+   "Inside features Yohji Yamamoto 'Form of Black' and Raf Simons' 10th-anniversary show at the Boboli Gardens.",
+   "Japanese text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
@@ -1464,8 +1468,9 @@ const BOOKS = [
    "assets/photos/1067-2.jpg"
   ],
   "details": [
-   "Compact Japanese guide to Jean-Michel Basquiat — Why Basquiat Now?",
-   "Japanese text.",
+   "Japanese pocket handbook introducing Jean-Michel Basquiat — 'Why Basquiat Now?'.",
+   "Q&A with art historian Kikurō Miyashita and artist Katsuhiko Hibino; many major works reproduced in color, with a chronology.",
+   "Published around the 2019 'Made in Japan' exhibition (Mori Art Museum). Japanese text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
@@ -1488,8 +1493,9 @@ const BOOKS = [
    "assets/photos/1068-1.jpg"
   ],
   "details": [
-   "Programme for Cinema Inferno — an original concept by John Galliano for Maison Margiela.",
-   "Stapled white booklet.",
+   "Show programme for 'Cinema Inferno' — an original concept by John Galliano for Maison Margiela.",
+   "The Artisanal presentation staged live at the Palais de Chaillot, Paris (July 2022): a road-movie narrative of fugitive lovers Count and Hen.",
+   "Stapled white booklet, Maison Margiela Paris.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
    "Questions? Reach us anytime through the Contact form in the menu."
@@ -1514,8 +1520,8 @@ const BOOKS = [
    "assets/photos/1069-3.jpg"
   ],
   "details": [
-   "The 'little white book' produced by Maison Martin Margiela for BRUTUS readers.",
-   "Cover reproduces the maison's line flyer; includes the letter from the editors and the house portraying itself through its Autumn/Winter collection.",
+   "The 'little white book' Maison Martin Margiela produced for BRUTUS readers.",
+   "Cover reproduces the maison's numbered line flyer (0–23 / MM6); includes the letter from the editors and the house portraying itself through its Autumn/Winter collection.",
    "Japanese and English text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",
@@ -1589,7 +1595,8 @@ const BOOKS = [
    "assets/full/1072.jpg"
   ],
   "details": [
-   "Japanese hi-end style magazine, September 2006 issue.",
+   "Japanese hi-end style magazine (Kodansha), September 2006 issue.",
+   "Dior Homme (Hedi Slimane era) back cover.",
    "Japanese text.",
    "Ships from New York City.",
    "Unless otherwise noted, all items are in good condition or better.",

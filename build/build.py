@@ -77,7 +77,10 @@ def intro_overlay():
 def page(title, active, body, base="", description="OuiOui website.", with_intro=True,
          url="/", og_image=None, jsonld=None):
     canonical = SITE + url
+    og_default = og_image is None
     og_img = og_image or (SITE + "/assets/og.png")
+    og_dims = ('<meta property="og:image:width" content="2400">'
+               '<meta property="og:image:height" content="1260">') if og_default else ""
     jsonld_tag = (
         '<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False) + "</script>"
         if jsonld else ""
@@ -101,10 +104,13 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
         '<meta property="og:type" content="website">'
         '<meta property="og:url" content="{canonical}">'
         '<meta property="og:image" content="{og_img}">'
+        '<meta property="og:image:alt" content="{title}">'
+        "{og_dims}"
         '<meta name="twitter:card" content="summary_large_image">'
         '<meta name="twitter:title" content="{title}">'
         '<meta name="twitter:description" content="{desc}">'
         '<meta name="twitter:image" content="{og_img}">'
+        '<meta name="twitter:image:alt" content="{title}">'
         '<link rel="icon" type="image/x-icon" href="{base}favicon.ico">'
         '<link rel="apple-touch-icon" href="{base}fav-l.png">'
         '<link rel="preconnect" href="https://cdn.sanity.io" crossorigin>'
@@ -117,7 +123,8 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
         "{jsonld}"
         "</head><body>"
     ).format(title=esc(title), desc=esc(description), base=base,
-             canonical=esc(canonical), og_img=esc(og_img), jsonld=jsonld_tag)
+             canonical=esc(canonical), og_img=esc(og_img), og_dims=og_dims,
+             jsonld=jsonld_tag)
     intro = intro_overlay() if with_intro else ""
     tail = '<script src="{base}assets/app.js" defer></script></body></html>'.format(base=base)
     return head + intro + nav(active, base) + body + tail
@@ -171,14 +178,46 @@ def build_catalogue():
         '<footer class="foot"><a href="{base}" aria-label="OuiOui001 home">{logo}</a></footer>'
         "</main>"
     ).format(n=len(POSTS), rows="".join(rows), logo=make_logo("catfoot"), base=base or "./")
-    cover0 = POSTS[0]["cover"]["file"] if POSTS and POSTS[0].get("cover") else None
+    # social / related profiles for the brand (helps Google's knowledge graph
+    # connect the site to its Instagram, TikTok, etc.)
+    same_as = []
+    for l in LINKS:
+        to = l.get("to", "")
+        if to.startswith("http") and ("instagram.com" in to or "tiktok.com" in to
+                                       or "ouiouiprints.com" in to):
+            if to not in same_as:
+                same_as.append(to)
+    item_list = {
+        "@type": "ItemList",
+        "name": "OuiOui001 catalogue",
+        "numberOfItems": len(POSTS),
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1,
+             "url": SITE + "/books/{}/".format(p["slug"]), "name": p["title"]}
+            for i, p in enumerate(POSTS)
+        ],
+    }
     jsonld = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "OuiOui001",
-        "url": SITE + "/",
-        "description": "OuiOui001 — a catalogue and archive of rare fashion books, "
-                       "magazines and printed matter.",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": SITE + "/#website",
+                "name": "OuiOui001",
+                "url": SITE + "/",
+                "description": "OuiOui001 — a catalogue and archive of rare fashion "
+                               "books, magazines and printed matter.",
+            },
+            {
+                "@type": "Organization",
+                "@id": SITE + "/#org",
+                "name": "OuiOui001",
+                "url": SITE + "/",
+                "logo": SITE + "/fav-l.png",
+                "sameAs": same_as,
+            },
+            item_list,
+        ],
     }
     return page("OuiOui001", "catalogue", body, base=base, url="/",
                 description="OuiOui001 — a catalogue and archive of rare fashion books, "
@@ -281,17 +320,24 @@ def build_book(p):
     ).format(title=esc(p["title"]), desc=desc_block, tiles=tiles)
     url = "/books/{}/".format(slug)
     cover = p["cover"]["file"] if p.get("cover") else None
-    jsonld = {
-        "@context": "https://schema.org",
+    work = {
         "@type": "CreativeWork",
         "name": p["title"],
         "url": SITE + url,
         "description": desc or p["title"],
     }
     if cover:
-        jsonld["image"] = cdn(cover, "w=1200&auto=format")
+        work["image"] = cdn(cover, "w=1200&auto=format")
     if p.get("date"):
-        jsonld["dateModified"] = p["date"]
+        work["dateModified"] = p["date"]
+    breadcrumb = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "catalogue", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": p["title"], "item": SITE + url},
+        ],
+    }
+    jsonld = {"@context": "https://schema.org", "@graph": [work, breadcrumb]}
     return page(p["title"] + " — OuiOui001", "", body, base="../../",
                 url=url,
                 og_image=cdn(cover, "w=1200&auto=format") if cover else None,

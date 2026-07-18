@@ -3,14 +3,13 @@
 # needed — IndexNow verifies ownership via the key file at the site root.
 name: IndexNow ping
 
+# Auto-trigger on push is disabled for now to keep the Actions tab quiet
+# (run manually from the Actions tab after deploying new/changed listings).
 on:
-  push:
-    branches: [main, claude/depop-ebook-shop-design-brfm33]
-    paths:
-      - "data/books.js"
-      - "sitemap.xml"
-      - "**/*.html"
   workflow_dispatch:
+  # push:
+  #   branches: [main, claude/depop-ebook-shop-design-brfm33]
+  #   paths: ["data/books.js", "sitemap.xml", "**/*.html"]
 
 jobs:
   ping:

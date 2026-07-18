@@ -4,10 +4,13 @@
 # with only "Payment Links: Read" (dashboard.stripe.com/apikeys).
 name: Sync sold listings from Stripe
 
+# NOTE: automatic schedule is disabled for now (was flooding email with
+# failure notices while the STRIPE_RESTRICTED_KEY secret is unset). Run it
+# manually from the Actions tab when needed, or re-enable the cron below.
 on:
-  schedule:
-    - cron: "*/10 * * * *"
   workflow_dispatch:
+  # schedule:
+  #   - cron: "*/10 * * * *"
 
 permissions:
   contents: write

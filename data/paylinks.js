@@ -63,5 +63,15 @@ const PAYLINKS = {
  "1059": "https://buy.stripe.com/7sYcN7drX24u61a9Mf67S0X",
  "1060": "https://buy.stripe.com/dRm5kF73z5gG1KU2jN67S0Y",
  "1061": "https://buy.stripe.com/bJe3cx9bHaB0fBK6A367S0Z",
- "1062": "https://buy.stripe.com/9B67sNcnT10q3T2aQj67S10"
+ "1062": "https://buy.stripe.com/9B67sNcnT10q3T2aQj67S10",
+ "1063": "https://buy.stripe.com/bJe9AV0FbbF4blubUn67S11",
+ "1064": "https://buy.stripe.com/6oU28t3Rn24uahqf6z67S12",
+ "1065": "https://buy.stripe.com/bJe14p9bH4cCcpy7E767S13",
+ "1066": "https://buy.stripe.com/eVq3cx0FbdNc2OYf6z67S14",
+ "1067": "https://buy.stripe.com/00wfZjbjP9wW9dm8Ib67S15",
+ "1068": "https://buy.stripe.com/8x214p0Fb7oO2OY2jN67S16",
+ "1069": "https://buy.stripe.com/9B6aEZ2NjaB075e9Mf67S17",
+ "1070": "https://buy.stripe.com/bJe7sN0Fb8sSexG0bF67S18",
+ "1071": "https://buy.stripe.com/4gMcN7drXgZo75ecYr67S19",
+ "1072": "https://buy.stripe.com/6oU5kFbjPgZocpy7E767S1a"
 };

@@ -266,10 +266,24 @@ def build_archive():
                 jsonld=jsonld)
 
 
+# Links to hide on the information page (kept out even after a Sanity re-sync):
+# the "our Shop" link, the ouiouiprints.com web link, and the phone number.
+def _hidden_info_link(l):
+    to = (l.get("to") or "").strip()
+    text = (l.get("text") or "").strip().lower()
+    if to.startswith("tel:"):
+        return True
+    if text in ("our shop", "ouiouiprints.com"):
+        return True
+    return False
+
+
 def build_information():
     lead = '<span class="lead">oui oui&nbsp;</span>'
     links = []
     for l in LINKS:
+        if _hidden_info_link(l):
+            continue
         tgt = ' target="_blank" rel="noopener noreferrer"' if l.get("target") == "_blank" else ""
         links.append(
             '<a class="info-link" href="{to}"{tgt}>'

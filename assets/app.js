@@ -5,7 +5,11 @@
   "use strict";
 
   var CDN = "https://cdn.sanity.io/images/up4mo0bf/production/";
+  // Offline archive sets window.OUIOUI_IMG_BASE to a local folder; then every
+  // image (thumbnails, hover previews, lightbox) loads the local original file.
+  var IMG_BASE = (typeof window !== "undefined" && window.OUIOUI_IMG_BASE) || null;
   function imgURL(file, opts) {
+    if (IMG_BASE) return IMG_BASE + file;   // local original, ignore CDN params
     var q = opts || "";
     return CDN + file + (q ? "?" + q : "");
   }

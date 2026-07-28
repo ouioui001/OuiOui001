@@ -15,6 +15,7 @@ LINKS = DATA["links"]
 
 CDN = "https://cdn.sanity.io/images/up4mo0bf/production/"
 SITE = "https://www.ouioui001.com"  # canonical origin (no trailing slash)
+OFFLINE = os.environ.get("OFFLINE") == "1"  # build the local, no-network archive
 
 
 def esc(s):
@@ -23,6 +24,14 @@ def esc(s):
 
 def cdn(file, params):
     return CDN + file + ("?" + params if params else "")
+
+
+def link_href(base, path):
+    """Internal page link. Offline needs explicit index.html so pages open
+    from the filesystem (file://) by double-click; online uses clean URLs."""
+    if OFFLINE:
+        return base + path + "index.html"
+    return (base + path) or "./"
 
 
 # ---------------------------------------------------------------- logo
@@ -61,11 +70,11 @@ def nav(active, base):
         return '<a href="{h}" class="{c}">{l}</a>'.format(h=href, c=cls, l=label)
     return (
         '<nav class="nav">'
-        + a(base or "./", "catalogue", "catalogue")
+        + a(link_href(base, ""), "catalogue", "catalogue")
         + '<span class="sep">,&nbsp;</span>'
-        + a(base + "archive/", "archive", "archive")
+        + a(link_href(base, "archive/"), "archive", "archive")
         + '<span class="sep">,&nbsp;</span>'
-        + a(base + "information/", "information", "information")
+        + a(link_href(base, "information/"), "information", "information")
         + "</nav>"
     )
 
@@ -126,34 +135,42 @@ def page(title, active, body, base="", description="OuiOui website.", with_intro
              canonical=esc(canonical), og_img=esc(og_img), og_dims=og_dims,
              jsonld=jsonld_tag)
     intro = intro_overlay() if with_intro else ""
-    tail = '<script src="{base}assets/app.js" defer></script></body></html>'.format(base=base)
+    offline_js = ('<script>window.OUIOUI_IMG_BASE="{}images/";</script>'.format(base)
+                  if OFFLINE else "")
+    tail = (offline_js
+            + '<script src="{base}assets/app.js" defer></script></body></html>'.format(base=base))
     return head + intro + nav(active, base) + body + tail
 
 
 # ---------------------------------------------------------------- tiles
-def tile(img, group, sizes, alt=None, idx=None, eager=False):
+def tile(img, group, sizes, alt=None, idx=None, eager=False, base=""):
     f = img["file"]
     w, h = img["w"], img["h"]
-    # crisp thumbnails: modern format (webp/avif) + retina-ready widths
-    src = cdn(f, "w=400&auto=format&q=82")
-    srcset = ", ".join([
-        cdn(f, "w=200&auto=format&q=82") + " 200w",
-        cdn(f, "w=400&auto=format&q=82") + " 400w",
-        cdn(f, "w=800&auto=format&q=84") + " 800w",
-        cdn(f, "w=1200&auto=format&q=84") + " 1200w",
-    ])
     label = alt if alt else group
     if idx is not None:
         label = "{} — {}".format(label, idx)
     # First images load eagerly with high priority (better LCP); rest are lazy.
     load = ('loading="eager" fetchpriority="high"' if eager
             else 'loading="lazy" fetchpriority="low"')
+    if OFFLINE:
+        # local original file, no CDN transforms, no responsive srcset
+        src_attr = 'src="{base}images/{f}"'.format(base=base, f=f)
+    else:
+        # crisp thumbnails: modern format (webp/avif) + retina-ready widths
+        src = cdn(f, "w=400&auto=format&q=82")
+        srcset = ", ".join([
+            cdn(f, "w=200&auto=format&q=82") + " 200w",
+            cdn(f, "w=400&auto=format&q=82") + " 400w",
+            cdn(f, "w=800&auto=format&q=84") + " 800w",
+            cdn(f, "w=1200&auto=format&q=84") + " 1200w",
+        ])
+        src_attr = 'src="{src}" srcset="{ss}" sizes="{sizes}"'.format(src=src, ss=srcset, sizes=sizes)
     return (
         '<img class="tile" data-file="{f}" data-group="{g}" '
-        'src="{src}" srcset="{ss}" sizes="{sizes}" '
+        '{src_attr} '
         'width="{w}" height="{h}" style="aspect-ratio:{w}/{h};" '
         '{load} decoding="async" draggable="false" alt="{alt}">'
-    ).format(f=f, g=esc(group), src=src, ss=srcset, sizes=sizes, w=w, h=h,
+    ).format(f=f, g=esc(group), src_attr=src_attr, w=w, h=h,
              load=load, alt=esc(label))
 
 
@@ -165,9 +182,10 @@ def build_catalogue():
         cover = p["cover"]["file"] if p.get("cover") else ""
         rows.append(
             '<li class="inv-item">'
-            '<a class="inv-link" href="{base}books/{slug}/" data-cover="{cover}" data-title="{t}">'
+            '<a class="inv-link" href="{href}" data-cover="{cover}" data-title="{t}">'
             '<span class="inv-more">(view more)</span>{title}</a></li>'.format(
-                base=base, slug=p["slug"], cover=esc(cover), t=esc(p["title"]), title=esc(p["title"])
+                href=link_href(base, "books/{}/".format(p["slug"])),
+                cover=esc(cover), t=esc(p["title"]), title=esc(p["title"])
             )
         )
     body = (
@@ -175,9 +193,10 @@ def build_catalogue():
         '<main class="catalogue">'
         '<h1 class="inv-count">(inventory {n})</h1>'
         '<ul class="inv-list dimmable">{rows}</ul>'
-        '<footer class="foot"><a href="{base}" aria-label="OuiOui001 home">{logo}</a></footer>'
+        '<footer class="foot"><a href="{home}" aria-label="OuiOui001 home">{logo}</a></footer>'
         "</main>"
-    ).format(n=len(POSTS), rows="".join(rows), logo=make_logo("catfoot"), base=base or "./")
+    ).format(n=len(POSTS), rows="".join(rows), logo=make_logo("catfoot"),
+             home=link_href(base, ""))
     # social / related profiles for the brand (helps Google's knowledge graph
     # connect the site to its Instagram, TikTok, etc.)
     same_as = []
@@ -233,7 +252,7 @@ def build_archive():
         tiles = "".join(
             tile(g, p["slug"], "(max-width:640px) 25vw, (max-width:1024px) 12.5vw, 6.6vw",
                  alt=p["title"], idx=gi + 1,
-                 eager=(si == 0 and gi < 8))  # prioritise first row of first section
+                 eager=(si == 0 and gi < 8), base=base)  # prioritise first row of first section
             for gi, g in enumerate(p["gallery"])
         )
         # Estimated rendered height per breakpoint (content-visibility hint):
@@ -248,9 +267,10 @@ def build_archive():
         )
         secs.append(
             '<section style="{style}">'
-            '<a class="archive-sec-title" href="{base}books/{slug}/">{title}</a>'
+            '<a class="archive-sec-title" href="{href}">{title}</a>'
             '<div class="grid archive-grid">{tiles}</div>'
-            "</section>".format(style=style, base=base, slug=p["slug"], title=esc(p["title"]), tiles=tiles)
+            "</section>".format(style=style, href=link_href(base, "books/{}/".format(p["slug"])),
+                                title=esc(p["title"]), tiles=tiles)
         )
     body = '<main class="archive">' + "".join(secs) + "</main>"
     jsonld = {
@@ -306,7 +326,7 @@ def build_book(p):
     slug = p["slug"]
     sizes = "(max-width:640px) 50vw, (max-width:1024px) 25vw, 6.6vw"
     tiles = "".join(
-        tile(g, slug, sizes, alt=p["title"], idx=gi + 1, eager=(gi < 4))
+        tile(g, slug, sizes, alt=p["title"], idx=gi + 1, eager=(gi < 4), base="../../")
         for gi, g in enumerate(p["gallery"])
     )
     desc = p.get("description") or ""

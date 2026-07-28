@@ -58,6 +58,21 @@ To rebuild without re-fetching (e.g. after editing templates or
 python3 build/build.py
 ```
 
+## Fully offline archive (all images, highest quality)
+
+Build a self-contained copy with every photo stored locally at full original
+resolution — viewable with no internet:
+
+```bash
+mkdir offline-build
+python3 build/fetch_images.py offline-build/images   # downloads ~2 GB of originals
+python3 build/offline.py offline-build               # builds the offline site
+```
+
+Then open `offline-build/index.html` in any browser. Zip `offline-build/` to
+keep it as a portable backup. (The images pull from the Sanity CDN, so this
+step needs internet; viewing afterwards does not.)
+
 ## SEO
 
 The generator writes per-page canonical URLs, Open Graph / Twitter cards
